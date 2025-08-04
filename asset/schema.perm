@@ -1,0 +1,19 @@
+entity user {}
+
+entity role {
+    relation assignee @user
+}
+
+entity company {
+    relation admin @user
+
+    action create_user = admin
+}
+
+entity template {
+    relation view @role#assignee
+    relation delete @role#assignee
+    relation edit @role#assignee
+    relation create @role#assignee
+}
+

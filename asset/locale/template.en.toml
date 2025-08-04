@@ -1,0 +1,4 @@
+[Notification]
+ActivityReminder = "This is to remind you about activity \"{{ .ActivityName }}\" in {{ .EntityName }} {{ .Name }}, deadline {{ .Deadline }}"
+ActivityComment = "Te mencioné en el comentario de \"{{ .EntityName }} {{ .Name }}\", texto del comentario: \"{{ .Comment }}\""
+

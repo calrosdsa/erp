@@ -1,0 +1,310 @@
+syntax = "proto3";
+
+package erp.api_v1;
+
+// option go_package = "/api_v1";
+
+option go_package = "/proto";
+
+
+message Result {
+    string message = 1;
+}
+
+enum RegatePartyType {
+    court = 0;
+    booking = 1;
+    eventBooking = 2;
+    regateChart = 3;
+}
+
+enum PartyAdminType {
+    roleTemplate = 0;
+}
+
+enum PartyType {
+    supplierGroup = 0;      // 1 - 1
+    itemGroup = 1;          // 2 - 1
+    warehouse = 2;          // 3 - 1
+    stockLevel = 3;         // 4 - 1
+    item = 4;               // 5 - 1
+    itemAttribute = 5;      // 6 - 1
+    itemPrice = 6;          // 7 - 1
+    supplier = 7;           // 8 - 1
+    purchaseOrder = 8;      // 9 - 1
+    tax = 9;                // 10 - 1
+    customer = 10;          // 11 - 1
+    customerGroup = 11;     // 12 - 1
+    admin = 12;             // 13 - 1
+    employee = 13;          // 14 - 1
+    client = 14;            // 15 - 1
+    address = 15;           // 16 - 1
+    contact = 16;           // 17 - 1
+    purchaseInvoice = 17;   // 18 - 1
+    company = 18;           // 19 - 1
+    payment = 19;           
+    ledger = 20;
+    purchaseReceipt = 21;
+    priceList = 22;
+    saleOrder = 23;
+    saleInvoice = 24;
+    deliveryNote = 25;
+    user = 26;
+    role = 27;
+    journalEntry = 28;
+    costCenter = 29;
+    project = 30;
+    stockEntry = 31;
+    generalLedger = 32;
+    accountReceivable = 33;
+    accountPayable = 34;
+    financialStatements = 35;
+    serialNo = 36;
+    batchBundle = 37;
+    supplierQuotation = 38;
+    salesQuotation = 39;
+    chargesTemplate = 40;
+    currencyExchange = 41;
+    salesRecord = 42;
+    purchaseRecord = 43;
+    module = 44;
+    pricing = 45;
+    termsAndConditions = 46;
+    paymentTerms = 47;
+    paymentTermsTemplate = 48;
+    bank = 49;
+    bankAccount = 50;
+    cashOutflow = 51;
+    deal = 52;
+    chat = 53;
+    workspace = 54;
+}
+
+enum PianoPartyType {
+    pianoForms = 0;
+}
+
+enum State {
+    UNSPECIFIED = 0;              // State is unspecified
+    DRAFT = 1;                    // The purchase order is created but not submitted
+    PENDING = 2;        // Awaiting approval from relevant authority
+    APPROVED = 3;                 // The purchase order has been approved
+    BILLED_AWAITING_PAYMENT = 4;  // Invoice has been issued, awaiting payment
+    UNPAID = 5;         // Invoice exists but payment is pending
+    PARTIALLY_PAID = 6;          // Part of the purchase order amount has been paid
+    SHIPPED = 7;                  // Goods/services have been shipped
+    RECEIVED = 8;                 // Goods/services have been received
+    COMPLETED = 9;                // All processes finalized
+    CANCELLED = 10;               // The purchase order has been cancelled
+    ON_HOLD = 11;                 // The purchase order is temporarily on hold
+    RETURNED = 12;                // Items have been returned to the vendor
+    CLOSED = 13;                  // The purchase order is closed
+    OVERDUE = 14;
+    TO_BILL = 15;
+    TO_RECEIVE = 16;
+    TO_RECEIVE_AND_BILL = 17;
+    SUBMITTED = 18;
+    PAID = 19;         // Invoice exists but payment is pending
+    TO_DELIVER_AND_BILL = 20;
+    TO_DELIVER = 21;
+    ENABLED = 22;
+    ACTIVE = 23;
+    INACTIVE = 24;
+    DELIVERED = 25;
+    DELETED = 26;
+    DISABLED = 27;
+}
+
+
+enum EventState {
+    UNSPECIFIED_EVENT = 0;
+    SUBMIT_EVENT = 1;  //used to transition state from DRAFT to other state
+    CANCEL_EVENT = 2;  //used to transition from any state to  CANCELLED
+    APPROVED_EVENT = 3; //used to transition from any state to APPROVED
+    COMPLETED_EVENT = 4; //used to transition from any state to APPROVED
+    ENABLED_EVENT = 5;
+    DISABLED_EVENT = 6;
+    DELETED_EVENT = 7;
+}
+
+
+enum PaymentType {
+    RECEIVE = 0;
+    PAY = 1;
+    INTERNAL_TRANSFER = 2;
+}
+
+// Enum for different types of accounts
+enum AccountType {
+    // Asset Accounts
+    ASSET = 0;                            // General asset account (current, fixed, intangible)
+    CASH = 1;                             // Cash or cash equivalents
+    BANK = 2;                             // Bank accounts (Cash in banks)
+    RECEIVABLE = 3;              // Amounts owed by customers
+    INVENTORY = 4;                       // Goods held for resale
+    PREPAID_EXPENSES = 5;                 // Expenses paid in advance
+    PROPERTY_PLANT_EQUIPMENT = 6;         // Physical fixed assets (PP&E)
+    
+    // Liability Accounts
+    LIABILITY = 7;                       // General liability account (current, long-term)
+    PAYABLE = 8;                 // Amounts owed to suppliers
+    UNEARNED_REVENUE = 9;                 // Income received but not yet earned
+    LOAN_PAYABLE = 10;                    // Loan obligations
+    
+    // Equity Accounts
+    EQUITY = 11;                         // Owner’s equity (capital)
+    COMMON_STOCK = 12;                    // Equity from common stock issued
+    RETAINED_EARNINGS = 13;               // Accumulated profits
+    DIVIDENDS_PAID = 14;                  // Dividends issued to shareholders
+    
+    // Revenue Accounts
+    REVENUE = 15;                         // General revenue (sales)
+    SALES_REVENUE = 16;                   // Revenue from product or service sales
+    SERVICE_REVENUE = 17;                 // Revenue from services provided
+    OTHER_REVENUE = 18;                   // Non-primary revenue (e.g., interest)
+    
+    // Expense Accounts
+    EXPENSE = 19;                         // General expense account
+    COST_OF_GOODS_SOLD = 20;              // Direct costs of goods or services sold
+    STOCK_ADJUSTMENT = 21;                // Stock adjustment (inventory corrections, etc.)
+    OPERATING_EXPENSES = 22;              // Operating costs (rent, salaries, etc.)
+    DEPRECIATION_EXPENSE = 23;            // Depreciation of assets
+    INTEREST_EXPENSE = 24;                // Interest payments
+    TAX_EXPENSE = 25;                     // Taxes paid
+    
+    // Contra Accounts
+    ACCUMULATED_DEPRECIATION = 26;        // Depreciation accumulated on assets
+    ALLOWANCE_FOR_DOUBTFUL_ACCOUNTS = 27; // Estimate of uncollectible receivables
+    SALES_DISCOUNTS = 28;                 // Discounts offered on sales
+    SALES_RETURNS_AND_ALLOWANCES = 29;    // Returns and allowances granted to customers
+    
+    // Other specific types
+    ASSET_RECEIVED_BUT_NOT_BILLED = 30;   // Asset received but not yet invoiced
+    OTHER_ASSET = 31;                     // Miscellaneous or intangible assets
+    OTHER_LIABILITY = 32;                 // Miscellaneous liabilities
+}
+
+enum ItemLineType {
+    ITEM_LINE_ORDER = 0;
+    ITEM_LINE_INVOICE = 1;
+    ITEM_LINE_RECEIPT = 2;
+    DELIVERY_LINE_ITEM = 3;
+    ITEM_LINE_STOCK_ENTRY = 4;
+    QUOTATION_LINE_ITEM = 5;
+    DEAL_LINE_ITEM = 6;
+}
+enum TaxChargeLineType {
+    ON_NET_TOTAL = 0;
+    FIXED_AMOUNT = 1;
+    ON_PREVIOUS_ROW_TOTAL = 2;
+    ON_PREVIOUS_ROW_AMOUNT = 3;
+}
+
+enum BookingType {
+    LOCAL_BOOKING = 0;
+    EVENT_BOOKING = 1;
+}
+
+enum ActivityType {
+    CREATE = 0;
+    EDIT = 1;
+    DELETE = 2;
+    COMMENT = 3;
+    EDIT_PAID_AMOUT = 4;
+    UPDATE_STATUS = 5;
+    ACTIVITY = 6;
+    STAGE = 7;
+    INFO = 8;
+}
+
+
+
+enum TimeUnit {
+    hour = 0;
+    day = 1;
+    week = 2;
+    month = 3;
+    year = 4;
+}
+
+enum ChartType {
+    INCOME = 0;
+    INCOME_AVG = 1;
+    BOOKING_HOUR = 2;
+    BOOKING_HOUR_AVG = 3;
+}
+
+enum Module {
+    accounting = 0;
+    stock = 1;
+    selling = 2;
+    buying = 3;
+}
+
+enum VoucherSubtype {
+    creditNote = 0;
+    debitNote = 1;
+    receive = 2;
+    pay = 3;
+}
+
+enum FinacialReport {
+    BALANCE_SHEET = 0;
+    PROFIT_AND_LOSS = 1;
+    CASH_FLOW =2;
+}
+
+enum CashFlowSection {
+    OPERATING = 0;
+	INVESTING = 1;
+	FINANCING = 2;
+}
+
+
+enum InvetoryValuation {
+    FIFO =0;
+    LIFO =1;
+    WEIGHTED_AVERAGE_COST = 2;
+}
+
+enum StockEntryType {
+    MATERIAL_ISSUE = 0;
+    MATERIAL_RECEIPT = 1;
+    MATERIAL_TRANSFER = 2;
+}
+
+enum JournalEntryType {
+    cashEntry = 0;
+    bankEntry = 1;
+    contraEntry = 2;
+    creditCardEntry =3;
+}
+
+
+enum DealType {
+    Sales = 0;
+    Services = 1;
+    IntegratedSales = 2;
+    MerchadiseSales = 3;
+    AfterSales = 4;
+}
+
+enum ChatType {
+    Conversation = 0;
+    Group = 1;
+}
+
+enum ChatMessageType {
+    Base = 0;
+}
+
+enum NotificationType {
+    SYSTEM = 0;
+    MENTION = 1;
+}
+
+//For ws
+enum MessageType {
+    Notification = 0;
+    ChatMessage = 1;
+}

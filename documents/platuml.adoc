@@ -1,0 +1,17 @@
+= AsciiDoc with PlantUML Example
+Author Name
+2025-01-18
+
+== Introduction
+
+This is an example of an AsciiDoc document with a PlantUML diagram.
+
+== PlantUML Diagram
+
+[plantuml, example-diagram, png]
+----
+@startuml
+Alice -> Bob: Hello, Bob!
+Bob -> Alice: Hi, Alice!
+@enduml
+----

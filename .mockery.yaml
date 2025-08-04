@@ -1,0 +1,38 @@
+with-expecter: true
+outpkg: mocks
+dir: "gen/mocks"
+packages:
+    erp/project:
+        config:
+            recursive: true
+            include-regex: ".*"
+            exclude-regex: ".*Spec"
+    erp/internal/domain/repository:
+        config:
+            include-regex: ".*"
+            exclude-regex: ".*Opt"
+            recursive: true
+    erp/pkg/db:
+        config:
+            all: true
+            recursive: true
+    erp/pkg/bus:
+        config:
+            all: true
+            recursive: true
+    erp/pkg/fsm:
+        config:
+            all: true
+            recursive: true
+    erp/pkg/logger:
+        # config:
+        interfaces:
+            Logger:
+    erp/pkg/di:
+        interfaces:
+            Container:
+        # interfaces:
+        #     # select the interfaces you want mocked
+        #     PaymentTermsTemplateUcase:
+        #         # Modify package-level config for this specific interface (if applicable)
+        #         config:

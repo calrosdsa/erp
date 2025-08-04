@@ -1,0 +1,68 @@
+with-expecter: true
+name: "bank_account"
+packages:
+    erp/project/accounting/banking/bank_account/domain:
+        config:
+            recursive: true
+            with-expecter: true
+        interfaces:
+            Repository:
+                config: 
+                    file-type: "repository"
+                    outpkg: bank_account_repo
+                    dir: "repository"
+                methods:
+                    Edit:
+                        config:
+                            operation: "edit"
+                    Create:
+                        config:
+                            operation: "create"
+                            default-status: ENABLED
+                            # with-tx: true
+                            # with-event-bus: true
+                    UpdateStatus:
+                        config:
+                            operation: "update-status"
+            UseCase:
+                config: 
+                    file-type: "usecase"
+                    outpkg: bank_account_usecase
+                    dir: "usecase"
+                methods:
+                    Get:
+                        config:
+                            operation: "get"
+                    GetList:
+                        config:
+                            operation: "list"
+                    Edit:
+                        config:
+                            operation: "edit"
+                    Create:
+                        config:
+                            operation: "create"
+                    UpdateStatus:
+                        config:
+                            operation: "update-status"
+            Handler:
+                config: 
+                    file-type: "handler"
+                    outpkg: bank_account_rest
+                    dir: "handler"
+                methods:
+                    Get:
+                        config:
+                            operation: "get"
+                    GetList:
+                        config:
+                            operation: "list"
+                    Edit:
+                        config:
+                            operation: "edit"
+                    Create:
+                        config:
+                            operation: "create"
+                    UpdateStatus:
+                        config:
+                            operation: "update-status"
