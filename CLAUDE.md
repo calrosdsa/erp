@@ -43,7 +43,7 @@ project/<module>/
 ### Database and Code Generation
 - **Generated models**: `gen/db/model/` - auto-generated from database schema
 - **Generated queries**: `gen/db/query/` - type-safe database operations
-- **Schema**: `db/schema.sql` and `db/init.sql` for database initialization
+
 
 ### Configuration
 - **Main config**: `configs/config.json` - database, API, NATS, observability settings
@@ -75,6 +75,7 @@ project/<module>/
 ### Database Changes
 1. Update schema in `db/schema.sql`
 2. Run `make models` to regenerate GORM models
+2. Run `make annotations` to regenerate models query
 3. Update repository interfaces as needed
 4. Test with `make test`
 

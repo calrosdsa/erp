@@ -70,7 +70,22 @@ yarn-error.log*
 testdata/output/
 test-results/
 
-# Generated files
+# Generated files - DO NOT EDIT MANUALLY
 generated/
-gen/query/*
-!gen/query/.gitkeep
+gen/db/query/*
+gen/db/model/*
+gen/openapi/*
+gen/mocks/*
+gen/proto/*
+!gen/db/query/.gitkeep
+!gen/db/model/.gitkeep
+!gen/openapi/.gitkeep
+!gen/mocks/.gitkeep
+!gen/proto/.gitkeep
+
+# Hot reload artifacts
+tmp/
+build-errors.log
+
+# Coverage reports
+coverage/

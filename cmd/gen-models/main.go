@@ -75,9 +75,14 @@ func main() {
 	models = append(models, pricingModels...)
 	models = append(models, crmModels...)
 	models = append(models, chatModels...)
-	g.ApplyBasic(
-		models...,
-	)
+	all := false
+	if all {
+		g.ApplyBasic(
+			models...,
+		)
+	}else {
+		g.ApplyBasic(projectModels...)
+	}
 	// g.ApplyInterface(func(internal.Querier) {},model.Group{}, model.Supplier{})
 
 	// g.ApplyBasic(

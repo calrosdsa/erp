@@ -17,7 +17,7 @@ type LedgerAccount struct {
 	LedgerID  int64          `gorm:"column:ledger_id;primaryKey" json:"ledger_id"`
 	CanCredit bool           `gorm:"column:can_credit;not null;default:true" json:"can_credit"`
 	CanDebit  bool           `gorm:"column:can_debit;not null;default:true" json:"can_debit"`
-	Limit_    int32          `gorm:"column:limit;not null" json:"limit"`
+	Limit     int32          `gorm:"column:limit;not null" json:"limit"`
 	CreatedAt time.Time      `gorm:"column:created_at;not null;default:now()" json:"created_at"`
 	DeletedAt gorm.DeletedAt `gorm:"column:deleted_at" json:"deleted_at"`
 	Currency  string         `gorm:"column:currency;not null" json:"currency"`

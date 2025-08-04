@@ -112,6 +112,7 @@ var (
 	StockSetting             *stockSetting
 	StockTransaction         *stockTransaction
 	Supplier                 *supplier
+	Task                     *task
 	Tax                      *tax
 	TaxAndChargeLine         *taxAndChargeLine
 	TermsAndCondition        *termsAndCondition
@@ -222,6 +223,7 @@ func SetDefault(db *gorm.DB, opts ...gen.DOOption) {
 	StockSetting = &Q.StockSetting
 	StockTransaction = &Q.StockTransaction
 	Supplier = &Q.Supplier
+	Task = &Q.Task
 	Tax = &Q.Tax
 	TaxAndChargeLine = &Q.TaxAndChargeLine
 	TermsAndCondition = &Q.TermsAndCondition
@@ -333,6 +335,7 @@ func Use(db *gorm.DB, opts ...gen.DOOption) *Query {
 		StockSetting:             newStockSetting(db, opts...),
 		StockTransaction:         newStockTransaction(db, opts...),
 		Supplier:                 newSupplier(db, opts...),
+		Task:                     newTask(db, opts...),
 		Tax:                      newTax(db, opts...),
 		TaxAndChargeLine:         newTaxAndChargeLine(db, opts...),
 		TermsAndCondition:        newTermsAndCondition(db, opts...),
@@ -445,6 +448,7 @@ type Query struct {
 	StockSetting             stockSetting
 	StockTransaction         stockTransaction
 	Supplier                 supplier
+	Task                     task
 	Tax                      tax
 	TaxAndChargeLine         taxAndChargeLine
 	TermsAndCondition        termsAndCondition
@@ -558,6 +562,7 @@ func (q *Query) clone(db *gorm.DB) *Query {
 		StockSetting:             q.StockSetting.clone(db),
 		StockTransaction:         q.StockTransaction.clone(db),
 		Supplier:                 q.Supplier.clone(db),
+		Task:                     q.Task.clone(db),
 		Tax:                      q.Tax.clone(db),
 		TaxAndChargeLine:         q.TaxAndChargeLine.clone(db),
 		TermsAndCondition:        q.TermsAndCondition.clone(db),
@@ -678,6 +683,7 @@ func (q *Query) ReplaceDB(db *gorm.DB) *Query {
 		StockSetting:             q.StockSetting.replaceDB(db),
 		StockTransaction:         q.StockTransaction.replaceDB(db),
 		Supplier:                 q.Supplier.replaceDB(db),
+		Task:                     q.Task.replaceDB(db),
 		Tax:                      q.Tax.replaceDB(db),
 		TaxAndChargeLine:         q.TaxAndChargeLine.replaceDB(db),
 		TermsAndCondition:        q.TermsAndCondition.replaceDB(db),
@@ -788,6 +794,7 @@ type queryCtx struct {
 	StockSetting             IStockSettingDo
 	StockTransaction         IStockTransactionDo
 	Supplier                 ISupplierDo
+	Task                     ITaskDo
 	Tax                      ITaxDo
 	TaxAndChargeLine         ITaxAndChargeLineDo
 	TermsAndCondition        ITermsAndConditionDo
@@ -898,6 +905,7 @@ func (q *Query) WithContext(ctx context.Context) *queryCtx {
 		StockSetting:             q.StockSetting.WithContext(ctx),
 		StockTransaction:         q.StockTransaction.WithContext(ctx),
 		Supplier:                 q.Supplier.WithContext(ctx),
+		Task:                     q.Task.WithContext(ctx),
 		Tax:                      q.Tax.WithContext(ctx),
 		TaxAndChargeLine:         q.TaxAndChargeLine.WithContext(ctx),
 		TermsAndCondition:        q.TermsAndCondition.WithContext(ctx),

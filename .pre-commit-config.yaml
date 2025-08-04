@@ -1,0 +1,108 @@
+# Pre-commit configuration for ERP backend
+# See https://pre-commit.com for more information
+
+repos:
+  # Go formatting and imports
+  - repo: https://github.com/dnephin/pre-commit-golang
+    rev: v0.5.1
+    hooks:
+      - id: go-fmt
+        name: Format Go code
+        description: Run gofmt on Go files
+        entry: gofmt
+        language: system
+        files: \.go$
+        args: ['-w']
+      
+      - id: go-imports
+        name: Organize Go imports
+        description: Run goimports on Go files
+        entry: goimports
+        language: system
+        files: \.go$
+        args: ['-w']
+      
+      - id: go-vet-mod
+        name: Go vet
+        description: Run go vet on Go modules
+        entry: go
+        language: system
+        files: \.go$
+        args: ['vet', './...']
+        pass_filenames: false
+
+  # Go linting with golangci-lint
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.55.2
+    hooks:
+      - id: golangci-lint
+        name: golangci-lint
+        description: Fast Go linters runner
+        entry: golangci-lint
+        language: system
+        files: \.go$
+        args: ['run', '--fix']
+
+  # Go unit tests
+  - repo: local
+    hooks:
+      - id: go-test-unit
+        name: Go unit tests
+        description: Run Go unit tests
+        entry: go
+        language: system
+        files: \.go$
+        args: ['test', '-short', './...']
+        pass_filenames: false
+
+  # Go mod tidy
+  - repo: local
+    hooks:
+      - id: go-mod-tidy
+        name: Go mod tidy
+        description: Ensure go.mod and go.sum are tidy
+        entry: go
+        language: system
+        files: go\.(mod|sum)$
+        args: ['mod', 'tidy']
+        pass_filenames: false
+
+  # Security checks
+  - repo: https://github.com/securecodewarrior/github-action-gosec
+    rev: v2.0.0
+    hooks:
+      - id: gosec
+        name: Gosec Security Scanner
+        description: Run gosec security scanner
+        entry: gosec
+        language: system
+        files: \.go$
+        args: ['-fmt', 'json', '-out', 'gosec-report.json', '-stdout', '-verbose=text', './...']
+        pass_filenames: false
+
+  # Generic hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: \.md$
+      - id: end-of-file-fixer
+      - id: check-yaml
+        exclude: \.air\.toml$
+      - id: check-json
+      - id: check-added-large-files
+        args: ['--maxkb=1000']
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+
+  # Docker
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.12.0
+    hooks:
+      - id: hadolint-docker
+        name: Lint Dockerfile
+        description: Run hadolint on Dockerfile
+        entry: hadolint
+        language: system
+        files: Dockerfile.*

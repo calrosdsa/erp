@@ -6,7 +6,9 @@ import (
 
 func ProjectModels(g *gen.Generator) []interface{} {
 	project := g.GenerateModel("projects")
+	task := g.GenerateModel("tasks")
 	return []interface{}{
 		project,
+		task,
 	}
 }

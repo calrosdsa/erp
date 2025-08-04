@@ -80,6 +80,7 @@ func main() {
 	model.BankAccount{},
 	//Project 
 	model.Project{},
+	model.Task{},
 	//Invoicing
 	model.PurchaseRecord{},
 	model.SalesRecord{},
