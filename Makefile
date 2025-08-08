@@ -42,9 +42,9 @@ dev-stop: ## Stop development environment
 .PHONY: docker-dev-up
 docker-dev-up: ## Start only the infrastructure services (postgres, nats, redis)
 	@echo "🐳 Starting development infrastructure..."
-	$(DOCKER_COMPOSE) up -d postgres nats redis
-	@echo "⏳ Waiting for services to be healthy..."
-	$(DOCKER_COMPOSE) exec postgres pg_isready -U postgres -d erp_dev || sleep 5
+# $(DOCKER_COMPOSE) up -d postgres nats redis
+# @echo "⏳ Waiting for services to be healthy..."
+# $(DOCKER_COMPOSE) exec postgres pg_isready -U postgres -d erp_dev || sleep 5
 
 .PHONY: docker-full-up
 docker-full-up: ## Start full environment including app container
@@ -222,8 +222,16 @@ app: ## Legacy: Run app service
 	@cd cmd/app && $(GO_CMD) run main.go
 
 .PHONY: start
-start: ## Legacy: Start application
+start: ## Start application in production mode
 	@cd cmd/all && $(GO_CMD) run main.go
+
+.PHONY: start-dev
+start-dev: ## Start application in development mode (without hot-reload)
+	@cd cmd/all && $(GO_CMD) run main.go -dev
+
+.PHONY: start-local
+start-local: ## Start application in local development mode (without hot-reload)
+	@cd cmd/all && $(GO_CMD) run main.go -local
 
 .PHONY: consul
 consul: ## Legacy: Start Consul agent

@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 17.5 (Debian 17.5-1.pgdg120+1)
+-- Dumped from database version 16.2 (Debian 16.2-1.pgdg120+2)
 -- Dumped by pg_dump version 17.1
 
--- Started on 2025-05-30 17:56:59
+-- Started on 2025-08-08 15:05:12
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -30,7 +30,7 @@ SET row_security = off;
 ALTER SCHEMA public OWNER TO postgres;
 
 --
--- TOC entry 4986 (class 0 OID 0)
+-- TOC entry 5020 (class 0 OID 0)
 -- Dependencies: 7
 -- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -39,7 +39,7 @@ COMMENT ON SCHEMA public IS '';
 
 
 --
--- TOC entry 2 (class 3079 OID 40961)
+-- TOC entry 2 (class 3079 OID 18915)
 -- Name: pgcrypto; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -47,7 +47,7 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
 
 
 --
--- TOC entry 4988 (class 0 OID 0)
+-- TOC entry 5022 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION pgcrypto; Type: COMMENT; Schema: -; Owner: 
 --
@@ -56,7 +56,7 @@ COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
 
 
 --
--- TOC entry 3 (class 3079 OID 40998)
+-- TOC entry 3 (class 3079 OID 18952)
 -- Name: uuid-ossp; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -64,7 +64,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
 --
--- TOC entry 4989 (class 0 OID 0)
+-- TOC entry 5023 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
 --
@@ -77,7 +77,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 219 (class 1259 OID 41009)
+-- TOC entry 217 (class 1259 OID 18963)
 -- Name: account_settings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -96,7 +96,7 @@ CREATE TABLE public.account_settings (
 ALTER TABLE public.account_settings OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 41012)
+-- TOC entry 218 (class 1259 OID 18966)
 -- Name: account_settings_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -111,7 +111,7 @@ ALTER TABLE public.account_settings ALTER COLUMN id ADD GENERATED ALWAYS AS IDEN
 
 
 --
--- TOC entry 221 (class 1259 OID 41013)
+-- TOC entry 219 (class 1259 OID 18967)
 -- Name: account_statements; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -127,7 +127,7 @@ CREATE TABLE public.account_statements (
 ALTER TABLE public.account_statements OWNER TO postgres;
 
 --
--- TOC entry 222 (class 1259 OID 41016)
+-- TOC entry 220 (class 1259 OID 18970)
 -- Name: account_type_exts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -141,7 +141,7 @@ CREATE TABLE public.account_type_exts (
 ALTER TABLE public.account_type_exts OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 41021)
+-- TOC entry 221 (class 1259 OID 18975)
 -- Name: account_types; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -154,7 +154,7 @@ CREATE TABLE public.account_types (
 ALTER TABLE public.account_types OWNER TO postgres;
 
 --
--- TOC entry 224 (class 1259 OID 41026)
+-- TOC entry 222 (class 1259 OID 18980)
 -- Name: accounts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -168,7 +168,7 @@ CREATE TABLE public.accounts (
 ALTER TABLE public.accounts OWNER TO postgres;
 
 --
--- TOC entry 225 (class 1259 OID 41031)
+-- TOC entry 223 (class 1259 OID 18985)
 -- Name: actions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -182,7 +182,7 @@ CREATE TABLE public.actions (
 ALTER TABLE public.actions OWNER TO postgres;
 
 --
--- TOC entry 226 (class 1259 OID 41036)
+-- TOC entry 224 (class 1259 OID 18990)
 -- Name: actions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -197,8 +197,8 @@ CREATE SEQUENCE public.actions_id_seq
 ALTER SEQUENCE public.actions_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4990 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 5024 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: actions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -206,7 +206,7 @@ ALTER SEQUENCE public.actions_id_seq OWNED BY public.actions.id;
 
 
 --
--- TOC entry 227 (class 1259 OID 41037)
+-- TOC entry 225 (class 1259 OID 18991)
 -- Name: activities; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -225,7 +225,7 @@ CREATE TABLE public.activities (
 ALTER TABLE public.activities OWNER TO postgres;
 
 --
--- TOC entry 228 (class 1259 OID 41043)
+-- TOC entry 226 (class 1259 OID 18997)
 -- Name: activities_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -240,7 +240,7 @@ ALTER TABLE public.activities ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- TOC entry 229 (class 1259 OID 41044)
+-- TOC entry 227 (class 1259 OID 18998)
 -- Name: activity_comments; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -254,7 +254,7 @@ CREATE TABLE public.activity_comments (
 ALTER TABLE public.activity_comments OWNER TO postgres;
 
 --
--- TOC entry 230 (class 1259 OID 41049)
+-- TOC entry 228 (class 1259 OID 19003)
 -- Name: activity_deadlines; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -275,7 +275,7 @@ CREATE TABLE public.activity_deadlines (
 ALTER TABLE public.activity_deadlines OWNER TO postgres;
 
 --
--- TOC entry 231 (class 1259 OID 41055)
+-- TOC entry 229 (class 1259 OID 19009)
 -- Name: activity_mentions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -293,7 +293,7 @@ CREATE TABLE public.activity_mentions (
 ALTER TABLE public.activity_mentions OWNER TO postgres;
 
 --
--- TOC entry 232 (class 1259 OID 41059)
+-- TOC entry 230 (class 1259 OID 19013)
 -- Name: activity_mentions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -308,7 +308,7 @@ ALTER TABLE public.activity_mentions ALTER COLUMN id ADD GENERATED ALWAYS AS IDE
 
 
 --
--- TOC entry 233 (class 1259 OID 41060)
+-- TOC entry 231 (class 1259 OID 19014)
 -- Name: address_and_contacts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -324,7 +324,7 @@ CREATE TABLE public.address_and_contacts (
 ALTER TABLE public.address_and_contacts OWNER TO postgres;
 
 --
--- TOC entry 234 (class 1259 OID 41063)
+-- TOC entry 232 (class 1259 OID 19017)
 -- Name: addresses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -356,7 +356,7 @@ CREATE TABLE public.addresses (
 ALTER TABLE public.addresses OWNER TO postgres;
 
 --
--- TOC entry 235 (class 1259 OID 41075)
+-- TOC entry 233 (class 1259 OID 19028)
 -- Name: addresses_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -371,8 +371,8 @@ CREATE SEQUENCE public.addresses_id_seq
 ALTER SEQUENCE public.addresses_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4991 (class 0 OID 0)
--- Dependencies: 235
+-- TOC entry 5025 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: addresses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -380,7 +380,7 @@ ALTER SEQUENCE public.addresses_id_seq OWNED BY public.addresses.id;
 
 
 --
--- TOC entry 236 (class 1259 OID 41076)
+-- TOC entry 234 (class 1259 OID 19029)
 -- Name: bank_accounts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -407,7 +407,7 @@ CREATE TABLE public.bank_accounts (
 ALTER TABLE public.bank_accounts OWNER TO postgres;
 
 --
--- TOC entry 237 (class 1259 OID 41083)
+-- TOC entry 235 (class 1259 OID 19036)
 -- Name: banks; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -425,7 +425,7 @@ CREATE TABLE public.banks (
 ALTER TABLE public.banks OWNER TO postgres;
 
 --
--- TOC entry 238 (class 1259 OID 41090)
+-- TOC entry 236 (class 1259 OID 19043)
 -- Name: batch_bundles; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -447,7 +447,7 @@ CREATE TABLE public.batch_bundles (
 ALTER TABLE public.batch_bundles OWNER TO postgres;
 
 --
--- TOC entry 239 (class 1259 OID 41095)
+-- TOC entry 237 (class 1259 OID 19048)
 -- Name: cash_outflows; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -480,7 +480,7 @@ CREATE TABLE public.cash_outflows (
 ALTER TABLE public.cash_outflows OWNER TO postgres;
 
 --
--- TOC entry 240 (class 1259 OID 41101)
+-- TOC entry 238 (class 1259 OID 19054)
 -- Name: charges_template; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -498,7 +498,7 @@ CREATE TABLE public.charges_template (
 ALTER TABLE public.charges_template OWNER TO postgres;
 
 --
--- TOC entry 241 (class 1259 OID 41109)
+-- TOC entry 239 (class 1259 OID 19062)
 -- Name: chat_members; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -515,7 +515,7 @@ CREATE TABLE public.chat_members (
 ALTER TABLE public.chat_members OWNER TO postgres;
 
 --
--- TOC entry 242 (class 1259 OID 41114)
+-- TOC entry 240 (class 1259 OID 19067)
 -- Name: chat_members_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -530,7 +530,7 @@ ALTER TABLE public.chat_members ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY
 
 
 --
--- TOC entry 243 (class 1259 OID 41115)
+-- TOC entry 241 (class 1259 OID 19068)
 -- Name: chat_messages; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -552,7 +552,7 @@ CREATE TABLE public.chat_messages (
 ALTER TABLE public.chat_messages OWNER TO postgres;
 
 --
--- TOC entry 244 (class 1259 OID 41121)
+-- TOC entry 242 (class 1259 OID 19074)
 -- Name: chat_messages_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -567,7 +567,7 @@ ALTER TABLE public.chat_messages ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTIT
 
 
 --
--- TOC entry 245 (class 1259 OID 41122)
+-- TOC entry 243 (class 1259 OID 19075)
 -- Name: chats; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -587,7 +587,7 @@ CREATE TABLE public.chats (
 ALTER TABLE public.chats OWNER TO postgres;
 
 --
--- TOC entry 246 (class 1259 OID 41128)
+-- TOC entry 244 (class 1259 OID 19081)
 -- Name: companies; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -610,7 +610,7 @@ CREATE TABLE public.companies (
 ALTER TABLE public.companies OWNER TO postgres;
 
 --
--- TOC entry 247 (class 1259 OID 41137)
+-- TOC entry 245 (class 1259 OID 19090)
 -- Name: companies_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -625,8 +625,8 @@ CREATE SEQUENCE public.companies_id_seq
 ALTER SEQUENCE public.companies_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4992 (class 0 OID 0)
--- Dependencies: 247
+-- TOC entry 5026 (class 0 OID 0)
+-- Dependencies: 245
 -- Name: companies_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -634,7 +634,7 @@ ALTER SEQUENCE public.companies_id_seq OWNED BY public.companies.id;
 
 
 --
--- TOC entry 248 (class 1259 OID 41138)
+-- TOC entry 246 (class 1259 OID 19091)
 -- Name: company_defaults; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -654,7 +654,7 @@ CREATE TABLE public.company_defaults (
 ALTER TABLE public.company_defaults OWNER TO postgres;
 
 --
--- TOC entry 249 (class 1259 OID 41144)
+-- TOC entry 247 (class 1259 OID 19097)
 -- Name: company_defaults_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -669,7 +669,7 @@ ALTER TABLE public.company_defaults ALTER COLUMN id ADD GENERATED ALWAYS AS IDEN
 
 
 --
--- TOC entry 250 (class 1259 OID 41145)
+-- TOC entry 248 (class 1259 OID 19098)
 -- Name: company_entities; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -683,7 +683,39 @@ CREATE TABLE public.company_entities (
 ALTER TABLE public.company_entities OWNER TO postgres;
 
 --
--- TOC entry 251 (class 1259 OID 41149)
+-- TOC entry 387 (class 1259 OID 21516)
+-- Name: connections; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.connections (
+    id integer NOT NULL,
+    created_at timestamp with time zone DEFAULT now() NOT NULL,
+    deleted_at timestamp with time zone,
+    reference_entity_id bigint NOT NULL,
+    section_name text NOT NULL,
+    entity_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.connections OWNER TO postgres;
+
+--
+-- TOC entry 386 (class 1259 OID 21515)
+-- Name: connection_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+ALTER TABLE public.connections ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME public.connection_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+--
+-- TOC entry 249 (class 1259 OID 19102)
 -- Name: contacts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -704,7 +736,7 @@ CREATE TABLE public.contacts (
 ALTER TABLE public.contacts OWNER TO postgres;
 
 --
--- TOC entry 252 (class 1259 OID 41156)
+-- TOC entry 250 (class 1259 OID 19109)
 -- Name: cost_centers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -723,7 +755,7 @@ CREATE TABLE public.cost_centers (
 ALTER TABLE public.cost_centers OWNER TO postgres;
 
 --
--- TOC entry 253 (class 1259 OID 41163)
+-- TOC entry 251 (class 1259 OID 19116)
 -- Name: currencies; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -736,7 +768,7 @@ CREATE TABLE public.currencies (
 ALTER TABLE public.currencies OWNER TO postgres;
 
 --
--- TOC entry 254 (class 1259 OID 41168)
+-- TOC entry 252 (class 1259 OID 19121)
 -- Name: currency_exchanges; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -759,7 +791,7 @@ CREATE TABLE public.currency_exchanges (
 ALTER TABLE public.currency_exchanges OWNER TO postgres;
 
 --
--- TOC entry 255 (class 1259 OID 41177)
+-- TOC entry 253 (class 1259 OID 19130)
 -- Name: customers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -780,7 +812,7 @@ CREATE TABLE public.customers (
 ALTER TABLE public.customers OWNER TO postgres;
 
 --
--- TOC entry 256 (class 1259 OID 41185)
+-- TOC entry 254 (class 1259 OID 19138)
 -- Name: deal_participants; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -795,7 +827,7 @@ CREATE TABLE public.deal_participants (
 ALTER TABLE public.deal_participants OWNER TO postgres;
 
 --
--- TOC entry 257 (class 1259 OID 41189)
+-- TOC entry 255 (class 1259 OID 19142)
 -- Name: deals; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -825,7 +857,7 @@ CREATE TABLE public.deals (
 ALTER TABLE public.deals OWNER TO postgres;
 
 --
--- TOC entry 258 (class 1259 OID 41197)
+-- TOC entry 256 (class 1259 OID 19150)
 -- Name: delivery_line_items; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -839,7 +871,7 @@ CREATE TABLE public.delivery_line_items (
 ALTER TABLE public.delivery_line_items OWNER TO postgres;
 
 --
--- TOC entry 259 (class 1259 OID 41200)
+-- TOC entry 257 (class 1259 OID 19153)
 -- Name: doc_accounts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -853,7 +885,7 @@ CREATE TABLE public.doc_accounts (
 ALTER TABLE public.doc_accounts OWNER TO postgres;
 
 --
--- TOC entry 260 (class 1259 OID 41203)
+-- TOC entry 258 (class 1259 OID 19156)
 -- Name: doc_terms; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -867,7 +899,7 @@ CREATE TABLE public.doc_terms (
 ALTER TABLE public.doc_terms OWNER TO postgres;
 
 --
--- TOC entry 261 (class 1259 OID 41206)
+-- TOC entry 259 (class 1259 OID 19159)
 -- Name: entities; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -882,7 +914,7 @@ CREATE TABLE public.entities (
 ALTER TABLE public.entities OWNER TO postgres;
 
 --
--- TOC entry 262 (class 1259 OID 41213)
+-- TOC entry 260 (class 1259 OID 19166)
 -- Name: entities_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -897,8 +929,8 @@ CREATE SEQUENCE public.entities_id_seq
 ALTER SEQUENCE public.entities_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4993 (class 0 OID 0)
--- Dependencies: 262
+-- TOC entry 5027 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: entities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -906,7 +938,7 @@ ALTER SEQUENCE public.entities_id_seq OWNED BY public.entities.id;
 
 
 --
--- TOC entry 263 (class 1259 OID 41214)
+-- TOC entry 261 (class 1259 OID 19167)
 -- Name: entity_types; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -919,7 +951,7 @@ CREATE TABLE public.entity_types (
 ALTER TABLE public.entity_types OWNER TO postgres;
 
 --
--- TOC entry 264 (class 1259 OID 41219)
+-- TOC entry 262 (class 1259 OID 19172)
 -- Name: groups; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -941,7 +973,7 @@ CREATE TABLE public.groups (
 ALTER TABLE public.groups OWNER TO postgres;
 
 --
--- TOC entry 265 (class 1259 OID 41228)
+-- TOC entry 263 (class 1259 OID 19181)
 -- Name: invoiced_item_lines; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -956,7 +988,7 @@ CREATE TABLE public.invoiced_item_lines (
 ALTER TABLE public.invoiced_item_lines OWNER TO postgres;
 
 --
--- TOC entry 266 (class 1259 OID 41233)
+-- TOC entry 264 (class 1259 OID 19186)
 -- Name: invoices; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -986,7 +1018,7 @@ CREATE TABLE public.invoices (
 ALTER TABLE public.invoices OWNER TO postgres;
 
 --
--- TOC entry 267 (class 1259 OID 41243)
+-- TOC entry 265 (class 1259 OID 19196)
 -- Name: item_attribute_values; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1005,7 +1037,7 @@ CREATE TABLE public.item_attribute_values (
 ALTER TABLE public.item_attribute_values OWNER TO postgres;
 
 --
--- TOC entry 268 (class 1259 OID 41250)
+-- TOC entry 266 (class 1259 OID 19203)
 -- Name: item_attribute_values_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1020,8 +1052,8 @@ CREATE SEQUENCE public.item_attribute_values_id_seq
 ALTER SEQUENCE public.item_attribute_values_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4994 (class 0 OID 0)
--- Dependencies: 268
+-- TOC entry 5028 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: item_attribute_values_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -1029,7 +1061,7 @@ ALTER SEQUENCE public.item_attribute_values_id_seq OWNED BY public.item_attribut
 
 
 --
--- TOC entry 269 (class 1259 OID 41251)
+-- TOC entry 267 (class 1259 OID 19204)
 -- Name: item_attributes; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1047,7 +1079,7 @@ CREATE TABLE public.item_attributes (
 ALTER TABLE public.item_attributes OWNER TO postgres;
 
 --
--- TOC entry 270 (class 1259 OID 41259)
+-- TOC entry 268 (class 1259 OID 19212)
 -- Name: item_attributes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1062,8 +1094,8 @@ CREATE SEQUENCE public.item_attributes_id_seq
 ALTER SEQUENCE public.item_attributes_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4995 (class 0 OID 0)
--- Dependencies: 270
+-- TOC entry 5029 (class 0 OID 0)
+-- Dependencies: 268
 -- Name: item_attributes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -1071,7 +1103,7 @@ ALTER SEQUENCE public.item_attributes_id_seq OWNED BY public.item_attributes.id;
 
 
 --
--- TOC entry 271 (class 1259 OID 41260)
+-- TOC entry 269 (class 1259 OID 19213)
 -- Name: item_inventory_settings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1091,7 +1123,7 @@ CREATE TABLE public.item_inventory_settings (
 ALTER TABLE public.item_inventory_settings OWNER TO postgres;
 
 --
--- TOC entry 272 (class 1259 OID 41266)
+-- TOC entry 270 (class 1259 OID 19219)
 -- Name: item_line_receipts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1109,7 +1141,7 @@ CREATE TABLE public.item_line_receipts (
 ALTER TABLE public.item_line_receipts OWNER TO postgres;
 
 --
--- TOC entry 273 (class 1259 OID 41272)
+-- TOC entry 271 (class 1259 OID 19225)
 -- Name: item_line_stock_entries; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1124,7 +1156,7 @@ CREATE TABLE public.item_line_stock_entries (
 ALTER TABLE public.item_line_stock_entries OWNER TO postgres;
 
 --
--- TOC entry 274 (class 1259 OID 41275)
+-- TOC entry 272 (class 1259 OID 19228)
 -- Name: item_line_stock_entries_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1139,7 +1171,7 @@ ALTER TABLE public.item_line_stock_entries ALTER COLUMN id ADD GENERATED ALWAYS 
 
 
 --
--- TOC entry 275 (class 1259 OID 41276)
+-- TOC entry 273 (class 1259 OID 19229)
 -- Name: item_line_types; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1151,7 +1183,7 @@ CREATE TABLE public.item_line_types (
 ALTER TABLE public.item_line_types OWNER TO postgres;
 
 --
--- TOC entry 276 (class 1259 OID 41281)
+-- TOC entry 274 (class 1259 OID 19234)
 -- Name: item_lines; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1172,7 +1204,7 @@ CREATE TABLE public.item_lines (
 ALTER TABLE public.item_lines OWNER TO postgres;
 
 --
--- TOC entry 277 (class 1259 OID 41288)
+-- TOC entry 275 (class 1259 OID 19241)
 -- Name: item_lines_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1188,8 +1220,8 @@ CREATE SEQUENCE public.item_lines_id_seq
 ALTER SEQUENCE public.item_lines_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4996 (class 0 OID 0)
--- Dependencies: 277
+-- TOC entry 5030 (class 0 OID 0)
+-- Dependencies: 275
 -- Name: item_lines_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -1197,7 +1229,7 @@ ALTER SEQUENCE public.item_lines_id_seq OWNED BY public.item_lines.id;
 
 
 --
--- TOC entry 278 (class 1259 OID 41289)
+-- TOC entry 276 (class 1259 OID 19242)
 -- Name: price_lists; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1219,7 +1251,7 @@ CREATE TABLE public.price_lists (
 ALTER TABLE public.price_lists OWNER TO postgres;
 
 --
--- TOC entry 279 (class 1259 OID 41300)
+-- TOC entry 277 (class 1259 OID 19253)
 -- Name: item_price_lists_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1234,8 +1266,8 @@ CREATE SEQUENCE public.item_price_lists_id_seq
 ALTER SEQUENCE public.item_price_lists_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4997 (class 0 OID 0)
--- Dependencies: 279
+-- TOC entry 5031 (class 0 OID 0)
+-- Dependencies: 277
 -- Name: item_price_lists_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -1243,7 +1275,7 @@ ALTER SEQUENCE public.item_price_lists_id_seq OWNED BY public.price_lists.id;
 
 
 --
--- TOC entry 280 (class 1259 OID 41301)
+-- TOC entry 278 (class 1259 OID 19254)
 -- Name: item_price_plugins; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1256,7 +1288,7 @@ CREATE TABLE public.item_price_plugins (
 ALTER TABLE public.item_price_plugins OWNER TO postgres;
 
 --
--- TOC entry 281 (class 1259 OID 41306)
+-- TOC entry 279 (class 1259 OID 19259)
 -- Name: item_prices; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1278,7 +1310,7 @@ CREATE TABLE public.item_prices (
 ALTER TABLE public.item_prices OWNER TO postgres;
 
 --
--- TOC entry 282 (class 1259 OID 41313)
+-- TOC entry 280 (class 1259 OID 19266)
 -- Name: item_prices_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1293,8 +1325,8 @@ CREATE SEQUENCE public.item_prices_id_seq
 ALTER SEQUENCE public.item_prices_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4998 (class 0 OID 0)
--- Dependencies: 282
+-- TOC entry 5032 (class 0 OID 0)
+-- Dependencies: 280
 -- Name: item_prices_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -1302,7 +1334,7 @@ ALTER SEQUENCE public.item_prices_id_seq OWNED BY public.item_prices.id;
 
 
 --
--- TOC entry 283 (class 1259 OID 41314)
+-- TOC entry 281 (class 1259 OID 19267)
 -- Name: item_variants; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1316,7 +1348,7 @@ CREATE TABLE public.item_variants (
 ALTER TABLE public.item_variants OWNER TO postgres;
 
 --
--- TOC entry 284 (class 1259 OID 41317)
+-- TOC entry 282 (class 1259 OID 19270)
 -- Name: items; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1342,7 +1374,7 @@ CREATE TABLE public.items (
 ALTER TABLE public.items OWNER TO postgres;
 
 --
--- TOC entry 285 (class 1259 OID 41328)
+-- TOC entry 283 (class 1259 OID 19280)
 -- Name: items_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1357,8 +1389,8 @@ CREATE SEQUENCE public.items_id_seq
 ALTER SEQUENCE public.items_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4999 (class 0 OID 0)
--- Dependencies: 285
+-- TOC entry 5033 (class 0 OID 0)
+-- Dependencies: 283
 -- Name: items_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -1366,7 +1398,7 @@ ALTER SEQUENCE public.items_id_seq OWNED BY public.items.id;
 
 
 --
--- TOC entry 286 (class 1259 OID 41329)
+-- TOC entry 284 (class 1259 OID 19281)
 -- Name: journal_entries; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1386,7 +1418,7 @@ CREATE TABLE public.journal_entries (
 ALTER TABLE public.journal_entries OWNER TO postgres;
 
 --
--- TOC entry 287 (class 1259 OID 41336)
+-- TOC entry 285 (class 1259 OID 19287)
 -- Name: journal_entry_lines; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1407,7 +1439,7 @@ CREATE TABLE public.journal_entry_lines (
 ALTER TABLE public.journal_entry_lines OWNER TO postgres;
 
 --
--- TOC entry 288 (class 1259 OID 41344)
+-- TOC entry 286 (class 1259 OID 19295)
 -- Name: journal_entry_lines_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1422,7 +1454,7 @@ ALTER TABLE public.journal_entry_lines ALTER COLUMN id ADD GENERATED ALWAYS AS I
 
 
 --
--- TOC entry 289 (class 1259 OID 41345)
+-- TOC entry 287 (class 1259 OID 19296)
 -- Name: key_values; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1437,7 +1469,7 @@ CREATE TABLE public.key_values (
 ALTER TABLE public.key_values OWNER TO postgres;
 
 --
--- TOC entry 290 (class 1259 OID 41350)
+-- TOC entry 288 (class 1259 OID 19301)
 -- Name: key_values_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1452,7 +1484,7 @@ ALTER TABLE public.key_values ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- TOC entry 291 (class 1259 OID 41351)
+-- TOC entry 289 (class 1259 OID 19302)
 -- Name: ledger_accounts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1470,7 +1502,7 @@ CREATE TABLE public.ledger_accounts (
 ALTER TABLE public.ledger_accounts OWNER TO postgres;
 
 --
--- TOC entry 292 (class 1259 OID 41360)
+-- TOC entry 290 (class 1259 OID 19311)
 -- Name: ledger_statements; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1485,7 +1517,7 @@ CREATE TABLE public.ledger_statements (
 ALTER TABLE public.ledger_statements OWNER TO postgres;
 
 --
--- TOC entry 293 (class 1259 OID 41364)
+-- TOC entry 291 (class 1259 OID 19315)
 -- Name: ledger_types; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1498,7 +1530,7 @@ CREATE TABLE public.ledger_types (
 ALTER TABLE public.ledger_types OWNER TO postgres;
 
 --
--- TOC entry 294 (class 1259 OID 41369)
+-- TOC entry 292 (class 1259 OID 19320)
 -- Name: ledgers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1525,7 +1557,7 @@ CREATE TABLE public.ledgers (
 ALTER TABLE public.ledgers OWNER TO postgres;
 
 --
--- TOC entry 295 (class 1259 OID 41379)
+-- TOC entry 293 (class 1259 OID 19330)
 -- Name: mentions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1543,7 +1575,7 @@ CREATE TABLE public.mentions (
 ALTER TABLE public.mentions OWNER TO postgres;
 
 --
--- TOC entry 296 (class 1259 OID 41384)
+-- TOC entry 294 (class 1259 OID 19335)
 -- Name: module_sections; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1558,7 +1590,7 @@ CREATE TABLE public.module_sections (
 ALTER TABLE public.module_sections OWNER TO postgres;
 
 --
--- TOC entry 297 (class 1259 OID 41389)
+-- TOC entry 295 (class 1259 OID 19340)
 -- Name: module_sections_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1573,7 +1605,7 @@ ALTER TABLE public.module_sections ALTER COLUMN id ADD GENERATED ALWAYS AS IDENT
 
 
 --
--- TOC entry 298 (class 1259 OID 41390)
+-- TOC entry 296 (class 1259 OID 19341)
 -- Name: modules; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1597,7 +1629,7 @@ CREATE TABLE public.modules (
 ALTER TABLE public.modules OWNER TO postgres;
 
 --
--- TOC entry 299 (class 1259 OID 41401)
+-- TOC entry 297 (class 1259 OID 19351)
 -- Name: notification_mentions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1612,7 +1644,7 @@ ALTER TABLE public.mentions ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- TOC entry 300 (class 1259 OID 41402)
+-- TOC entry 298 (class 1259 OID 19352)
 -- Name: notifications; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1633,7 +1665,7 @@ CREATE TABLE public.notifications (
 ALTER TABLE public.notifications OWNER TO postgres;
 
 --
--- TOC entry 301 (class 1259 OID 41410)
+-- TOC entry 299 (class 1259 OID 19360)
 -- Name: notifications_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1648,7 +1680,7 @@ ALTER TABLE public.notifications ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTIT
 
 
 --
--- TOC entry 302 (class 1259 OID 41411)
+-- TOC entry 300 (class 1259 OID 19361)
 -- Name: orders; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1675,7 +1707,7 @@ CREATE TABLE public.orders (
 ALTER TABLE public.orders OWNER TO postgres;
 
 --
--- TOC entry 303 (class 1259 OID 41421)
+-- TOC entry 301 (class 1259 OID 19371)
 -- Name: parties; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1691,7 +1723,7 @@ CREATE TABLE public.parties (
 ALTER TABLE public.parties OWNER TO postgres;
 
 --
--- TOC entry 304 (class 1259 OID 41428)
+-- TOC entry 302 (class 1259 OID 19378)
 -- Name: parties_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1706,8 +1738,8 @@ CREATE SEQUENCE public.parties_id_seq
 ALTER SEQUENCE public.parties_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5000 (class 0 OID 0)
--- Dependencies: 304
+-- TOC entry 5034 (class 0 OID 0)
+-- Dependencies: 302
 -- Name: parties_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -1715,7 +1747,7 @@ ALTER SEQUENCE public.parties_id_seq OWNED BY public.parties.id;
 
 
 --
--- TOC entry 305 (class 1259 OID 41429)
+-- TOC entry 303 (class 1259 OID 19379)
 -- Name: parties_id_seq1; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1730,7 +1762,7 @@ ALTER TABLE public.parties ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- TOC entry 306 (class 1259 OID 41430)
+-- TOC entry 304 (class 1259 OID 19380)
 -- Name: party_addresses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1749,7 +1781,7 @@ CREATE TABLE public.party_addresses (
 ALTER TABLE public.party_addresses OWNER TO postgres;
 
 --
--- TOC entry 307 (class 1259 OID 41438)
+-- TOC entry 305 (class 1259 OID 19388)
 -- Name: party_payments; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1765,7 +1797,7 @@ CREATE TABLE public.party_payments (
 ALTER TABLE public.party_payments OWNER TO postgres;
 
 --
--- TOC entry 308 (class 1259 OID 41443)
+-- TOC entry 306 (class 1259 OID 19393)
 -- Name: party_references; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1780,7 +1812,7 @@ CREATE TABLE public.party_references (
 ALTER TABLE public.party_references OWNER TO postgres;
 
 --
--- TOC entry 309 (class 1259 OID 41447)
+-- TOC entry 307 (class 1259 OID 19397)
 -- Name: party_types; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1795,7 +1827,7 @@ CREATE TABLE public.party_types (
 ALTER TABLE public.party_types OWNER TO postgres;
 
 --
--- TOC entry 310 (class 1259 OID 41453)
+-- TOC entry 308 (class 1259 OID 19403)
 -- Name: payment_references; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1814,7 +1846,7 @@ CREATE TABLE public.payment_references (
 ALTER TABLE public.payment_references OWNER TO postgres;
 
 --
--- TOC entry 311 (class 1259 OID 41459)
+-- TOC entry 309 (class 1259 OID 19409)
 -- Name: payment_references_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1829,7 +1861,7 @@ ALTER TABLE public.payment_references ALTER COLUMN id ADD GENERATED ALWAYS AS ID
 
 
 --
--- TOC entry 312 (class 1259 OID 41460)
+-- TOC entry 310 (class 1259 OID 19410)
 -- Name: payment_terms; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1855,7 +1887,7 @@ CREATE TABLE public.payment_terms (
 ALTER TABLE public.payment_terms OWNER TO postgres;
 
 --
--- TOC entry 313 (class 1259 OID 41467)
+-- TOC entry 311 (class 1259 OID 19417)
 -- Name: payment_terms_lines; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1875,7 +1907,7 @@ CREATE TABLE public.payment_terms_lines (
 ALTER TABLE public.payment_terms_lines OWNER TO postgres;
 
 --
--- TOC entry 314 (class 1259 OID 41472)
+-- TOC entry 312 (class 1259 OID 19422)
 -- Name: payment_terms_lines_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1890,7 +1922,7 @@ ALTER TABLE public.payment_terms_lines ALTER COLUMN id ADD GENERATED ALWAYS AS I
 
 
 --
--- TOC entry 315 (class 1259 OID 41473)
+-- TOC entry 313 (class 1259 OID 19423)
 -- Name: payment_terms_templates; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1908,7 +1940,7 @@ CREATE TABLE public.payment_terms_templates (
 ALTER TABLE public.payment_terms_templates OWNER TO postgres;
 
 --
--- TOC entry 316 (class 1259 OID 41480)
+-- TOC entry 314 (class 1259 OID 19430)
 -- Name: payments; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1939,7 +1971,7 @@ CREATE TABLE public.payments (
 ALTER TABLE public.payments OWNER TO postgres;
 
 --
--- TOC entry 317 (class 1259 OID 41488)
+-- TOC entry 315 (class 1259 OID 19438)
 -- Name: piano_form; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1974,7 +2006,7 @@ CREATE TABLE public.piano_form (
 ALTER TABLE public.piano_form OWNER TO postgres;
 
 --
--- TOC entry 318 (class 1259 OID 41494)
+-- TOC entry 316 (class 1259 OID 19444)
 -- Name: plugins; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -1989,7 +2021,7 @@ CREATE TABLE public.plugins (
 ALTER TABLE public.plugins OWNER TO postgres;
 
 --
--- TOC entry 319 (class 1259 OID 41500)
+-- TOC entry 317 (class 1259 OID 19450)
 -- Name: plugins_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2004,8 +2036,8 @@ CREATE SEQUENCE public.plugins_id_seq
 ALTER SEQUENCE public.plugins_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5001 (class 0 OID 0)
--- Dependencies: 319
+-- TOC entry 5035 (class 0 OID 0)
+-- Dependencies: 317
 -- Name: plugins_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -2013,7 +2045,7 @@ ALTER SEQUENCE public.plugins_id_seq OWNED BY public.plugins.id;
 
 
 --
--- TOC entry 320 (class 1259 OID 41501)
+-- TOC entry 318 (class 1259 OID 19451)
 -- Name: pricing_line_items; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2048,7 +2080,7 @@ CREATE TABLE public.pricing_line_items (
 ALTER TABLE public.pricing_line_items OWNER TO postgres;
 
 --
--- TOC entry 321 (class 1259 OID 41507)
+-- TOC entry 319 (class 1259 OID 19457)
 -- Name: priced_item_lines_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2063,7 +2095,7 @@ ALTER TABLE public.pricing_line_items ALTER COLUMN id ADD GENERATED ALWAYS AS ID
 
 
 --
--- TOC entry 322 (class 1259 OID 41508)
+-- TOC entry 320 (class 1259 OID 19458)
 -- Name: pricing_charges; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2080,7 +2112,7 @@ CREATE TABLE public.pricing_charges (
 ALTER TABLE public.pricing_charges OWNER TO postgres;
 
 --
--- TOC entry 323 (class 1259 OID 41513)
+-- TOC entry 321 (class 1259 OID 19463)
 -- Name: pricing_charges_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2095,7 +2127,7 @@ ALTER TABLE public.pricing_charges ALTER COLUMN id ADD GENERATED ALWAYS AS IDENT
 
 
 --
--- TOC entry 324 (class 1259 OID 41514)
+-- TOC entry 322 (class 1259 OID 19464)
 -- Name: pricings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2115,7 +2147,7 @@ CREATE TABLE public.pricings (
 ALTER TABLE public.pricings OWNER TO postgres;
 
 --
--- TOC entry 325 (class 1259 OID 41520)
+-- TOC entry 323 (class 1259 OID 19470)
 -- Name: profiles; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2137,7 +2169,7 @@ CREATE TABLE public.profiles (
 ALTER TABLE public.profiles OWNER TO postgres;
 
 --
--- TOC entry 326 (class 1259 OID 41528)
+-- TOC entry 324 (class 1259 OID 19478)
 -- Name: profiles_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2152,8 +2184,8 @@ CREATE SEQUENCE public.profiles_id_seq
 ALTER SEQUENCE public.profiles_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5002 (class 0 OID 0)
--- Dependencies: 326
+-- TOC entry 5036 (class 0 OID 0)
+-- Dependencies: 324
 -- Name: profiles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -2161,7 +2193,7 @@ ALTER SEQUENCE public.profiles_id_seq OWNED BY public.profiles.id;
 
 
 --
--- TOC entry 327 (class 1259 OID 41529)
+-- TOC entry 325 (class 1259 OID 19479)
 -- Name: progress_invoices; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2175,7 +2207,7 @@ CREATE TABLE public.progress_invoices (
 ALTER TABLE public.progress_invoices OWNER TO postgres;
 
 --
--- TOC entry 328 (class 1259 OID 41533)
+-- TOC entry 326 (class 1259 OID 19483)
 -- Name: progress_orders; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2191,7 +2223,7 @@ CREATE TABLE public.progress_orders (
 ALTER TABLE public.progress_orders OWNER TO postgres;
 
 --
--- TOC entry 329 (class 1259 OID 41540)
+-- TOC entry 327 (class 1259 OID 19490)
 -- Name: projects; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2210,7 +2242,7 @@ CREATE TABLE public.projects (
 ALTER TABLE public.projects OWNER TO postgres;
 
 --
--- TOC entry 330 (class 1259 OID 41546)
+-- TOC entry 328 (class 1259 OID 19496)
 -- Name: purchase_records; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2253,7 +2285,7 @@ CREATE TABLE public.purchase_records (
 ALTER TABLE public.purchase_records OWNER TO postgres;
 
 --
--- TOC entry 331 (class 1259 OID 41553)
+-- TOC entry 329 (class 1259 OID 19503)
 -- Name: quotations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2280,7 +2312,7 @@ CREATE TABLE public.quotations (
 ALTER TABLE public.quotations OWNER TO postgres;
 
 --
--- TOC entry 332 (class 1259 OID 41560)
+-- TOC entry 330 (class 1259 OID 19510)
 -- Name: r_booking_events; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2293,7 +2325,7 @@ CREATE TABLE public.r_booking_events (
 ALTER TABLE public.r_booking_events OWNER TO postgres;
 
 --
--- TOC entry 333 (class 1259 OID 41563)
+-- TOC entry 331 (class 1259 OID 19513)
 -- Name: r_booking_prices; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2308,7 +2340,7 @@ CREATE TABLE public.r_booking_prices (
 ALTER TABLE public.r_booking_prices OWNER TO postgres;
 
 --
--- TOC entry 334 (class 1259 OID 41567)
+-- TOC entry 332 (class 1259 OID 19517)
 -- Name: r_booking_slots; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2328,7 +2360,7 @@ CREATE TABLE public.r_booking_slots (
 ALTER TABLE public.r_booking_slots OWNER TO postgres;
 
 --
--- TOC entry 335 (class 1259 OID 41575)
+-- TOC entry 333 (class 1259 OID 19525)
 -- Name: r_booking_slots_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2343,7 +2375,7 @@ ALTER TABLE public.r_booking_slots ALTER COLUMN id ADD GENERATED ALWAYS AS IDENT
 
 
 --
--- TOC entry 336 (class 1259 OID 41576)
+-- TOC entry 334 (class 1259 OID 19526)
 -- Name: r_bookings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2366,7 +2398,7 @@ CREATE TABLE public.r_bookings (
 ALTER TABLE public.r_bookings OWNER TO postgres;
 
 --
--- TOC entry 337 (class 1259 OID 41582)
+-- TOC entry 335 (class 1259 OID 19532)
 -- Name: r_court_rates; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2386,7 +2418,7 @@ CREATE TABLE public.r_court_rates (
 ALTER TABLE public.r_court_rates OWNER TO postgres;
 
 --
--- TOC entry 338 (class 1259 OID 41589)
+-- TOC entry 336 (class 1259 OID 19539)
 -- Name: r_court_rates_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2401,7 +2433,7 @@ ALTER TABLE public.r_court_rates ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTIT
 
 
 --
--- TOC entry 339 (class 1259 OID 41590)
+-- TOC entry 337 (class 1259 OID 19540)
 -- Name: r_courts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2421,7 +2453,7 @@ CREATE TABLE public.r_courts (
 ALTER TABLE public.r_courts OWNER TO postgres;
 
 --
--- TOC entry 340 (class 1259 OID 41599)
+-- TOC entry 338 (class 1259 OID 19549)
 -- Name: r_events; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2441,7 +2473,7 @@ CREATE TABLE public.r_events (
 ALTER TABLE public.r_events OWNER TO postgres;
 
 --
--- TOC entry 341 (class 1259 OID 41607)
+-- TOC entry 339 (class 1259 OID 19557)
 -- Name: receipts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2469,7 +2501,7 @@ CREATE TABLE public.receipts (
 ALTER TABLE public.receipts OWNER TO postgres;
 
 --
--- TOC entry 342 (class 1259 OID 41615)
+-- TOC entry 340 (class 1259 OID 19565)
 -- Name: role_actions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2483,7 +2515,7 @@ CREATE TABLE public.role_actions (
 ALTER TABLE public.role_actions OWNER TO postgres;
 
 --
--- TOC entry 343 (class 1259 OID 41618)
+-- TOC entry 341 (class 1259 OID 19568)
 -- Name: role_templates; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2498,7 +2530,7 @@ CREATE TABLE public.role_templates (
 ALTER TABLE public.role_templates OWNER TO postgres;
 
 --
--- TOC entry 344 (class 1259 OID 41624)
+-- TOC entry 342 (class 1259 OID 19574)
 -- Name: roles; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2518,7 +2550,7 @@ CREATE TABLE public.roles (
 ALTER TABLE public.roles OWNER TO postgres;
 
 --
--- TOC entry 345 (class 1259 OID 41632)
+-- TOC entry 343 (class 1259 OID 19582)
 -- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2533,8 +2565,8 @@ CREATE SEQUENCE public.roles_id_seq
 ALTER SEQUENCE public.roles_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5003 (class 0 OID 0)
--- Dependencies: 345
+-- TOC entry 5037 (class 0 OID 0)
+-- Dependencies: 343
 -- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -2542,7 +2574,7 @@ ALTER SEQUENCE public.roles_id_seq OWNED BY public.roles.id;
 
 
 --
--- TOC entry 346 (class 1259 OID 41633)
+-- TOC entry 344 (class 1259 OID 19583)
 -- Name: sales_records; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2586,7 +2618,7 @@ CREATE TABLE public.sales_records (
 ALTER TABLE public.sales_records OWNER TO postgres;
 
 --
--- TOC entry 347 (class 1259 OID 41640)
+-- TOC entry 345 (class 1259 OID 19590)
 -- Name: serial_no_transactions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2604,7 +2636,7 @@ CREATE TABLE public.serial_no_transactions (
 ALTER TABLE public.serial_no_transactions OWNER TO postgres;
 
 --
--- TOC entry 348 (class 1259 OID 41646)
+-- TOC entry 346 (class 1259 OID 19596)
 -- Name: serial_no_transactions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2619,7 +2651,7 @@ ALTER TABLE public.serial_no_transactions ALTER COLUMN id ADD GENERATED ALWAYS A
 
 
 --
--- TOC entry 349 (class 1259 OID 41647)
+-- TOC entry 347 (class 1259 OID 19597)
 -- Name: serial_nos; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2638,7 +2670,43 @@ CREATE TABLE public.serial_nos (
 ALTER TABLE public.serial_nos OWNER TO postgres;
 
 --
--- TOC entry 350 (class 1259 OID 41653)
+-- TOC entry 385 (class 1259 OID 21494)
+-- Name: sessions; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.sessions (
+    id bigint NOT NULL,
+    expires_at timestamp with time zone NOT NULL,
+    token text NOT NULL,
+    created_at timestamp with time zone DEFAULT now() NOT NULL,
+    updated_at timestamp with time zone DEFAULT now(),
+    ip_address text,
+    user_agent text,
+    user_id bigint NOT NULL,
+    impersonated_by text,
+    active_company_id bigint
+);
+
+
+ALTER TABLE public.sessions OWNER TO postgres;
+
+--
+-- TOC entry 384 (class 1259 OID 21493)
+-- Name: session_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+ALTER TABLE public.sessions ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME public.session_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
+
+--
+-- TOC entry 348 (class 1259 OID 19603)
 -- Name: stages; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2657,7 +2725,7 @@ CREATE TABLE public.stages (
 ALTER TABLE public.stages OWNER TO postgres;
 
 --
--- TOC entry 351 (class 1259 OID 41660)
+-- TOC entry 349 (class 1259 OID 19610)
 -- Name: stages_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2673,8 +2741,8 @@ CREATE SEQUENCE public.stages_id_seq
 ALTER SEQUENCE public.stages_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5004 (class 0 OID 0)
--- Dependencies: 351
+-- TOC entry 5038 (class 0 OID 0)
+-- Dependencies: 349
 -- Name: stages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -2682,7 +2750,7 @@ ALTER SEQUENCE public.stages_id_seq OWNED BY public.stages.id;
 
 
 --
--- TOC entry 352 (class 1259 OID 41661)
+-- TOC entry 350 (class 1259 OID 19611)
 -- Name: states; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2694,7 +2762,7 @@ CREATE TABLE public.states (
 ALTER TABLE public.states OWNER TO postgres;
 
 --
--- TOC entry 353 (class 1259 OID 41666)
+-- TOC entry 351 (class 1259 OID 19616)
 -- Name: stock_defaults; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2711,7 +2779,7 @@ CREATE TABLE public.stock_defaults (
 ALTER TABLE public.stock_defaults OWNER TO postgres;
 
 --
--- TOC entry 354 (class 1259 OID 41673)
+-- TOC entry 352 (class 1259 OID 19623)
 -- Name: stock_entries; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2738,7 +2806,7 @@ CREATE TABLE public.stock_entries (
 ALTER TABLE public.stock_entries OWNER TO postgres;
 
 --
--- TOC entry 355 (class 1259 OID 41680)
+-- TOC entry 353 (class 1259 OID 19630)
 -- Name: stock_levels; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2759,7 +2827,7 @@ CREATE TABLE public.stock_levels (
 ALTER TABLE public.stock_levels OWNER TO postgres;
 
 --
--- TOC entry 356 (class 1259 OID 41686)
+-- TOC entry 354 (class 1259 OID 19636)
 -- Name: stock_movements; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2778,7 +2846,7 @@ CREATE TABLE public.stock_movements (
 ALTER TABLE public.stock_movements OWNER TO postgres;
 
 --
--- TOC entry 357 (class 1259 OID 41693)
+-- TOC entry 355 (class 1259 OID 19643)
 -- Name: stock_movements_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2793,8 +2861,8 @@ CREATE SEQUENCE public.stock_movements_id_seq
 ALTER SEQUENCE public.stock_movements_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5005 (class 0 OID 0)
--- Dependencies: 357
+-- TOC entry 5039 (class 0 OID 0)
+-- Dependencies: 355
 -- Name: stock_movements_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -2802,7 +2870,7 @@ ALTER SEQUENCE public.stock_movements_id_seq OWNED BY public.stock_movements.id;
 
 
 --
--- TOC entry 358 (class 1259 OID 41694)
+-- TOC entry 356 (class 1259 OID 19644)
 -- Name: stock_settings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2818,7 +2886,7 @@ CREATE TABLE public.stock_settings (
 ALTER TABLE public.stock_settings OWNER TO postgres;
 
 --
--- TOC entry 359 (class 1259 OID 41697)
+-- TOC entry 357 (class 1259 OID 19647)
 -- Name: stock_settings_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2833,7 +2901,7 @@ ALTER TABLE public.stock_settings ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTI
 
 
 --
--- TOC entry 360 (class 1259 OID 41698)
+-- TOC entry 358 (class 1259 OID 19648)
 -- Name: stock_transactions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2862,7 +2930,7 @@ CREATE TABLE public.stock_transactions (
 ALTER TABLE public.stock_transactions OWNER TO postgres;
 
 --
--- TOC entry 361 (class 1259 OID 41712)
+-- TOC entry 359 (class 1259 OID 19662)
 -- Name: stock_transactions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2877,7 +2945,7 @@ ALTER TABLE public.stock_transactions ALTER COLUMN id ADD GENERATED ALWAYS AS ID
 
 
 --
--- TOC entry 362 (class 1259 OID 41713)
+-- TOC entry 360 (class 1259 OID 19663)
 -- Name: supplier_orders; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2890,7 +2958,7 @@ CREATE TABLE public.supplier_orders (
 ALTER TABLE public.supplier_orders OWNER TO postgres;
 
 --
--- TOC entry 363 (class 1259 OID 41716)
+-- TOC entry 361 (class 1259 OID 19666)
 -- Name: suppliers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2910,7 +2978,32 @@ CREATE TABLE public.suppliers (
 ALTER TABLE public.suppliers OWNER TO postgres;
 
 --
--- TOC entry 364 (class 1259 OID 41724)
+-- TOC entry 388 (class 1259 OID 21534)
+-- Name: tasks; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.tasks (
+    id bigint NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    deleted_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    project_id bigint NOT NULL,
+    assignee bigint,
+    title text NOT NULL,
+    description text,
+    priority text,
+    due_date date,
+    uuid uuid DEFAULT public.uuid_generate_v4() NOT NULL,
+    company_id bigint NOT NULL,
+    index integer DEFAULT 0 NOT NULL,
+    stage_id integer NOT NULL
+);
+
+
+ALTER TABLE public.tasks OWNER TO postgres;
+
+--
+-- TOC entry 362 (class 1259 OID 19674)
 -- Name: tax_and_charge_lines; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2930,7 +3023,7 @@ CREATE TABLE public.tax_and_charge_lines (
 ALTER TABLE public.tax_and_charge_lines OWNER TO postgres;
 
 --
--- TOC entry 365 (class 1259 OID 41732)
+-- TOC entry 363 (class 1259 OID 19682)
 -- Name: tax_and_charge_lines_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2945,7 +3038,7 @@ ALTER TABLE public.tax_and_charge_lines ALTER COLUMN id ADD GENERATED ALWAYS AS 
 
 
 --
--- TOC entry 366 (class 1259 OID 41733)
+-- TOC entry 364 (class 1259 OID 19683)
 -- Name: taxes; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2965,7 +3058,7 @@ CREATE TABLE public.taxes (
 ALTER TABLE public.taxes OWNER TO postgres;
 
 --
--- TOC entry 367 (class 1259 OID 41742)
+-- TOC entry 365 (class 1259 OID 19692)
 -- Name: taxes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -2980,8 +3073,8 @@ CREATE SEQUENCE public.taxes_id_seq
 ALTER SEQUENCE public.taxes_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5006 (class 0 OID 0)
--- Dependencies: 367
+-- TOC entry 5040 (class 0 OID 0)
+-- Dependencies: 365
 -- Name: taxes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -2989,7 +3082,7 @@ ALTER SEQUENCE public.taxes_id_seq OWNED BY public.taxes.id;
 
 
 --
--- TOC entry 368 (class 1259 OID 41743)
+-- TOC entry 366 (class 1259 OID 19693)
 -- Name: terms_and_conditions; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3008,7 +3101,7 @@ CREATE TABLE public.terms_and_conditions (
 ALTER TABLE public.terms_and_conditions OWNER TO postgres;
 
 --
--- TOC entry 369 (class 1259 OID 41750)
+-- TOC entry 367 (class 1259 OID 19700)
 -- Name: transaction_accounts; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3024,7 +3117,7 @@ CREATE TABLE public.transaction_accounts (
 ALTER TABLE public.transaction_accounts OWNER TO postgres;
 
 --
--- TOC entry 370 (class 1259 OID 41756)
+-- TOC entry 368 (class 1259 OID 19706)
 -- Name: transaction_ledgers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3051,7 +3144,7 @@ CREATE TABLE public.transaction_ledgers (
 ALTER TABLE public.transaction_ledgers OWNER TO postgres;
 
 --
--- TOC entry 371 (class 1259 OID 41767)
+-- TOC entry 369 (class 1259 OID 19717)
 -- Name: transaction_ledgers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -3066,7 +3159,7 @@ ALTER TABLE public.transaction_ledgers ALTER COLUMN id ADD GENERATED ALWAYS AS I
 
 
 --
--- TOC entry 372 (class 1259 OID 41768)
+-- TOC entry 370 (class 1259 OID 19718)
 -- Name: transaction_type_de; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3079,7 +3172,7 @@ CREATE TABLE public.transaction_type_de (
 ALTER TABLE public.transaction_type_de OWNER TO postgres;
 
 --
--- TOC entry 373 (class 1259 OID 41773)
+-- TOC entry 371 (class 1259 OID 19723)
 -- Name: transaction_type_ext; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3093,7 +3186,7 @@ CREATE TABLE public.transaction_type_ext (
 ALTER TABLE public.transaction_type_ext OWNER TO postgres;
 
 --
--- TOC entry 374 (class 1259 OID 41779)
+-- TOC entry 372 (class 1259 OID 19729)
 -- Name: transaction_type_ledgers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3106,7 +3199,7 @@ CREATE TABLE public.transaction_type_ledgers (
 ALTER TABLE public.transaction_type_ledgers OWNER TO postgres;
 
 --
--- TOC entry 375 (class 1259 OID 41784)
+-- TOC entry 373 (class 1259 OID 19734)
 -- Name: unit_of_measure_translations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3124,7 +3217,7 @@ CREATE TABLE public.unit_of_measure_translations (
 ALTER TABLE public.unit_of_measure_translations OWNER TO postgres;
 
 --
--- TOC entry 376 (class 1259 OID 41791)
+-- TOC entry 374 (class 1259 OID 19741)
 -- Name: unit_of_measure_translations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -3139,8 +3232,8 @@ CREATE SEQUENCE public.unit_of_measure_translations_id_seq
 ALTER SEQUENCE public.unit_of_measure_translations_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5007 (class 0 OID 0)
--- Dependencies: 376
+-- TOC entry 5041 (class 0 OID 0)
+-- Dependencies: 374
 -- Name: unit_of_measure_translations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -3148,7 +3241,7 @@ ALTER SEQUENCE public.unit_of_measure_translations_id_seq OWNED BY public.unit_o
 
 
 --
--- TOC entry 377 (class 1259 OID 41792)
+-- TOC entry 375 (class 1259 OID 19742)
 -- Name: unit_of_measures; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3166,7 +3259,7 @@ CREATE TABLE public.unit_of_measures (
 ALTER TABLE public.unit_of_measures OWNER TO postgres;
 
 --
--- TOC entry 378 (class 1259 OID 41799)
+-- TOC entry 376 (class 1259 OID 19749)
 -- Name: unit_of_measures_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -3181,8 +3274,8 @@ CREATE SEQUENCE public.unit_of_measures_id_seq
 ALTER SEQUENCE public.unit_of_measures_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5008 (class 0 OID 0)
--- Dependencies: 378
+-- TOC entry 5042 (class 0 OID 0)
+-- Dependencies: 376
 -- Name: unit_of_measures_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -3190,7 +3283,7 @@ ALTER SEQUENCE public.unit_of_measures_id_seq OWNED BY public.unit_of_measures.i
 
 
 --
--- TOC entry 379 (class 1259 OID 41800)
+-- TOC entry 377 (class 1259 OID 19750)
 -- Name: user_relations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3208,7 +3301,7 @@ CREATE TABLE public.user_relations (
 ALTER TABLE public.user_relations OWNER TO postgres;
 
 --
--- TOC entry 380 (class 1259 OID 41805)
+-- TOC entry 378 (class 1259 OID 19755)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3227,7 +3320,7 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
--- TOC entry 381 (class 1259 OID 41813)
+-- TOC entry 379 (class 1259 OID 19763)
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -3242,8 +3335,8 @@ CREATE SEQUENCE public.users_id_seq
 ALTER SEQUENCE public.users_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5009 (class 0 OID 0)
--- Dependencies: 381
+-- TOC entry 5043 (class 0 OID 0)
+-- Dependencies: 379
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -3251,7 +3344,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- TOC entry 382 (class 1259 OID 41814)
+-- TOC entry 380 (class 1259 OID 19764)
 -- Name: ware_houses; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3273,7 +3366,7 @@ CREATE TABLE public.ware_houses (
 ALTER TABLE public.ware_houses OWNER TO postgres;
 
 --
--- TOC entry 383 (class 1259 OID 41823)
+-- TOC entry 381 (class 1259 OID 19773)
 -- Name: ware_houses_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -3288,8 +3381,8 @@ CREATE SEQUENCE public.ware_houses_id_seq
 ALTER SEQUENCE public.ware_houses_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5010 (class 0 OID 0)
--- Dependencies: 383
+-- TOC entry 5044 (class 0 OID 0)
+-- Dependencies: 381
 -- Name: ware_houses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -3297,7 +3390,7 @@ ALTER SEQUENCE public.ware_houses_id_seq OWNED BY public.ware_houses.id;
 
 
 --
--- TOC entry 384 (class 1259 OID 41824)
+-- TOC entry 382 (class 1259 OID 19774)
 -- Name: workspace_modules; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3313,7 +3406,7 @@ CREATE TABLE public.workspace_modules (
 ALTER TABLE public.workspace_modules OWNER TO postgres;
 
 --
--- TOC entry 385 (class 1259 OID 41829)
+-- TOC entry 383 (class 1259 OID 19778)
 -- Name: workspaces; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -3331,7 +3424,7 @@ CREATE TABLE public.workspaces (
 ALTER TABLE public.workspaces OWNER TO postgres;
 
 --
--- TOC entry 3786 (class 2604 OID 41837)
+-- TOC entry 3793 (class 2604 OID 19786)
 -- Name: actions id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3339,7 +3432,7 @@ ALTER TABLE ONLY public.actions ALTER COLUMN id SET DEFAULT nextval('public.acti
 
 
 --
--- TOC entry 3790 (class 2604 OID 41838)
+-- TOC entry 3797 (class 2604 OID 19787)
 -- Name: addresses id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3347,7 +3440,7 @@ ALTER TABLE ONLY public.addresses ALTER COLUMN id SET DEFAULT nextval('public.ad
 
 
 --
--- TOC entry 3810 (class 2604 OID 41839)
+-- TOC entry 3817 (class 2604 OID 19788)
 -- Name: companies id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3355,7 +3448,7 @@ ALTER TABLE ONLY public.companies ALTER COLUMN id SET DEFAULT nextval('public.co
 
 
 --
--- TOC entry 3832 (class 2604 OID 41840)
+-- TOC entry 3839 (class 2604 OID 19789)
 -- Name: entities id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3363,7 +3456,7 @@ ALTER TABLE ONLY public.entities ALTER COLUMN id SET DEFAULT nextval('public.ent
 
 
 --
--- TOC entry 3846 (class 2604 OID 41841)
+-- TOC entry 3853 (class 2604 OID 19790)
 -- Name: item_attribute_values id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3371,7 +3464,7 @@ ALTER TABLE ONLY public.item_attribute_values ALTER COLUMN id SET DEFAULT nextva
 
 
 --
--- TOC entry 3849 (class 2604 OID 41842)
+-- TOC entry 3856 (class 2604 OID 19791)
 -- Name: item_attributes id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3379,7 +3472,7 @@ ALTER TABLE ONLY public.item_attributes ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3857 (class 2604 OID 41843)
+-- TOC entry 3864 (class 2604 OID 19792)
 -- Name: item_lines id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3387,7 +3480,7 @@ ALTER TABLE ONLY public.item_lines ALTER COLUMN id SET DEFAULT nextval('public.i
 
 
 --
--- TOC entry 3867 (class 2604 OID 41844)
+-- TOC entry 3874 (class 2604 OID 19793)
 -- Name: item_prices id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3395,7 +3488,7 @@ ALTER TABLE ONLY public.item_prices ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 3872 (class 2604 OID 41845)
+-- TOC entry 3879 (class 2604 OID 19794)
 -- Name: items id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3403,7 +3496,7 @@ ALTER TABLE ONLY public.items ALTER COLUMN id SET DEFAULT nextval('public.items_
 
 
 --
--- TOC entry 3926 (class 2604 OID 41846)
+-- TOC entry 3933 (class 2604 OID 19795)
 -- Name: plugins id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3411,7 +3504,7 @@ ALTER TABLE ONLY public.plugins ALTER COLUMN id SET DEFAULT nextval('public.plug
 
 
 --
--- TOC entry 3860 (class 2604 OID 41847)
+-- TOC entry 3867 (class 2604 OID 19796)
 -- Name: price_lists id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3419,7 +3512,7 @@ ALTER TABLE ONLY public.price_lists ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 3961 (class 2604 OID 41848)
+-- TOC entry 3968 (class 2604 OID 19797)
 -- Name: roles id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3427,7 +3520,7 @@ ALTER TABLE ONLY public.roles ALTER COLUMN id SET DEFAULT nextval('public.roles_
 
 
 --
--- TOC entry 3970 (class 2604 OID 41849)
+-- TOC entry 3977 (class 2604 OID 19798)
 -- Name: stages id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3435,7 +3528,7 @@ ALTER TABLE ONLY public.stages ALTER COLUMN id SET DEFAULT nextval('public.stage
 
 
 --
--- TOC entry 3979 (class 2604 OID 41850)
+-- TOC entry 3986 (class 2604 OID 19799)
 -- Name: stock_movements id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3443,7 +3536,7 @@ ALTER TABLE ONLY public.stock_movements ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- TOC entry 3997 (class 2604 OID 41851)
+-- TOC entry 4004 (class 2604 OID 19800)
 -- Name: taxes id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3451,7 +3544,7 @@ ALTER TABLE ONLY public.taxes ALTER COLUMN id SET DEFAULT nextval('public.taxes_
 
 
 --
--- TOC entry 4012 (class 2604 OID 41852)
+-- TOC entry 4019 (class 2604 OID 19801)
 -- Name: unit_of_measure_translations id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3459,7 +3552,7 @@ ALTER TABLE ONLY public.unit_of_measure_translations ALTER COLUMN id SET DEFAULT
 
 
 --
--- TOC entry 4015 (class 2604 OID 41853)
+-- TOC entry 4022 (class 2604 OID 19802)
 -- Name: unit_of_measures id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3467,7 +3560,7 @@ ALTER TABLE ONLY public.unit_of_measures ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 4020 (class 2604 OID 41854)
+-- TOC entry 4027 (class 2604 OID 19803)
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3475,7 +3568,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
--- TOC entry 4024 (class 2604 OID 41855)
+-- TOC entry 4031 (class 2604 OID 19804)
 -- Name: ware_houses id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -3483,8 +3576,8 @@ ALTER TABLE ONLY public.ware_houses ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- TOC entry 4814 (class 0 OID 41009)
--- Dependencies: 219
+-- TOC entry 4843 (class 0 OID 18963)
+-- Dependencies: 217
 -- Data for Name: account_settings; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -3495,40 +3588,40 @@ INSERT INTO public.account_settings (id, company_id, bank_account, cash_accunt, 
 
 
 --
--- TOC entry 4816 (class 0 OID 41013)
--- Dependencies: 221
+-- TOC entry 4845 (class 0 OID 18967)
+-- Dependencies: 219
 -- Data for Name: account_statements; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4817 (class 0 OID 41016)
--- Dependencies: 222
+-- TOC entry 4846 (class 0 OID 18970)
+-- Dependencies: 220
 -- Data for Name: account_type_exts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4818 (class 0 OID 41021)
--- Dependencies: 223
+-- TOC entry 4847 (class 0 OID 18975)
+-- Dependencies: 221
 -- Data for Name: account_types; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4819 (class 0 OID 41026)
--- Dependencies: 224
+-- TOC entry 4848 (class 0 OID 18980)
+-- Dependencies: 222
 -- Data for Name: accounts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4820 (class 0 OID 41031)
--- Dependencies: 225
+-- TOC entry 4849 (class 0 OID 18985)
+-- Dependencies: 223
 -- Data for Name: actions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -3738,8 +3831,8 @@ INSERT INTO public.actions (id, name, entity_id) VALUES (218, 'delete', 68);
 
 
 --
--- TOC entry 4822 (class 0 OID 41037)
--- Dependencies: 227
+-- TOC entry 4851 (class 0 OID 18991)
+-- Dependencies: 225
 -- Data for Name: activities; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4209,54 +4302,14 @@ INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_a
 INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1953, '2025-05-28 18:21:06.787332', NULL, 1913, NULL, NULL);
 INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1955, '2025-05-28 18:23:27.213339', NULL, 1914, NULL, NULL);
 INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1957, '2025-05-28 18:24:54.788661', NULL, 1915, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1959, '2025-05-29 19:42:50.684257', NULL, 1916, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1960, '2025-05-29 19:43:05.662388', NULL, 1917, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1962, '2025-05-29 19:45:28.846264', NULL, 1919, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1963, '2025-05-29 19:45:28.846264', NULL, 1920, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1964, '2025-05-29 19:45:28.846264', NULL, 1921, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1965, '2025-05-29 19:45:28.846264', NULL, 1922, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1966, '2025-05-29 19:45:28.846264', NULL, 1923, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1968, '2025-05-29 19:45:32.117167', NULL, 1924, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1969, '2025-05-29 19:45:32.117167', NULL, 1925, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1970, '2025-05-29 19:45:32.117167', NULL, 1926, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1971, '2025-05-29 19:45:32.117167', NULL, 1927, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1967, '2025-05-29 19:46:04.051638', NULL, 1928, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1972, '2025-05-29 19:46:24.643791', NULL, 1929, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1990, '2025-05-29 19:47:44.766747', NULL, 1930, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1990, '2025-05-29 19:48:14.846691', NULL, 1931, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1373, '2025-05-29 19:48:24.962351', NULL, 1932, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1374, '2025-05-29 19:48:29.773989', NULL, 1933, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1373, '2025-05-29 19:48:58.64012', NULL, 1934, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1374, '2025-05-29 19:49:20.824204', NULL, 1935, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1372, '2025-05-29 19:49:37.339783', NULL, 1936, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1371, '2025-05-29 19:49:50.406441', NULL, 1937, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1991, '2025-05-29 19:50:09.532086', NULL, 1938, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1909, '2025-05-29 19:51:22.365061', NULL, 1939, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1991, '2025-05-29 19:51:44.422381', NULL, 1940, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1370, '2025-05-29 19:51:51.653835', NULL, 1941, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1971, '2025-05-29 19:52:23.326641', NULL, 1942, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1993, '2025-05-29 19:52:45.28897', NULL, 1943, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1996, '2025-05-29 19:54:13.659514', NULL, 1944, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1528, '2025-05-29 19:55:33.754307', NULL, 1945, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1960, '2025-05-29 19:58:47.330145', NULL, 1946, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 1999, '2025-05-29 20:05:34.950037', NULL, 1947, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2000, '2025-05-29 20:07:05.740174', NULL, 1948, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2001, '2025-05-29 20:07:05.740174', NULL, 1949, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2002, '2025-05-29 20:07:05.740174', NULL, 1950, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2003, '2025-05-29 20:07:05.740174', NULL, 1951, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2004, '2025-05-29 20:07:05.740174', NULL, 1952, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2006, '2025-05-29 20:07:23.244259', NULL, 1953, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2007, '2025-05-29 20:07:23.244259', NULL, 1954, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2008, '2025-05-29 20:07:23.244259', NULL, 1955, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2009, '2025-05-29 20:07:23.244259', NULL, 1956, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2010, '2025-05-29 20:20:58.123243', NULL, 1957, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2012, '2025-05-29 20:30:02.353519', NULL, 1958, NULL, NULL);
-INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'CREATE', 2013, '2025-05-29 20:30:38.057938', NULL, 1959, NULL, NULL);
+INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'STAGE', 1750, '2025-08-01 15:23:14.926303', NULL, 1916, NULL, NULL);
+INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'STAGE', 1752, '2025-08-01 15:23:17.149148', NULL, 1917, NULL, NULL);
+INSERT INTO public.activities (profile_id, type, party_id, created_at, deleted_at, id, data, is_pinned) OVERRIDING SYSTEM VALUE VALUES (180, 'EDIT', 1750, '2025-08-01 15:23:32.321967', NULL, 1918, NULL, NULL);
 
 
 --
--- TOC entry 4824 (class 0 OID 41044)
--- Dependencies: 229
+-- TOC entry 4853 (class 0 OID 18998)
+-- Dependencies: 227
 -- Data for Name: activity_comments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4332,8 +4385,8 @@ INSERT INTO public.activity_comments (activity_id, deleted_at, comment) VALUES (
 
 
 --
--- TOC entry 4825 (class 0 OID 41049)
--- Dependencies: 230
+-- TOC entry 4854 (class 0 OID 19003)
+-- Dependencies: 228
 -- Data for Name: activity_deadlines; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4375,8 +4428,8 @@ INSERT INTO public.activity_deadlines (activity_id, link, party_id, deadline, ad
 
 
 --
--- TOC entry 4826 (class 0 OID 41055)
--- Dependencies: 231
+-- TOC entry 4855 (class 0 OID 19009)
+-- Dependencies: 229
 -- Data for Name: activity_mentions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4433,8 +4486,8 @@ INSERT INTO public.activity_mentions (profile_id, created_at, deleted_at, activi
 
 
 --
--- TOC entry 4828 (class 0 OID 41060)
--- Dependencies: 233
+-- TOC entry 4857 (class 0 OID 19014)
+-- Dependencies: 231
 -- Data for Name: address_and_contacts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4469,21 +4522,11 @@ INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id
 INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1954, NULL, NULL, NULL, NULL);
 INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1955, NULL, NULL, NULL, NULL);
 INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1957, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1967, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1972, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1992, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1993, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (1996, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (2005, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (2010, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (2011, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (2012, NULL, NULL, NULL, NULL);
-INSERT INTO public.address_and_contacts (doc_id, shipping_address_id, contact_id, billing_address_id, party_address_id) VALUES (2013, NULL, NULL, NULL, NULL);
 
 
 --
--- TOC entry 4829 (class 0 OID 41063)
--- Dependencies: 234
+-- TOC entry 4858 (class 0 OID 19017)
+-- Dependencies: 232
 -- Data for Name: addresses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4492,8 +4535,8 @@ INSERT INTO public.addresses (id, created_at, deleted_at, updated_at, company, s
 
 
 --
--- TOC entry 4831 (class 0 OID 41076)
--- Dependencies: 236
+-- TOC entry 4860 (class 0 OID 19029)
+-- Dependencies: 234
 -- Data for Name: bank_accounts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4506,8 +4549,8 @@ INSERT INTO public.bank_accounts (id, uuid, created_at, deleted_at, account_name
 
 
 --
--- TOC entry 4832 (class 0 OID 41083)
--- Dependencies: 237
+-- TOC entry 4861 (class 0 OID 19036)
+-- Dependencies: 235
 -- Data for Name: banks; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4518,8 +4561,8 @@ INSERT INTO public.banks (id, uuid, created_at, deleted_at, name, company_id, st
 
 
 --
--- TOC entry 4833 (class 0 OID 41090)
--- Dependencies: 238
+-- TOC entry 4862 (class 0 OID 19043)
+-- Dependencies: 236
 -- Data for Name: batch_bundles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4543,15 +4586,11 @@ INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse
 INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse_id, batch_bundle_no, voucher_type, voucher_code, posting_date, posting_time, deleted_at) VALUES (1927, 1290, '2025-05-23 20:05:46.91737', 152, 233, 'BB-0000009', 'purchaseReceipt', 'RC-0000005', '2025-05-23', '16:03:33', NULL);
 INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse_id, batch_bundle_no, voucher_type, voucher_code, posting_date, posting_time, deleted_at) VALUES (1943, 1290, '2025-05-27 19:42:17.647092', 152, 185, 'BB-0000010', 'purchaseReceipt', 'RC-0000006', '2025-05-27', '15:41:32', NULL);
 INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse_id, batch_bundle_no, voucher_type, voucher_code, posting_date, posting_time, deleted_at) VALUES (1956, 1290, '2025-05-28 18:23:47.001901', 152, 185, 'BB-0000011', 'deliveryNote', 'NE-0000004', '2025-05-28', '14:23:12', NULL);
-INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse_id, batch_bundle_no, voucher_type, voucher_code, posting_date, posting_time, deleted_at) VALUES (1973, 1963, '2025-05-29 19:46:26.950881', 152, 185, 'BB-0000012', 'purchaseInvoice', 'FC-0000007', '2025-05-29', '15:46:10', NULL);
-INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse_id, batch_bundle_no, voucher_type, voucher_code, posting_date, posting_time, deleted_at) VALUES (1984, 1965, '2025-05-29 19:46:27.004853', 152, 185, 'BB-0000013', 'purchaseInvoice', 'FC-0000007', '2025-05-29', '15:46:10', NULL);
-INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse_id, batch_bundle_no, voucher_type, voucher_code, posting_date, posting_time, deleted_at) VALUES (1994, 1963, '2025-05-29 19:52:47.42052', 152, 185, 'BB-0000014', 'deliveryNote', 'NE-0000005', '2025-05-29', '15:52:40', NULL);
-INSERT INTO public.batch_bundles (id, item_id, created_at, company_id, warehouse_id, batch_bundle_no, voucher_type, voucher_code, posting_date, posting_time, deleted_at) VALUES (1995, 1965, '2025-05-29 19:52:47.48348', 152, 185, 'BB-0000015', 'deliveryNote', 'NE-0000005', '2025-05-29', '15:52:40', NULL);
 
 
 --
--- TOC entry 4834 (class 0 OID 41095)
--- Dependencies: 239
+-- TOC entry 4863 (class 0 OID 19048)
+-- Dependencies: 237
 -- Data for Name: cash_outflows; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4562,8 +4601,8 @@ INSERT INTO public.cash_outflows (id, created_at, company_id, status, party_id, 
 
 
 --
--- TOC entry 4835 (class 0 OID 41101)
--- Dependencies: 240
+-- TOC entry 4864 (class 0 OID 19054)
+-- Dependencies: 238
 -- Data for Name: charges_template; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4573,8 +4612,8 @@ INSERT INTO public.charges_template (id, deleted_at, created_at, uuid, name, com
 
 
 --
--- TOC entry 4836 (class 0 OID 41109)
--- Dependencies: 241
+-- TOC entry 4865 (class 0 OID 19062)
+-- Dependencies: 239
 -- Data for Name: chat_members; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4595,8 +4634,8 @@ INSERT INTO public.chat_members (id, created_at, deleted_at, profile_id, chat_id
 
 
 --
--- TOC entry 4838 (class 0 OID 41115)
--- Dependencies: 243
+-- TOC entry 4867 (class 0 OID 19068)
+-- Dependencies: 241
 -- Data for Name: chat_messages; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4623,8 +4662,8 @@ INSERT INTO public.chat_messages (id, created_at, updated_at, deleted_at, profil
 
 
 --
--- TOC entry 4840 (class 0 OID 41122)
--- Dependencies: 245
+-- TOC entry 4869 (class 0 OID 19075)
+-- Dependencies: 243
 -- Data for Name: chats; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4638,8 +4677,8 @@ INSERT INTO public.chats (id, created_at, deleted_at, company_id, party_id, name
 
 
 --
--- TOC entry 4841 (class 0 OID 41128)
--- Dependencies: 246
+-- TOC entry 4870 (class 0 OID 19081)
+-- Dependencies: 244
 -- Data for Name: companies; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4656,8 +4695,8 @@ INSERT INTO public.companies (id, created_at, updated_at, deleted_at, uuid, name
 
 
 --
--- TOC entry 4843 (class 0 OID 41138)
--- Dependencies: 248
+-- TOC entry 4872 (class 0 OID 19091)
+-- Dependencies: 246
 -- Data for Name: company_defaults; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4668,8 +4707,8 @@ INSERT INTO public.company_defaults (id, created_at, deleted_at, updated_at, cou
 
 
 --
--- TOC entry 4845 (class 0 OID 41145)
--- Dependencies: 250
+-- TOC entry 4874 (class 0 OID 19098)
+-- Dependencies: 248
 -- Data for Name: company_entities; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4950,8 +4989,16 @@ INSERT INTO public.company_entities (company_id, entity_id, enabled) VALUES (152
 
 
 --
--- TOC entry 4846 (class 0 OID 41149)
--- Dependencies: 251
+-- TOC entry 5013 (class 0 OID 21516)
+-- Dependencies: 387
+-- Data for Name: connections; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 4875 (class 0 OID 19102)
+-- Dependencies: 249
 -- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4986,8 +5033,8 @@ INSERT INTO public.contacts (id, created_at, deleted_at, uuid, name, gender, ema
 
 
 --
--- TOC entry 4847 (class 0 OID 41156)
--- Dependencies: 252
+-- TOC entry 4876 (class 0 OID 19109)
+-- Dependencies: 250
 -- Data for Name: cost_centers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -4997,8 +5044,8 @@ INSERT INTO public.cost_centers (id, created_at, deleted_at, updated_at, name, c
 
 
 --
--- TOC entry 4848 (class 0 OID 41163)
--- Dependencies: 253
+-- TOC entry 4877 (class 0 OID 19116)
+-- Dependencies: 251
 -- Data for Name: currencies; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5007,18 +5054,18 @@ INSERT INTO public.currencies ("code ", "name ") VALUES ('BOB', 'BOB');
 
 
 --
--- TOC entry 4849 (class 0 OID 41168)
--- Dependencies: 254
+-- TOC entry 4878 (class 0 OID 19121)
+-- Dependencies: 252
 -- Data for Name: currency_exchanges; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.currency_exchanges (id, created_at, deleted_at, status, company_id, name, from_currency, to_currency, exchange_rate, for_buying, for_selling, uuid) VALUES (873, '2024-12-07 15:49:15.088437', NULL, 'ENABLED', 152, 'BOB a USD.', 'BOB', 'USD', 14, true, true, '447aeafc-5084-4d3e-a51c-34be1e0fb7a1');
-INSERT INTO public.currency_exchanges (id, created_at, deleted_at, status, company_id, name, from_currency, to_currency, exchange_rate, for_buying, for_selling, uuid) VALUES (1528, '2025-01-09 14:51:09.249419', NULL, 'ENABLED', 152, 'USD a BOB.', 'USD', 'BOB', 750, true, true, '9cf31fc7-514c-4a4e-ba91-727e6b5b0f31');
+INSERT INTO public.currency_exchanges (id, created_at, deleted_at, status, company_id, name, from_currency, to_currency, exchange_rate, for_buying, for_selling, uuid) VALUES (1528, '2025-01-09 14:51:09.249419', NULL, 'ENABLED', 152, 'USD a BOB.', 'USD', 'BOB', 2100, true, true, '9cf31fc7-514c-4a4e-ba91-727e6b5b0f31');
 
 
 --
--- TOC entry 4850 (class 0 OID 41177)
--- Dependencies: 255
+-- TOC entry 4879 (class 0 OID 19130)
+-- Dependencies: 253
 -- Data for Name: customers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5049,12 +5096,11 @@ INSERT INTO public.customers (id, uuid, created_at, deleted_at, updated_at, cust
 INSERT INTO public.customers (id, uuid, created_at, deleted_at, updated_at, customer_type, group_id, name, company_id, status) VALUES (851, '5609702d-56c0-4488-a789-a4f399491a5e', '2024-12-07 14:43:24.624956', NULL, '2025-05-16 17:16:11.975352', 'company', 306, 'Team Zapata.', 275, 'ENABLED');
 INSERT INTO public.customers (id, uuid, created_at, deleted_at, updated_at, customer_type, group_id, name, company_id, status) VALUES (1886, '8fa83204-7b74-403e-988e-fdc30175e294', '2025-05-20 14:49:23.220239', NULL, '2025-05-20 14:49:22.394939', 'individual', NULL, 'Juan Carlos', 275, 'ENABLED');
 INSERT INTO public.customers (id, uuid, created_at, deleted_at, updated_at, customer_type, group_id, name, company_id, status) VALUES (383, '20f739f0-4c8f-49dc-9aa5-550c28aa3608', '2024-11-23 18:29:52.410776', NULL, '2025-05-20 15:30:22.50916', 'individual', 306, 'Jonh D', 275, 'ENABLED');
-INSERT INTO public.customers (id, uuid, created_at, deleted_at, updated_at, customer_type, group_id, name, company_id, status) VALUES (1959, 'd623e958-16b1-4a5c-8462-c2086ae2bad6', '2025-05-29 19:42:50.684257', NULL, '2025-05-29 19:42:50.692234', 'company', NULL, 'DM', 152, 'ENABLED');
 
 
 --
--- TOC entry 4851 (class 0 OID 41185)
--- Dependencies: 256
+-- TOC entry 4880 (class 0 OID 19138)
+-- Dependencies: 254
 -- Data for Name: deal_participants; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5063,8 +5109,8 @@ INSERT INTO public.deal_participants (deal_id, profile_id, created_at, deleted_a
 
 
 --
--- TOC entry 4852 (class 0 OID 41189)
--- Dependencies: 257
+-- TOC entry 4881 (class 0 OID 19142)
+-- Dependencies: 255
 -- Data for Name: deals; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5073,24 +5119,24 @@ INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, st
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1798, '66b6259d-c9b6-4b82-b9da-3e71178d16b9', '2025-03-26 20:16:05.920675', NULL, '2025-03-26 20:16:06.389699', 'Deal paid', 13, 11100, 'USD', 'Services', NULL, NULL, '2025-03-26', 152, 180, NULL, true, 0, NULL);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1800, '4eb0f132-3f2e-4070-8a29-cb312a164d61', '2025-03-26 20:27:14.376956', NULL, '2025-03-26 20:27:14.855432', 'Deal Facturado', 12, 12300, 'USD', 'Sales', NULL, NULL, '2025-03-26', 152, 180, NULL, true, 0, NULL);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1910, 'cfe67974-708b-4837-9ad1-e7990152a6e8', '2025-05-22 20:47:46.176643', NULL, '2025-05-22 20:53:55.907438', 'view', 11, 10000, 'USD', 'Sales', 'Website', NULL, '2025-05-20', 152, 180, NULL, false, 0, 190);
-INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1750, 'a0695444-2222-4a05-ad6c-0a10bf0ac123', '2025-02-21 19:04:12.27781', NULL, '2025-05-22 21:03:57.37815', 'Deal4', 7, 123100, 'USD', NULL, NULL, NULL, '2025-02-20', 152, 180, NULL, false, 1, NULL);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1744, '2c8c74da-78b2-4fcb-a188-2fbaf9408904', '2025-02-20 12:52:06.985738', NULL, '2025-05-22 20:48:17.011795', 'Deal 1.', 2, 10000, 'BOB', 'Sales', NULL, NULL, '2025-02-14', 152, 180, NULL, false, 2, NULL);
-INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1799, '09eb6f60-1995-4bf4-a72e-a353f21aa3d6', '2025-03-26 20:20:47.889906', NULL, '2025-05-23 13:27:45.782107', 'Trato Ganado.', 7, 11100, 'USD', 'Sales', NULL, NULL, '2025-03-23', 152, 180, NULL, false, 0, 1841);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1796, 'f1380fea-699a-4b37-94ab-7aa8fb9f9dfa', '2025-03-26 19:53:03.989732', NULL, '2025-05-22 20:48:20.355347', 'New Deal', 2, 10000, 'USD', NULL, NULL, NULL, '2025-03-24', 152, 180, NULL, false, 4, NULL);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1838, '39ae29b3-b05b-4a42-8475-3cf706ec11ca', '2025-04-05 17:46:10.806942', NULL, '2025-05-20 20:34:35.45094', 'Trato 1.', 16, 100100, 'BOB', 'Sales', NULL, NULL, '2025-03-23', 275, 304, NULL, false, 2, 383);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1751, 'ed7582ea-0d33-42ee-993b-df4f9647c133', '2025-02-21 19:05:03.550079', NULL, '2025-05-22 20:48:20.667376', 'Deal 5', 2, 12200, 'USD', 'Sales', NULL, NULL, '2025-02-21', 152, 180, NULL, true, 3, NULL);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1908, '74283f93-91f4-4121-a19e-407115105ed1', '2025-05-20 20:36:38.742861', NULL, '2025-05-21 13:12:49.992817', 'Trato 2', 14, 122200, 'USD', NULL, NULL, NULL, '2025-05-20', 275, 304, NULL, true, 0, 683);
-INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1753, 'c78dbb86-6f49-407c-85c1-1992a463555e', '2025-02-21 19:10:43.162998', NULL, '2025-05-22 20:48:26.100235', 'Deal 0', 6, 11100, 'BOB', 'IntegratedSales', NULL, NULL, '2025-02-15', 152, 180, NULL, false, 3, NULL);
-INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1802, '3eb7e0df-06ea-4480-ad01-0f2a8f3b92d7', '2025-03-26 20:46:20.129405', NULL, '2025-05-22 20:48:26.100235', 'Venta de Monitores', 6, 1000000, 'USD', 'Sales', 'Website', NULL, '2025-03-26', 152, 180, NULL, true, 2, NULL);
-INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1797, '13439308-0ccd-444f-a05d-c4b7a0ed819f', '2025-03-26 20:14:26.339002', NULL, '2025-05-22 20:48:26.100235', 'Nuevo Deal', 6, 100100, 'USD', 'Sales', NULL, NULL, '2025-03-23', 152, 180, NULL, false, 1, NULL);
+INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1799, '09eb6f60-1995-4bf4-a72e-a353f21aa3d6', '2025-03-26 20:20:47.889906', NULL, '2025-08-01 15:23:14.808365', 'Trato Ganado.', 7, 11100, 'USD', 'Sales', NULL, NULL, '2025-03-23', 152, 180, NULL, false, 1, 1841);
+INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1753, 'c78dbb86-6f49-407c-85c1-1992a463555e', '2025-02-21 19:10:43.162998', NULL, '2025-08-01 15:23:16.993643', 'Deal 0', 6, 11100, 'BOB', 'IntegratedSales', NULL, NULL, '2025-02-15', 152, 180, NULL, false, 2, NULL);
+INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1802, '3eb7e0df-06ea-4480-ad01-0f2a8f3b92d7', '2025-03-26 20:46:20.129405', NULL, '2025-08-01 15:23:16.993643', 'Venta de Monitores', 6, 1000000, 'USD', 'Sales', 'Website', NULL, '2025-03-26', 152, 180, NULL, true, 1, NULL);
+INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1797, '13439308-0ccd-444f-a05d-c4b7a0ed819f', '2025-03-26 20:14:26.339002', NULL, '2025-08-01 15:23:16.993643', 'Nuevo Deal', 6, 100100, 'USD', 'Sales', NULL, NULL, '2025-03-23', 152, 180, NULL, false, 0, NULL);
+INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1752, '2f0f075b-f612-466c-a8a0-47f908503a0d', '2025-02-21 19:06:01.24539', NULL, '2025-08-01 15:23:17.251368', 'Deal6', 6, 14400, 'USD', 'IntegratedSales', NULL, NULL, '2025-02-19', 152, 180, NULL, false, 1, NULL);
+INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1750, 'a0695444-2222-4a05-ad6c-0a10bf0ac123', '2025-02-21 19:04:12.27781', NULL, '2025-08-01 15:23:32.249988', 'Deal4.', 7, 123100, 'USD', NULL, NULL, NULL, '2025-02-19', 152, 180, NULL, false, 0, NULL);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1755, 'b5a3e760-c40d-4c37-b223-1277c6554c33', '2025-02-21 19:20:58.539435', NULL, '2025-05-22 14:03:28.473034', 'Proyecto Test', 2, 100000, 'USD', 'Sales', NULL, NULL, '2025-02-21', 152, 180, '2025-02-28 00:00:00', true, 1, NULL);
 INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1774, '1564eeac-acb6-48df-8810-fd73dd5a0273', '2025-02-24 14:16:07.069322', NULL, '2025-05-22 14:03:28.473034', 'Trato 1', 2, 14400, 'USD', 'Sales', NULL, NULL, '2025-02-23', 152, 180, NULL, false, 0, NULL);
-INSERT INTO public.deals (id, uuid, created_at, deleted_at, updated_at, name, stage_id, amount, currency, deal_type, source, source_information, start_date, company_id, responsible_id, end_date, available_for_everyone, index, customer_id) VALUES (1752, '2f0f075b-f612-466c-a8a0-47f908503a0d', '2025-02-21 19:06:01.24539', NULL, '2025-05-22 20:48:26.100235', 'Deal6', 6, 14400, 'USD', 'IntegratedSales', NULL, NULL, '2025-02-19', 152, 180, NULL, false, 0, NULL);
 
 
 --
--- TOC entry 4853 (class 0 OID 41197)
--- Dependencies: 258
+-- TOC entry 4882 (class 0 OID 19150)
+-- Dependencies: 256
 -- Data for Name: delivery_line_items; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5107,13 +5153,11 @@ INSERT INTO public.delivery_line_items (item_line_id, source_warehouse_id, bille
 INSERT INTO public.delivery_line_items (item_line_id, source_warehouse_id, billed_quantity) VALUES (724, 317, 0);
 INSERT INTO public.delivery_line_items (item_line_id, source_warehouse_id, billed_quantity) VALUES (793, 185, 0);
 INSERT INTO public.delivery_line_items (item_line_id, source_warehouse_id, billed_quantity) VALUES (860, 185, 0);
-INSERT INTO public.delivery_line_items (item_line_id, source_warehouse_id, billed_quantity) VALUES (874, 185, 0);
-INSERT INTO public.delivery_line_items (item_line_id, source_warehouse_id, billed_quantity) VALUES (875, 185, 0);
 
 
 --
--- TOC entry 4854 (class 0 OID 41200)
--- Dependencies: 259
+-- TOC entry 4883 (class 0 OID 19153)
+-- Dependencies: 257
 -- Data for Name: doc_accounts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5135,17 +5179,11 @@ INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VA
 INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (1952, 157, 167);
 INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (1955, 163, 176);
 INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (1957, NULL, 161);
-INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (1972, 167, NULL);
-INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (1993, 163, 176);
-INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (1996, NULL, 161);
-INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (2010, 167, NULL);
-INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (2012, 167, NULL);
-INSERT INTO public.doc_accounts (doc_id, credit_account_id, debit_account_id) VALUES (2013, 167, NULL);
 
 
 --
--- TOC entry 4855 (class 0 OID 41203)
--- Dependencies: 260
+-- TOC entry 4884 (class 0 OID 19156)
+-- Dependencies: 258
 -- Data for Name: doc_terms; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5179,21 +5217,11 @@ INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_templ
 INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1954, NULL, NULL);
 INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1955, NULL, NULL);
 INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1957, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1967, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1972, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1992, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1993, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (1996, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (2005, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (2010, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (2011, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (2012, NULL, NULL);
-INSERT INTO public.doc_terms (doc_id, terms_and_condition_id, payment_term_template_id) VALUES (2013, NULL, NULL);
 
 
 --
--- TOC entry 4856 (class 0 OID 41206)
--- Dependencies: 261
+-- TOC entry 4885 (class 0 OID 19159)
+-- Dependencies: 259
 -- Data for Name: entities; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5261,23 +5289,24 @@ INSERT INTO public.entities (id, name, href, has_modal) VALUES (12, 'Proveedor',
 INSERT INTO public.entities (id, name, href, has_modal) VALUES (11, 'Usuario', 'user', true);
 INSERT INTO public.entities (id, name, href, has_modal) VALUES (67, 'Calendario Reservas', 'booking/schedule', false);
 INSERT INTO public.entities (id, name, href, has_modal) VALUES (22, 'Reserva', 'booking', true);
+INSERT INTO public.entities (id, name, href, has_modal) VALUES (68, 'Spacio de Trabajo', 'workspace', true);
 INSERT INTO public.entities (id, name, href, has_modal) VALUES (30, 'Centro de Costo', 'costCenter', false);
 INSERT INTO public.entities (id, name, href, has_modal) VALUES (29, 'Asiento Contable', 'journalEntry', false);
 INSERT INTO public.entities (id, name, href, has_modal) VALUES (2, 'Articulo', 'item', false);
-INSERT INTO public.entities (id, name, href, has_modal) VALUES (68, 'Espacio de Trabajo', 'workspace', true);
+INSERT INTO public.entities (id, name, href, has_modal) VALUES (69, 'Tareas', 'task', true);
 
 
 --
--- TOC entry 4858 (class 0 OID 41214)
--- Dependencies: 263
+-- TOC entry 4887 (class 0 OID 19167)
+-- Dependencies: 261
 -- Data for Name: entity_types; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4859 (class 0 OID 41219)
--- Dependencies: 264
+-- TOC entry 4888 (class 0 OID 19172)
+-- Dependencies: 262
 -- Data for Name: groups; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5304,8 +5333,8 @@ INSERT INTO public.groups (id, created_at, updated_at, deleted_at, uuid, name, o
 
 
 --
--- TOC entry 4860 (class 0 OID 41228)
--- Dependencies: 265
+-- TOC entry 4889 (class 0 OID 19181)
+-- Dependencies: 263
 -- Data for Name: invoiced_item_lines; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5331,21 +5360,11 @@ INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id,
 INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (852, 1, 1925, 0);
 INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (857, 0, 1945, 0);
 INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (861, 0, 1957, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (868, 0, 1972, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (869, 0, 1972, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (876, 0, 1996, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (877, 0, 1996, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (882, 0, 2010, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (883, 0, 2010, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (886, 0, 2012, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (887, 0, 2012, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (888, 0, 2013, 0);
-INSERT INTO public.invoiced_item_lines (item_line, receipt_quantity, invoice_id, paid_amount) VALUES (889, 0, 2013, 0);
 
 
 --
--- TOC entry 4861 (class 0 OID 41233)
--- Dependencies: 266
+-- TOC entry 4890 (class 0 OID 19186)
+-- Dependencies: 264
 -- Data for Name: invoices; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5369,16 +5388,11 @@ INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_dat
 INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1925, 'FC-0000005', 1922, '2025-05-23 20:02:04.978835', NULL, '2025-05-25', 'PAID', 152, 'BOB', NULL, false, '2025-05-23', '16:01:48', 'America/La_Paz', 243, 242, 1924, NULL, NULL);
 INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1945, 'FC-0000006', 1922, '2025-05-27 19:45:20.879289', NULL, NULL, 'PAID', 152, 'BOB', NULL, false, '2025-05-27', '15:45:11', 'America/La_Paz', 243, 242, 1941, NULL, NULL);
 INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1957, 'FV-0000005', 1841, '2025-05-28 18:24:54.788661', NULL, NULL, 'PAID', 152, 'BOB', NULL, false, '2025-05-28', '14:24:49', 'America/La_Paz', 243, 242, 1954, NULL, NULL);
-INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1972, 'FC-0000007', 1922, '2025-05-29 19:46:24.643791', NULL, NULL, 'UNPAID', 152, 'USD', NULL, true, '2025-05-29', '15:46:10', 'America/La_Paz', 243, 242, 1967, 1962, 185);
-INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1996, 'FV-0000006', 1959, '2025-05-29 19:54:13.659514', NULL, NULL, 'UNPAID', 152, 'BOB', NULL, false, '2025-05-29', '15:54:09', 'America/La_Paz', 243, 242, 1992, 1968, NULL);
-INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (2010, 'FC-0000008', 1082, '2025-05-29 20:20:58.123243', NULL, NULL, 'CANCELLED', 152, 'USD', NULL, false, '2025-05-29', '16:19:53', 'America/La_Paz', 1997, 242, 2005, 2000, NULL);
-INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (2012, 'FC-0000009', 1082, '2025-05-29 20:30:02.353519', NULL, NULL, 'CANCELLED', 152, 'USD', NULL, false, '2025-05-29', '16:30:00', 'America/La_Paz', 1997, 242, 2011, 2000, NULL);
-INSERT INTO public.invoices (id, code, party_id, created_at, deleted_at, due_date, status, company_id, currency, bill_date, update_stock, posting_date, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (2013, 'FC-0000010', 1082, '2025-05-29 20:30:38.057938', NULL, NULL, 'CANCELLED', 152, 'USD', NULL, false, '2025-05-29', '16:30:29', 'America/La_Paz', 1997, 242, 2011, 2000, NULL);
 
 
 --
--- TOC entry 4862 (class 0 OID 41243)
--- Dependencies: 267
+-- TOC entry 4891 (class 0 OID 19196)
+-- Dependencies: 265
 -- Data for Name: item_attribute_values; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5386,8 +5400,8 @@ INSERT INTO public.item_attribute_values (id, created_at, deleted_at, updated_at
 
 
 --
--- TOC entry 4864 (class 0 OID 41251)
--- Dependencies: 269
+-- TOC entry 4893 (class 0 OID 19204)
+-- Dependencies: 267
 -- Data for Name: item_attributes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5395,8 +5409,8 @@ INSERT INTO public.item_attributes (id, created_at, deleted_at, updated_at, uuid
 
 
 --
--- TOC entry 4866 (class 0 OID 41260)
--- Dependencies: 271
+-- TOC entry 4895 (class 0 OID 19213)
+-- Dependencies: 269
 -- Data for Name: item_inventory_settings; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5411,15 +5425,11 @@ INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created
 INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created_at, deleted_at, warranty_period_in_days, has_serial_no, serial_no_template, weight_uom_id, weight_per_unit) VALUES (1803, 360, '2025-03-27 00:33:57.880056', NULL, 360, NULL, NULL, NULL, NULL);
 INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created_at, deleted_at, warranty_period_in_days, has_serial_no, serial_no_template, weight_uom_id, weight_per_unit) VALUES (1818, NULL, '2025-04-02 22:29:07.530008', NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created_at, deleted_at, warranty_period_in_days, has_serial_no, serial_no_template, weight_uom_id, weight_per_unit) VALUES (183, 365, '2025-05-27 15:46:13.669855', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created_at, deleted_at, warranty_period_in_days, has_serial_no, serial_no_template, weight_uom_id, weight_per_unit) VALUES (1963, NULL, '2025-05-29 19:45:28.846264', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created_at, deleted_at, warranty_period_in_days, has_serial_no, serial_no_template, weight_uom_id, weight_per_unit) VALUES (1965, NULL, '2025-05-29 19:45:28.846264', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created_at, deleted_at, warranty_period_in_days, has_serial_no, serial_no_template, weight_uom_id, weight_per_unit) VALUES (2001, NULL, '2025-05-29 20:07:05.740174', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO public.item_inventory_settings (item_id, shelf_life_in_days, created_at, deleted_at, warranty_period_in_days, has_serial_no, serial_no_template, weight_uom_id, weight_per_unit) VALUES (2003, NULL, '2025-05-29 20:07:05.740174', NULL, NULL, NULL, NULL, NULL, NULL);
 
 
 --
--- TOC entry 4867 (class 0 OID 41266)
--- Dependencies: 272
+-- TOC entry 4896 (class 0 OID 19219)
+-- Dependencies: 270
 -- Data for Name: item_line_receipts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5435,13 +5445,11 @@ INSERT INTO public.item_line_receipts (item_line, accepted_warehouse, rejected_w
 INSERT INTO public.item_line_receipts (item_line, accepted_warehouse, rejected_warehouse, accepted_quantity, rejected_quantity, invoice_item_line_id, billed_quantity) VALUES (814, 234, NULL, 1, 0, NULL, 1);
 INSERT INTO public.item_line_receipts (item_line, accepted_warehouse, rejected_warehouse, accepted_quantity, rejected_quantity, invoice_item_line_id, billed_quantity) VALUES (853, 233, NULL, 1, 0, NULL, 1);
 INSERT INTO public.item_line_receipts (item_line, accepted_warehouse, rejected_warehouse, accepted_quantity, rejected_quantity, invoice_item_line_id, billed_quantity) VALUES (856, 185, NULL, 1, 0, NULL, 0);
-INSERT INTO public.item_line_receipts (item_line, accepted_warehouse, rejected_warehouse, accepted_quantity, rejected_quantity, invoice_item_line_id, billed_quantity) VALUES (868, 185, 185, 10, 0, NULL, 0);
-INSERT INTO public.item_line_receipts (item_line, accepted_warehouse, rejected_warehouse, accepted_quantity, rejected_quantity, invoice_item_line_id, billed_quantity) VALUES (869, 185, 185, 5, 0, NULL, 0);
 
 
 --
--- TOC entry 4868 (class 0 OID 41272)
--- Dependencies: 273
+-- TOC entry 4897 (class 0 OID 19225)
+-- Dependencies: 271
 -- Data for Name: item_line_stock_entries; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5451,8 +5459,8 @@ INSERT INTO public.item_line_stock_entries (id, source_warehouse_id, target_ware
 
 
 --
--- TOC entry 4870 (class 0 OID 41276)
--- Dependencies: 275
+-- TOC entry 4899 (class 0 OID 19229)
+-- Dependencies: 273
 -- Data for Name: item_line_types; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5466,8 +5474,8 @@ INSERT INTO public.item_line_types (type) VALUES ('DEAL_LINE_ITEM');
 
 
 --
--- TOC entry 4871 (class 0 OID 41281)
--- Dependencies: 276
+-- TOC entry 4900 (class 0 OID 19234)
+-- Dependencies: 274
 -- Data for Name: item_lines; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5573,43 +5581,19 @@ INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party
 INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (859, '2025-05-28 18:22:36.404007', NULL, 750000, 1, 1954, NULL, 'QUOTATION_LINE_ITEM', 1290, 5);
 INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (860, '2025-05-28 18:23:27.213339', NULL, 750000, 1, 1955, 859, 'DELIVERY_LINE_ITEM', 1290, 5);
 INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (861, '2025-05-28 18:24:54.788661', NULL, 750000, 1, 1957, 859, 'ITEM_LINE_INVOICE', 1290, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (866, '2025-05-29 19:46:04.051638', NULL, 45022, 10, 1967, NULL, 'ITEM_LINE_ORDER', 1963, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (867, '2025-05-29 19:46:04.051638', NULL, 59787, 5, 1967, NULL, 'ITEM_LINE_ORDER', 1965, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (868, '2025-05-29 19:46:24.643791', NULL, 45022, 10, 1972, 862, 'ITEM_LINE_INVOICE', 1963, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (869, '2025-05-29 19:46:24.643791', NULL, 59787, 5, 1972, 863, 'ITEM_LINE_INVOICE', 1965, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (870, '2025-05-29 19:52:23.326641', NULL, 556478, 10, 1971, NULL, 'QUOTATION_LINE_ITEM', 1963, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (871, '2025-05-29 19:52:23.326641', NULL, 738765, 5, 1971, NULL, 'QUOTATION_LINE_ITEM', 1965, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (872, '2025-05-29 19:52:32.750342', NULL, 556478, 10, 1992, NULL, 'QUOTATION_LINE_ITEM', 1963, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (873, '2025-05-29 19:52:32.750342', NULL, 738765, 5, 1992, NULL, 'QUOTATION_LINE_ITEM', 1965, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (874, '2025-05-29 19:52:45.28897', NULL, 556478, 10, 1993, 872, 'DELIVERY_LINE_ITEM', 1963, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (875, '2025-05-29 19:52:45.28897', NULL, 738765, 5, 1993, 873, 'DELIVERY_LINE_ITEM', 1965, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (876, '2025-05-29 19:54:13.659514', NULL, 556478, 10, 1996, 872, 'ITEM_LINE_INVOICE', 1963, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (877, '2025-05-29 19:54:13.659514', NULL, 738765, 5, 1996, 873, 'ITEM_LINE_INVOICE', 1965, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (878, '2025-05-29 20:07:05.740174', NULL, 72546, 2, 2005, NULL, 'ITEM_LINE_ORDER', 2001, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (879, '2025-05-29 20:07:05.740174', NULL, 24182, 2, 2005, NULL, 'ITEM_LINE_ORDER', 2003, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (880, '2025-05-29 20:07:23.244259', NULL, 896280, 2, 2009, NULL, 'QUOTATION_LINE_ITEM', 2001, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (881, '2025-05-29 20:07:23.244259', NULL, 299198, 2, 2009, NULL, 'QUOTATION_LINE_ITEM', 2003, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (882, '2025-05-29 20:20:58.123243', NULL, 72546, 2, 2010, 878, 'ITEM_LINE_INVOICE', 2001, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (883, '2025-05-29 20:20:58.123243', NULL, 24182, 2, 2010, 879, 'ITEM_LINE_INVOICE', 2003, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (884, '2025-05-29 20:29:48.922886', NULL, 72546, 2, 2011, NULL, 'ITEM_LINE_ORDER', 2001, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (885, '2025-05-29 20:29:48.922886', NULL, 24182, 2, 2011, NULL, 'ITEM_LINE_ORDER', 2003, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (886, '2025-05-29 20:30:02.353519', NULL, 72546, 2, 2012, 884, 'ITEM_LINE_INVOICE', 2001, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (887, '2025-05-29 20:30:02.353519', NULL, 24182, 2, 2012, 885, 'ITEM_LINE_INVOICE', 2003, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (888, '2025-05-29 20:30:38.057938', NULL, 72546, 2, 2013, 884, 'ITEM_LINE_INVOICE', 2001, 5);
-INSERT INTO public.item_lines (id, created_at, deleted_at, rate, quantity, party_id, item_line_reference_id, "type ", item_id, unit_of_measure_id) VALUES (889, '2025-05-29 20:30:38.057938', NULL, 24182, 2, 2013, 885, 'ITEM_LINE_INVOICE', 2003, 5);
 
 
 --
--- TOC entry 4875 (class 0 OID 41301)
--- Dependencies: 280
+-- TOC entry 4904 (class 0 OID 19254)
+-- Dependencies: 278
 -- Data for Name: item_price_plugins; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4876 (class 0 OID 41306)
--- Dependencies: 281
+-- TOC entry 4905 (class 0 OID 19259)
+-- Dependencies: 279
 -- Data for Name: item_prices; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5648,27 +5632,19 @@ INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, it
 INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (1804, '2025-03-27 00:33:57.880056+00', NULL, '2025-03-27 00:33:57.880056+00', '81bd6199-1807-485a-9d0f-ae85ca92052c', 1803, 1, 152, 1, 90900, 5);
 INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (1100, '2024-12-12 21:44:06.018533+00', NULL, '2025-03-27 01:08:26.555773+00', '30ba1e54-b335-496e-805b-fd584dd6424e', 183, 1099, 152, 1, 15054, 5);
 INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (1819, '2025-04-02 22:29:07.530008+00', NULL, '2025-04-02 22:29:07.530008+00', '79af4593-e5c6-4895-8263-2231b2917edf', 1818, 4, 275, 1, 10000, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (1964, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', 'e40d3be8-dcbe-4f1d-a792-06883dcfaa54', 1963, 1962, 152, 1, 45022, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (1966, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', '486b4d9d-3cfe-4cdf-87ec-5aa4716bd14e', 1965, 1962, 152, 1, 59787, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (1969, '2025-05-29 19:45:32.117167+00', NULL, '2025-05-29 19:45:32.117167+00', 'c5550be2-621b-493c-8894-bd49375bdf33', 1963, 1968, 152, 1, 556478, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (1970, '2025-05-29 19:45:32.117167+00', NULL, '2025-05-29 19:45:32.117167+00', '998b93e4-ac6d-4828-a483-e577b437a872', 1965, 1968, 152, 1, 738765, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (2002, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'a283e896-451d-42f2-9c8d-48b74111db8f', 2001, 2000, 152, 1, 72546, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (2004, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'f9d096ec-7770-436e-8d00-b4589f37d951', 2003, 2000, 152, 1, 24182, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (2007, '2025-05-29 20:07:23.244259+00', NULL, '2025-05-29 20:07:23.244259+00', '3aab95c5-e6b7-4bf2-a900-db846288e9ae', 2001, 2006, 152, 1, 896280, 5);
-INSERT INTO public.item_prices (id, created_at, deleted_at, updated_at, uuid, item_id, price_list_id, company_id, item_quantity, rate, unit_of_measure_id) VALUES (2008, '2025-05-29 20:07:23.244259+00', NULL, '2025-05-29 20:07:23.244259+00', '5208d1ac-bf1c-446f-a4d2-d4fb1b119b27', 2003, 2006, 152, 1, 299198, 5);
 
 
 --
--- TOC entry 4878 (class 0 OID 41314)
--- Dependencies: 283
+-- TOC entry 4907 (class 0 OID 19267)
+-- Dependencies: 281
 -- Data for Name: item_variants; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4879 (class 0 OID 41317)
--- Dependencies: 284
+-- TOC entry 4908 (class 0 OID 19270)
+-- Dependencies: 282
 -- Data for Name: items; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5698,15 +5674,11 @@ INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, co
 INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, code, group_id, company_id, unit_of_measure_id, parent_id, item_type, maintain_stock, description, status) VALUES (1803, '2025-03-27 00:33:57.880056+00', '2025-03-27 00:33:57.880056+00', NULL, '00709453-ba5f-4587-9e8b-997549e09d76', 'Monitor LGD', 'LGD-10202', 897, 152, 5, NULL, 'ITEM', true, NULL, 'ENABLED');
 INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, code, group_id, company_id, unit_of_measure_id, parent_id, item_type, maintain_stock, description, status) VALUES (1818, '2025-04-02 22:29:07.530008+00', '2025-04-02 22:29:29.909612+00', NULL, '74bb0453-af07-4ecb-bac4-2d347bad09ba', 'Indumentaria deportiva', '120202', 312, 275, 5, NULL, 'ITEM', true, '<p>Indumentaria deportiva.</p>', 'ENABLED');
 INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, code, group_id, company_id, unit_of_measure_id, parent_id, item_type, maintain_stock, description, status) VALUES (183, '2024-11-13 15:40:31.76559+00', '2025-05-27 19:16:48.461618+00', NULL, '6e0fb971-f78b-4daa-aa6b-1f0805788d32', 'Item 1.', '0417381F', 182, 152, 5, NULL, 'ITEM', true, NULL, 'ENABLED');
-INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, code, group_id, company_id, unit_of_measure_id, parent_id, item_type, maintain_stock, description, status) VALUES (1963, '2025-05-29 19:45:28.846264+00', '2025-05-29 19:45:28.846264+00', NULL, 'a4a37583-3567-47cd-812b-15db07c17aab', 'Laptop-HP-A41', 'Laptop-HP-A41', NULL, 152, 5, NULL, 'ITEM', true, 'Portátil HP con procesador de última generación (Intel o AMD, según modelo), pantalla Full HD de hasta 15.6 pulgadas, memoria RAM ampliable (8 GB o más), almacenamiento SSD de alta velocidad (256 GB o más), conectividad avanzada (Wi-Fi 6, Bluetooth 5), puertos USB-C y HDMI, teclado retroiluminado en algunos modelos y batería de larga duración. Ideal para productividad y uso diario.', 'ENABLED');
-INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, code, group_id, company_id, unit_of_measure_id, parent_id, item_type, maintain_stock, description, status) VALUES (1965, '2025-05-29 19:45:28.846264+00', '2025-05-29 19:45:28.846264+00', NULL, '8fdf192b-b23e-4b3c-9d01-fbb2cf5db9f0', 'Laptop-HP-A54', 'Laptop-HP-A54', NULL, 152, 5, NULL, 'ITEM', true, 'Portátil HP con procesador de última generación (Intel o AMD, según modelo), pantalla Full HD de hasta 15.6 pulgadas, memoria RAM ampliable (8 GB o más), almacenamiento SSD de alta velocidad (256 GB o más), conectividad avanzada (Wi-Fi 6, Bluetooth 5), puertos USB-C y HDMI, teclado retroiluminado en algunos modelos y batería de larga duración. Ideal para productividad y uso diario.', 'ENABLED');
-INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, code, group_id, company_id, unit_of_measure_id, parent_id, item_type, maintain_stock, description, status) VALUES (2001, '2025-05-29 20:07:05.740174+00', '2025-05-29 20:07:05.740174+00', NULL, 'ff6ec23d-33f3-4dd3-9fd0-64ec9d556691', 'PL-321', 'PL-321', NULL, 152, 5, NULL, 'ITEM', true, 'Monitor de 21 pulgadas', 'ENABLED');
-INSERT INTO public.items (id, created_at, updated_at, deleted_at, uuid, name, code, group_id, company_id, unit_of_measure_id, parent_id, item_type, maintain_stock, description, status) VALUES (2003, '2025-05-29 20:07:05.740174+00', '2025-05-29 20:07:05.740174+00', NULL, '9befdaa9-66b1-47c2-a910-ca17a927256d', 'TECL-132', 'TECL-132', NULL, 152, 5, NULL, 'ITEM', true, 'Teclado hp', 'ENABLED');
 
 
 --
--- TOC entry 4881 (class 0 OID 41329)
--- Dependencies: 286
+-- TOC entry 4910 (class 0 OID 19281)
+-- Dependencies: 284
 -- Data for Name: journal_entries; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5720,8 +5692,8 @@ INSERT INTO public.journal_entries (id, created_at, posting_date, deleted_at, up
 
 
 --
--- TOC entry 4882 (class 0 OID 41336)
--- Dependencies: 287
+-- TOC entry 4911 (class 0 OID 19287)
+-- Dependencies: 285
 -- Data for Name: journal_entry_lines; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5742,16 +5714,16 @@ INSERT INTO public.journal_entry_lines (id, created_at, deleted_at, ledger_id, c
 
 
 --
--- TOC entry 4884 (class 0 OID 41345)
--- Dependencies: 289
+-- TOC entry 4913 (class 0 OID 19296)
+-- Dependencies: 287
 -- Data for Name: key_values; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4886 (class 0 OID 41351)
--- Dependencies: 291
+-- TOC entry 4915 (class 0 OID 19302)
+-- Dependencies: 289
 -- Data for Name: ledger_accounts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5822,24 +5794,24 @@ INSERT INTO public.ledger_accounts (ledger_id, can_credit, can_debit, "limit", c
 
 
 --
--- TOC entry 4887 (class 0 OID 41360)
--- Dependencies: 292
+-- TOC entry 4916 (class 0 OID 19311)
+-- Dependencies: 290
 -- Data for Name: ledger_statements; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4888 (class 0 OID 41364)
--- Dependencies: 293
+-- TOC entry 4917 (class 0 OID 19315)
+-- Dependencies: 291
 -- Data for Name: ledger_types; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4889 (class 0 OID 41369)
--- Dependencies: 294
+-- TOC entry 4918 (class 0 OID 19320)
+-- Dependencies: 292
 -- Data for Name: ledgers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -5996,8 +5968,8 @@ INSERT INTO public.ledgers (ledger_parent, account_type, name, company_id, is_gr
 
 
 --
--- TOC entry 4890 (class 0 OID 41379)
--- Dependencies: 295
+-- TOC entry 4919 (class 0 OID 19330)
+-- Dependencies: 293
 -- Data for Name: mentions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -6081,11 +6053,25 @@ INSERT INTO public.mentions (id, entity_id, party_id, party_name, start_index, e
 
 
 --
--- TOC entry 4891 (class 0 OID 41384)
--- Dependencies: 296
+-- TOC entry 4920 (class 0 OID 19335)
+-- Dependencies: 294
 -- Data for Name: module_sections; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (135, 'Facturación', 1371, 12);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (136, 'Facturación', 1371, 17);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (137, 'Facturación', 1371, 44);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (138, 'Pagos', 1371, 18);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (139, 'Pagos', 1371, 29);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (140, 'Reportes', 1371, 35);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (141, 'Reportes', 1371, 54);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (142, 'Facturación', 1372, 14);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (143, 'Facturación', 1372, 25);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (144, 'Facturación', 1372, 45);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (145, 'Pagos', 1372, 18);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (146, 'Pagos', 1372, 29);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (147, 'Reportes', 1372, 34);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (148, 'Reportes', 1372, 53);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (414, 'Autorizacion', 1637, 10);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (415, 'Autorizacion', 1637, 11);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (324, 'Facturación', 1416, 14);
@@ -6100,6 +6086,18 @@ INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING S
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (419, 'Autorizacion', 1650, 10);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (420, 'Autorizacion', 1650, 11);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (421, 'App', 1650, 47);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (452, 'Empresa', 1370, 1);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (453, 'Empresa', 1370, 19);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (454, 'Pagos', 1370, 18);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (455, 'Pagos', 1370, 29);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (456, 'Ajustes', 1370, 43);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (457, 'Dimensión contable', 1370, 31);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (458, 'Dimensión contable', 1370, 30);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (459, 'Reportes', 1370, 33);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (460, 'Reportes', 1370, 50);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (461, 'Reportes', 1370, 51);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (462, 'Reportes', 1370, 52);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (463, 'Términos y Condiciones', 1370, 58);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (392, 'Catálogo de Artículos', 1375, 2);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (393, 'Catálogo de Artículos', 1375, 4);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (394, 'Transacciones de Inventario', 1375, 32);
@@ -6113,6 +6111,11 @@ INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING S
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (402, 'Precios', 1375, 9);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (403, 'Ajuste', 1375, 7);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (404, 'Ajuste', 1375, 39);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (464, 'Términos y Condiciones', 1370, 59);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (465, 'Términos y Condiciones', 1370, 60);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (466, 'Banca', 1370, 61);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (467, 'Banca', 1370, 62);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (468, 'Pagos', 1370, 63);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (332, 'Facturación', 1415, 12);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (333, 'Facturación', 1415, 17);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (334, 'Facturación', 1415, 44);
@@ -6145,6 +6148,28 @@ INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING S
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (361, 'Precios', 1419, 3);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (362, 'Precios', 1419, 9);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (363, 'Ajuste', 1419, 7);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (370, 'Compra', 1373, 13);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (371, 'Compra', 1373, 20);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (372, 'Compra', 1373, 40);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (373, 'Artículo y Precio', 1373, 2);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (374, 'Artículo y Precio', 1373, 4);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (375, 'Artículo y Precio', 1373, 3);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (376, 'Artículo y Precio', 1373, 9);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (377, 'Proveedor', 1373, 12);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (378, 'Proveedor', 1373, 55);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (379, 'Cliente', 1373, 16);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (380, 'Cliente', 1373, 15);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (381, 'Venta', 1374, 24);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (382, 'Venta', 1374, 28);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (383, 'Venta', 1374, 41);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (384, 'Artículo y Precio', 1374, 2);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (385, 'Artículo y Precio', 1374, 4);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (386, 'Artículo y Precio', 1374, 3);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (387, 'Artículo y Precio', 1374, 9);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (388, 'Cliente', 1374, 14);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (389, 'Cliente', 1374, 56);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (390, 'Cliente', 1374, 16);
+INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (391, 'Cliente', 1374, 15);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (469, 'Compra', 1417, 13);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (470, 'Compra', 1417, 20);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (471, 'Compra', 1417, 40);
@@ -6167,67 +6192,19 @@ INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING S
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (488, 'Cliente', 1418, 56);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (489, 'Cliente', 1418, 16);
 INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (490, 'Cliente', 1418, 15);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (491, 'Facturación', 1990, 44);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (492, 'Facturación', 1990, 45);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (515, 'Compra', 1373, 13);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (516, 'Compra', 1373, 20);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (517, 'Compra', 1373, 40);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (518, 'Artículo y Precio', 1373, 2);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (519, 'Artículo y Precio', 1373, 4);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (520, 'Artículo y Precio', 1373, 3);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (521, 'Artículo y Precio', 1373, 9);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (522, 'Proveedor', 1373, 12);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (523, 'Proveedor', 1373, 55);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (524, 'Cliente', 1373, 16);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (525, 'Cliente', 1373, 15);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (526, 'Compra', 1373, 17);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (527, 'Venta', 1374, 24);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (528, 'Venta', 1374, 28);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (529, 'Venta', 1374, 41);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (530, 'Artículo y Precio', 1374, 2);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (531, 'Artículo y Precio', 1374, 4);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (532, 'Artículo y Precio', 1374, 3);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (533, 'Artículo y Precio', 1374, 9);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (534, 'Cliente', 1374, 14);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (535, 'Cliente', 1374, 56);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (536, 'Cliente', 1374, 16);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (537, 'Cliente', 1374, 15);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (538, 'Venta', 1374, 25);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (539, 'Pagos', 1372, 18);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (540, 'Pagos', 1372, 29);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (541, 'Reportes', 1372, 34);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (542, 'Reportes', 1372, 53);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (543, 'Pagos', 1371, 18);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (544, 'Pagos', 1371, 29);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (545, 'Reportes', 1371, 35);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (546, 'Reportes', 1371, 54);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (547, 'Empresa', 1370, 1);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (548, 'Empresa', 1370, 19);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (549, 'Pagos', 1370, 18);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (550, 'Pagos', 1370, 29);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (551, 'Ajustes', 1370, 43);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (552, 'Dimensión contable', 1370, 31);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (553, 'Dimensión contable', 1370, 30);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (554, 'Reportes', 1370, 33);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (555, 'Reportes', 1370, 50);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (556, 'Reportes', 1370, 51);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (557, 'Reportes', 1370, 52);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (558, 'Términos y Condiciones', 1370, 58);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (559, 'Términos y Condiciones', 1370, 59);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (560, 'Términos y Condiciones', 1370, 60);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (561, 'Banca', 1370, 61);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (562, 'Banca', 1370, 62);
-INSERT INTO public.module_sections (id, name, module_id, entity_id) OVERRIDING SYSTEM VALUE VALUES (563, 'Pagos', 1370, 63);
 
 
 --
--- TOC entry 4893 (class 0 OID 41390)
--- Dependencies: 298
+-- TOC entry 4922 (class 0 OID 19341)
+-- Dependencies: 296
 -- Data for Name: modules; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1371, 152, NULL, '2024-12-19 17:30:15.948006', 'arrowLeft', 'Cuentas por Pagar', 'payables', 'ENABLED', 'eec58c19-62d1-4d24-a126-43f29a3ac7f7', NULL, false, 0, '2025-05-19 14:50:04.575409');
+INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1372, 152, NULL, '2024-12-19 17:30:15.948006', 'arrowRight', 'Cuentas por Cobrar', 'receivables', 'ENABLED', '77eebd26-4483-4747-86bb-02b1bbe10f25', NULL, false, 0, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1637, 152, NULL, '2025-01-14 14:48:57.370286', 'settings', 'Configuracion', 'configuracion', 'ENABLED', '6dba4734-d5d6-459e-a761-0fa9f4a318b6', 'Configuración', false, 5, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1650, 275, NULL, '2025-01-16 21:12:06.920509', 'settings', 'Configuracion', 'configuracion', 'ENABLED', '37313064-c245-4ec4-be81-2770db73286e', 'Configuración', false, 6, '2025-05-19 14:50:04.575409');
+INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1370, 152, NULL, '2024-12-19 17:30:15.948006', 'wallet', 'Contabilidad', 'accounting', 'ENABLED', '90461f2c-25df-401e-a476-df5a6804c733', NULL, false, 0, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1422, 275, NULL, '2024-12-27 20:43:36.044509', 'users', 'Clientes', 'customer', 'ENABLED', '9041c6cd-1114-4202-b9de-741be9f25915', 'Usuarios', true, 2, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1830, 275, NULL, '2025-04-05 12:18:48.601176', 'cog', 'Crm', 'deal', 'ENABLED', 'b0831dd2-05c7-466b-8ddd-6da3fb777d27', 'Cog', true, 1, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1638, 275, NULL, '2025-01-14 18:12:49.016951', 'layoutDashboard', 'Panel ', 'bookingDashboard', 'ENABLED', 'afb59e73-7e72-4097-8aa1-fa6821ed9c84', 'Panel', true, 0, '2025-05-19 14:50:04.575409');
@@ -6239,23 +6216,18 @@ INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, l
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1639, 275, NULL, '2025-01-14 18:17:16.574579', 'store', 'Cancha', 'court', 'ENABLED', '91cbd1b3-2c27-4899-9a5a-c314f11890e6', 'Tienda', true, 1, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1421, 275, NULL, '2024-12-27 20:43:36.044509', 'contact', 'Contacto', 'contact', 'ENABLED', '56f09764-913a-4082-a091-9dfe122f7dc2', 'Contacto', true, 2, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1640, 275, NULL, '2025-01-14 19:03:12.58484', 'party-popper', 'Evento', 'event', 'ENABLED', '7f227cd3-10b2-40cd-a6fc-ccb1acf5a24d', 'Confeti de fiesta', true, 2, '2025-05-19 14:50:04.575409');
+INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1373, 152, NULL, '2024-12-19 17:30:15.948006', 'creditCard', 'Compra', 'buying', 'ENABLED', 'e9228c38-856b-4fba-92d2-36b5f322ad46', NULL, false, 3, '2025-05-19 14:50:04.575409');
+INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1374, 152, NULL, '2024-12-19 17:30:15.948006', 'dollarSign', 'Venta', 'venta', 'ENABLED', 'b03136dc-4d93-45e6-b400-069ba54a293f', 'Signo de Dólar', false, 3, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1375, 152, NULL, '2024-12-19 17:30:15.948006', NULL, 'Inventario', 'stock', 'ENABLED', 'f56f1a80-c098-4465-aafb-b37bf1abeaee', NULL, false, 4, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1853, 152, NULL, '2025-04-14 20:18:22.058562', 'cog', 'Crm', 'deal', 'ENABLED', '9aae8ff9-8a4c-4559-a7ff-eb9ebcf4289c', 'Cog', true, 1, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1417, 275, NULL, '2024-12-27 20:03:18.032893', 'creditCard', 'Compra', 'buying', 'DISABLED', '22b226fc-f59f-4d55-b982-852c17e24568', NULL, false, 1, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1418, 275, NULL, '2024-12-27 20:03:18.032893', 'currency', 'Venta', 'selling', 'DISABLED', '15d04481-2762-4137-b81a-87c73c9cb8d2', NULL, false, 1, '2025-05-19 14:50:04.575409');
 INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1831, 275, NULL, '2025-04-05 16:47:54.518702', 'calendarPlus', 'Reservar', 'booking/schedule', 'DISABLED', '0fb90a0e-e787-45e2-b669-77fb8bfe860b', 'Calendario Plus', true, 0, '2025-05-19 14:50:04.575409');
-INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1990, 152, NULL, '2025-05-29 19:47:44.766747', 'layers', 'Facturación', 'facturacion', 'ENABLED', '19ccbf39-b4b3-485a-9dca-30ff8c88930f', 'Capas', false, 3, '2025-05-29 19:47:44.766747');
-INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1373, 152, NULL, '2024-12-19 17:30:15.948006', 'creditCard', 'Compra', 'buying', 'ENABLED', 'e9228c38-856b-4fba-92d2-36b5f322ad46', NULL, false, 2, '2025-05-19 14:50:04.575409');
-INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1374, 152, NULL, '2024-12-19 17:30:15.948006', 'dollarSign', 'Venta', 'venta', 'ENABLED', 'b03136dc-4d93-45e6-b400-069ba54a293f', 'Signo de Dólar', false, 2, '2025-05-19 14:50:04.575409');
-INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1372, 152, NULL, '2024-12-19 17:30:15.948006', 'arrowRight', 'Cuentas por Cobrar', 'receivables', 'ENABLED', '77eebd26-4483-4747-86bb-02b1bbe10f25', NULL, false, 0, '2025-05-19 14:50:04.575409');
-INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1371, 152, NULL, '2024-12-19 17:30:15.948006', 'arrowLeft', 'Cuentas por Pagar', 'payables', 'ENABLED', 'eec58c19-62d1-4d24-a126-43f29a3ac7f7', NULL, false, 0, '2025-05-19 14:50:04.575409');
-INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1991, 152, NULL, '2025-05-29 19:50:09.532086', 'layers', 'Costo', 'pricing', 'ENABLED', 'fb7e24d4-f785-4d7c-98d9-e753b387d323', 'Capas', true, 4, '2025-05-29 19:50:09.532086');
-INSERT INTO public.modules (id, company_id, deleted_at, created_at, icon_code, label, href, status, uuid, icon_name, has_direct_access, priority, upadated_at) VALUES (1370, 152, NULL, '2024-12-19 17:30:15.948006', 'wallet', 'Contabilidad', 'accounting', 'ENABLED', '90461f2c-25df-401e-a476-df5a6804c733', NULL, false, 1, '2025-05-19 14:50:04.575409');
 
 
 --
--- TOC entry 4895 (class 0 OID 41402)
--- Dependencies: 300
+-- TOC entry 4924 (class 0 OID 19352)
+-- Dependencies: 298
 -- Data for Name: notifications; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -6295,7 +6267,6 @@ INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payloa
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (64, 275, '2025-04-03 01:34:23.302685', NULL, 'Esto es para recordarte acerca de la actividad "12312312" en Cliente Jane Doe.1, fecha límite 2025-04-06 01:34:21', true, 'MENTION', 304, '2025-04-06 01:34:21', true);
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (74, 275, '2025-04-06 10:31:17.309879', NULL, 'Mentioned you in comment to "Cliente Jorge Miranda Lopez", comment text: "@Regate Admin asdasda"', true, 'MENTION', 304, '2025-04-06 10:31:26.099604', true);
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (80, 275, '2025-05-19 15:41:06.726826', NULL, 'Mentioned you in comment to "Calendario Reservas Admin.", comment text: "@Regate Admin asdasd"', true, 'MENTION', 304, '2025-05-19 15:41:07.513786', true);
-INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (82, 152, '2025-05-27 14:37:44.141579', NULL, 'Esto es para recordarte acerca de la actividad "Activity" en Asiento Contable 8C454840, fecha límite 2025-05-30 14:36:31', false, 'MENTION', 180, '2025-05-30 14:36:31', false);
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (81, 152, '2025-05-27 14:31:37.958285', NULL, 'Mentioned you in comment to "Asiento Contable 8C454840", comment text: "Asientos Contables @Jorge M "', true, 'MENTION', 180, '2025-05-27 14:31:40.578175', true);
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (34, 152, '2025-03-26 18:09:20.858821', NULL, 'Mentioned you in comment to "Condiciones de Pago 30 días de crédito", comment text: "@Jorge M Condiciones de pago"', true, 'MENTION', 180, '2025-03-26 18:09:21.212899', true);
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (33, 152, '2025-03-26 17:58:51.055171', NULL, 'Mentioned you in comment to "Terminos y Condiciones Términos y condiciones estándar", comment text: "@Jorge M Terminos y condiciones"', true, 'MENTION', 180, '2025-03-26 17:58:51.400751', true);
@@ -6312,11 +6283,12 @@ INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payloa
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (23, 152, '2025-03-26 15:03:37.256903', NULL, 'Mentioned you in comment to "Banco Banco UNION", comment text: "@Jorge M BANCO UNION"', true, 'MENTION', 180, '2025-03-26 15:03:37.763956', true);
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (22, 152, '2025-03-26 14:46:16.907086', NULL, 'Mentioned you in comment to "Orden de Compra OC-0000014", comment text: "@Jorge M Comentario para pedido"', true, 'MENTION', 180, '2025-03-26 14:46:17.414314', true);
 INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (21, 152, '2025-03-26 13:19:29.147821', NULL, 'Mentioned you in comment to "Cliente Cliente1", comment text: "@Jorge M dasd asdasdas"', true, 'MENTION', 180, '2025-03-26 13:19:29.548901', true);
+INSERT INTO public.notifications (id, company_id, created_at, deleted_at, payload, read, type, profile_id, send_at, sended) OVERRIDING SYSTEM VALUE VALUES (82, 152, '2025-05-27 14:37:44.141579', NULL, 'Esto es para recordarte acerca de la actividad "Activity" en Asiento Contable 8C454840, fecha límite 2025-05-30 14:36:31', false, 'MENTION', 180, '2025-05-30 14:36:31', true);
 
 
 --
--- TOC entry 4897 (class 0 OID 41411)
--- Dependencies: 302
+-- TOC entry 4926 (class 0 OID 19361)
+-- Dependencies: 300
 -- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -6342,15 +6314,11 @@ INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, deliver
 INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, delivery_date, company_id, currency, status, posting_date, party_id, posting_time, tz, project_id, cost_center_id, price_list_id) VALUES (1924, '2025-05-23 19:59:00.737916', NULL, '2025-05-23 20:05:51.093311', 'OC-0000015', NULL, 152, 'BOB', 'COMPLETED', '2025-05-23', 1922, '15:58:48', 'America/La_Paz', 243, 242, NULL);
 INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, delivery_date, company_id, currency, status, posting_date, party_id, posting_time, tz, project_id, cost_center_id, price_list_id) VALUES (1941, '2025-05-27 19:38:22.351985', NULL, '2025-05-27 19:45:42.721239', 'OC-0000016', '2025-05-29 00:00:00', 152, 'BOB', 'COMPLETED', '2025-05-27', 1922, '15:38:09', 'America/La_Paz', 243, 242, NULL);
 INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, delivery_date, company_id, currency, status, posting_date, party_id, posting_time, tz, project_id, cost_center_id, price_list_id) VALUES (1954, '2025-05-28 18:22:36.404007', NULL, '2025-05-28 18:32:02.205028', 'OV-0000006', '2025-05-29 00:00:00', 152, 'BOB', 'COMPLETED', '2025-05-28', 1841, '14:22:16', 'America/La_Paz', 243, 242, NULL);
-INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, delivery_date, company_id, currency, status, posting_date, party_id, posting_time, tz, project_id, cost_center_id, price_list_id) VALUES (1967, '2025-05-29 19:45:28.846264', NULL, '2025-05-29 19:46:27.111248', 'OC-0000017', NULL, 152, 'USD', 'COMPLETED', '2025-05-28', 1922, '19:45:28', 'America/La_Paz', 243, 242, 1962);
-INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, delivery_date, company_id, currency, status, posting_date, party_id, posting_time, tz, project_id, cost_center_id, price_list_id) VALUES (1992, '2025-05-29 19:52:32.750342', NULL, '2025-05-29 19:54:15.804622', 'OV-0000007', NULL, 152, 'BOB', 'COMPLETED', '2025-05-29', 1959, '15:52:28', 'America/La_Paz', 243, 242, 1968);
-INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, delivery_date, company_id, currency, status, posting_date, party_id, posting_time, tz, project_id, cost_center_id, price_list_id) VALUES (2005, '2025-05-29 20:07:05.740174', NULL, '2025-05-29 20:29:25.78022', 'OC-0000018', NULL, 152, 'USD', 'CANCELLED', '2025-05-29', 1082, '20:07:05', 'America/La_Paz', 1997, 242, 2000);
-INSERT INTO public.orders (id, created_at, deleted_at, updated_at, code, delivery_date, company_id, currency, status, posting_date, party_id, posting_time, tz, project_id, cost_center_id, price_list_id) VALUES (2011, '2025-05-29 20:29:48.922886', NULL, '2025-05-29 20:30:52.515619', 'OC-0000019', NULL, 152, 'USD', 'TO_RECEIVE_AND_BILL', '2025-05-29', 1082, '20:29:48', 'America/La_Paz', 1997, 242, 2000);
 
 
 --
--- TOC entry 4898 (class 0 OID 41421)
--- Dependencies: 303
+-- TOC entry 4927 (class 0 OID 19371)
+-- Dependencies: 301
 -- Data for Name: parties; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8027,81 +7995,27 @@ INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_c
 INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1956, '2025-05-28 18:23:46.382753+00', NULL, '2025-05-28 18:23:46.382753+00', 'batchBundle');
 INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1957, '2025-05-28 18:24:54.788661+00', NULL, '2025-05-28 18:24:54.788661+00', 'saleInvoice');
 INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1958, '2025-05-28 18:36:04.933494+00', NULL, '2025-05-28 18:36:04.933494+00', 'payment');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1959, '2025-05-29 19:42:50.684257+00', NULL, '2025-05-29 19:42:50.684257+00', 'customer');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1960, '2025-05-29 19:43:05.662388+00', NULL, '2025-05-29 19:43:05.662388+00', 'pricing');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1962, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', 'priceList');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1963, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', 'item');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1964, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1965, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', 'item');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1966, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1967, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', 'purchaseOrder');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1968, '2025-05-29 19:45:32.117167+00', NULL, '2025-05-29 19:45:32.117167+00', 'priceList');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1969, '2025-05-29 19:45:32.117167+00', NULL, '2025-05-29 19:45:32.117167+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1970, '2025-05-29 19:45:32.117167+00', NULL, '2025-05-29 19:45:32.117167+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1971, '2025-05-29 19:45:32.117167+00', NULL, '2025-05-29 19:45:32.117167+00', 'salesQuotation');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1972, '2025-05-29 19:46:24.643791+00', NULL, '2025-05-29 19:46:24.643791+00', 'purchaseInvoice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1973, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'batchBundle');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1974, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1975, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1976, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1977, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1978, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1979, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1980, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1981, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1982, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1983, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1984, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'batchBundle');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1985, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1986, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1987, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1988, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1989, '2025-05-29 19:46:26.913252+00', NULL, '2025-05-29 19:46:26.913252+00', 'serialNo');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1990, '2025-05-29 19:47:44.766747+00', NULL, '2025-05-29 19:47:44.766747+00', 'module');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1991, '2025-05-29 19:50:09.532086+00', NULL, '2025-05-29 19:50:09.532086+00', 'module');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1992, '2025-05-29 19:52:32.750342+00', NULL, '2025-05-29 19:52:32.750342+00', 'saleOrder');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1993, '2025-05-29 19:52:45.28897+00', NULL, '2025-05-29 19:52:45.28897+00', 'deliveryNote');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1994, '2025-05-29 19:52:47.388688+00', NULL, '2025-05-29 19:52:47.388688+00', 'batchBundle');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1995, '2025-05-29 19:52:47.388688+00', NULL, '2025-05-29 19:52:47.388688+00', 'batchBundle');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1996, '2025-05-29 19:54:13.659514+00', NULL, '2025-05-29 19:54:13.659514+00', 'saleInvoice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1997, '2025-05-29 19:57:52.260801+00', NULL, '2025-05-29 19:57:52.260801+00', 'project');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1998, '2025-05-29 19:58:12.199859+00', NULL, '2025-05-29 19:58:12.199859+00', 'warehouse');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (1999, '2025-05-29 20:05:34.950037+00', NULL, '2025-05-29 20:05:34.950037+00', 'pricing');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2000, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'priceList');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2001, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'item');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2002, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2003, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'item');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2004, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2005, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', 'purchaseOrder');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2006, '2025-05-29 20:07:23.244259+00', NULL, '2025-05-29 20:07:23.244259+00', 'priceList');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2007, '2025-05-29 20:07:23.244259+00', NULL, '2025-05-29 20:07:23.244259+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2008, '2025-05-29 20:07:23.244259+00', NULL, '2025-05-29 20:07:23.244259+00', 'itemPrice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2009, '2025-05-29 20:07:23.244259+00', NULL, '2025-05-29 20:07:23.244259+00', 'salesQuotation');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2010, '2025-05-29 20:20:58.123243+00', NULL, '2025-05-29 20:20:58.123243+00', 'purchaseInvoice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2011, '2025-05-29 20:29:48.922886+00', NULL, '2025-05-29 20:29:48.922886+00', 'purchaseOrder');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2012, '2025-05-29 20:30:02.353519+00', NULL, '2025-05-29 20:30:02.353519+00', 'purchaseInvoice');
-INSERT INTO public.parties (id, created_at, deleted_at, updated_at, party_type_code) OVERRIDING SYSTEM VALUE VALUES (2013, '2025-05-29 20:30:38.057938+00', NULL, '2025-05-29 20:30:38.057938+00', 'purchaseInvoice');
 
 
 --
--- TOC entry 4901 (class 0 OID 41430)
--- Dependencies: 306
+-- TOC entry 4930 (class 0 OID 19380)
+-- Dependencies: 304
 -- Data for Name: party_addresses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4902 (class 0 OID 41438)
--- Dependencies: 307
+-- TOC entry 4931 (class 0 OID 19388)
+-- Dependencies: 305
 -- Data for Name: party_payments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4903 (class 0 OID 41443)
--- Dependencies: 308
+-- TOC entry 4932 (class 0 OID 19393)
+-- Dependencies: 306
 -- Data for Name: party_references; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8249,62 +8163,33 @@ INSERT INTO public.party_references (party_id, reference_id, created_at, deleted
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1941, 1942, '2025-05-27 19:41:52.919389', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1941, 1945, '2025-05-27 19:45:20.879289', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1945, 1946, '2025-05-27 19:50:01.217728', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1922, 1951, '2025-05-27 20:47:05.435978', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1951, '2025-05-27 20:47:05.435978', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1951, '2025-05-27 20:47:05.435978', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1922, 1952, '2025-05-27 21:10:11.68372', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1952, '2025-05-27 21:10:11.68372', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1952, '2025-05-27 21:10:11.68372', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1841, 1953, '2025-05-28 18:21:06.787332', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1953, '2025-05-28 18:21:06.787332', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1953, '2025-05-28 18:21:06.787332', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1841, 1954, '2025-05-28 18:22:36.404007', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1954, '2025-05-28 18:22:36.404007', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1954, '2025-05-28 18:22:36.404007', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1841, 1955, '2025-05-28 18:23:27.213339', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1954, 1955, '2025-05-28 18:23:27.213339', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1955, '2025-05-28 18:23:27.213339', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1955, '2025-05-28 18:23:27.213339', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1841, 1957, '2025-05-28 18:24:54.788661', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1954, 1957, '2025-05-28 18:24:54.788661', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1957, '2025-05-28 18:24:54.788661', NULL);
+INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1957, '2025-05-28 18:24:54.788661', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1957, 1958, '2025-05-28 18:36:04.933494', NULL);
 INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1841, 1958, '2025-05-28 18:36:04.933494', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1960, 1967, '2025-05-29 19:45:28.846264', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1960, 1971, '2025-05-29 19:45:32.117167', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1922, 1967, '2025-05-29 19:46:04.051638', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1922, 1972, '2025-05-29 19:46:24.643791', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1967, 1972, '2025-05-29 19:46:24.643791', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1959, 1971, '2025-05-29 19:52:23.326641', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1971, '2025-05-29 19:52:23.326641', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1971, '2025-05-29 19:52:23.326641', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1959, 1992, '2025-05-29 19:52:32.750342', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1992, '2025-05-29 19:52:32.750342', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1992, '2025-05-29 19:52:32.750342', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1959, 1993, '2025-05-29 19:52:45.28897', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1992, 1993, '2025-05-29 19:52:45.28897', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1993, '2025-05-29 19:52:45.28897', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1993, '2025-05-29 19:52:45.28897', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1959, 1996, '2025-05-29 19:54:13.659514', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1992, 1996, '2025-05-29 19:54:13.659514', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 1996, '2025-05-29 19:54:13.659514', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (243, 1996, '2025-05-29 19:54:13.659514', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1999, 2005, '2025-05-29 20:07:05.740174', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1082, 2005, '2025-05-29 20:07:05.740174', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1997, 2005, '2025-05-29 20:07:05.740174', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 2005, '2025-05-29 20:07:05.740174', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1999, 2009, '2025-05-29 20:07:23.244259', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (240, 2009, '2025-05-29 20:07:23.244259', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 2009, '2025-05-29 20:07:23.244259', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1997, 2009, '2025-05-29 20:07:23.244259', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1082, 2010, '2025-05-29 20:20:58.123243', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (2005, 2010, '2025-05-29 20:20:58.123243', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 2010, '2025-05-29 20:20:58.123243', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1997, 2010, '2025-05-29 20:20:58.123243', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1999, 2011, '2025-05-29 20:29:48.922886', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1082, 2011, '2025-05-29 20:29:48.922886', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1997, 2011, '2025-05-29 20:29:48.922886', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 2011, '2025-05-29 20:29:48.922886', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1082, 2012, '2025-05-29 20:30:02.353519', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (2011, 2012, '2025-05-29 20:30:02.353519', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 2012, '2025-05-29 20:30:02.353519', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1997, 2012, '2025-05-29 20:30:02.353519', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1082, 2013, '2025-05-29 20:30:38.057938', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (2011, 2013, '2025-05-29 20:30:38.057938', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (242, 2013, '2025-05-29 20:30:38.057938', NULL);
-INSERT INTO public.party_references (party_id, reference_id, created_at, deleted_at) VALUES (1997, 2013, '2025-05-29 20:30:38.057938', NULL);
 
 
 --
--- TOC entry 4904 (class 0 OID 41447)
--- Dependencies: 309
+-- TOC entry 4933 (class 0 OID 19397)
+-- Dependencies: 307
 -- Data for Name: party_types; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8370,11 +8255,12 @@ INSERT INTO public.party_types (code, name, created_at, entity_id) VALUES ('cash
 INSERT INTO public.party_types (code, name, created_at, entity_id) VALUES ('deal', 'deals', '2025-02-18 13:42:21.908741', 64);
 INSERT INTO public.party_types (code, name, created_at, entity_id) VALUES ('chat', 'Chat', '2025-03-21 17:37:25.402416', 66);
 INSERT INTO public.party_types (code, name, created_at, entity_id) VALUES ('workspace', 'Workspace', '2025-05-16 17:53:42.846988', 68);
+INSERT INTO public.party_types (code, name, created_at, entity_id) VALUES ('task', 'Task', '2025-08-05 15:47:24.8013', 69);
 
 
 --
--- TOC entry 4905 (class 0 OID 41453)
--- Dependencies: 310
+-- TOC entry 4934 (class 0 OID 19403)
+-- Dependencies: 308
 -- Data for Name: payment_references; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8392,8 +8278,8 @@ INSERT INTO public.payment_references (payment_id, party_id, party_code, total, 
 
 
 --
--- TOC entry 4907 (class 0 OID 41460)
--- Dependencies: 312
+-- TOC entry 4936 (class 0 OID 19410)
+-- Dependencies: 310
 -- Data for Name: payment_terms; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8401,8 +8287,8 @@ INSERT INTO public.payment_terms (id, uuid, created_at, deleted_at, name, invoic
 
 
 --
--- TOC entry 4908 (class 0 OID 41467)
--- Dependencies: 313
+-- TOC entry 4937 (class 0 OID 19417)
+-- Dependencies: 311
 -- Data for Name: payment_terms_lines; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8410,8 +8296,8 @@ INSERT INTO public.payment_terms_lines (id, create_at, deleted_at, payment_terms
 
 
 --
--- TOC entry 4910 (class 0 OID 41473)
--- Dependencies: 315
+-- TOC entry 4939 (class 0 OID 19423)
+-- Dependencies: 313
 -- Data for Name: payment_terms_templates; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8419,8 +8305,8 @@ INSERT INTO public.payment_terms_templates (id, uuid, created_at, deleted_at, na
 
 
 --
--- TOC entry 4911 (class 0 OID 41480)
--- Dependencies: 316
+-- TOC entry 4940 (class 0 OID 19430)
+-- Dependencies: 314
 -- Data for Name: payments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8441,8 +8327,8 @@ INSERT INTO public.payments (id, uuid, created_at, deleted_at, updated_at, posti
 
 
 --
--- TOC entry 4912 (class 0 OID 41488)
--- Dependencies: 317
+-- TOC entry 4941 (class 0 OID 19438)
+-- Dependencies: 315
 -- Data for Name: piano_form; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8450,16 +8336,16 @@ INSERT INTO public.piano_form (id, moving_date, piano_type, pickup_flights, pick
 
 
 --
--- TOC entry 4913 (class 0 OID 41494)
--- Dependencies: 318
+-- TOC entry 4942 (class 0 OID 19444)
+-- Dependencies: 316
 -- Data for Name: plugins; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4873 (class 0 OID 41289)
--- Dependencies: 278
+-- TOC entry 4902 (class 0 OID 19242)
+-- Dependencies: 276
 -- Data for Name: price_lists; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8483,15 +8369,11 @@ INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, na
 INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, name, is_buying, is_selling, currency, company_id, status) VALUES (1757, '2025-02-21 19:37:44.96719+00', NULL, '2025-02-21 19:37:44.96719+00', 'f3280428-fa94-4f65-87f7-8fe77b485a86', 'PR-0000004 Venta', false, true, 'BOB', 152, 'ENABLED');
 INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, name, is_buying, is_selling, currency, company_id, status) VALUES (1761, '2025-02-21 19:42:56.708901+00', NULL, '2025-02-21 19:42:56.708901+00', 'ec5e9305-dc66-4cce-83a3-f4681c4458bf', 'PR-0000005 Venta', false, true, 'BOB', 152, 'ENABLED');
 INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, name, is_buying, is_selling, currency, company_id, status) VALUES (1765, '2025-02-21 19:47:41.768605+00', NULL, '2025-02-21 19:47:41.768605+00', '745f35f1-1e6c-4fba-aabb-984fac4697f7', 'PR-0000005 Compra', true, false, 'USD', 152, 'ENABLED');
-INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, name, is_buying, is_selling, currency, company_id, status) VALUES (1962, '2025-05-29 19:45:28.846264+00', NULL, '2025-05-29 19:45:28.846264+00', '4fd4b46c-cbc2-4713-8373-031c8d544366', 'PR-0000006 Compra', true, false, 'USD', 152, 'ENABLED');
-INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, name, is_buying, is_selling, currency, company_id, status) VALUES (1968, '2025-05-29 19:45:32.117167+00', NULL, '2025-05-29 19:45:32.117167+00', '9cf3025d-4029-4afa-94a5-6fe50a319402', 'PR-0000006 Venta', false, true, 'BOB', 152, 'ENABLED');
-INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, name, is_buying, is_selling, currency, company_id, status) VALUES (2000, '2025-05-29 20:07:05.740174+00', NULL, '2025-05-29 20:07:05.740174+00', '15c1e46b-0da8-434e-979b-e9d3ea076264', 'PR-0000007 Compra', true, false, 'USD', 152, 'ENABLED');
-INSERT INTO public.price_lists (id, created_at, deleted_at, updated_at, uuid, name, is_buying, is_selling, currency, company_id, status) VALUES (2006, '2025-05-29 20:07:23.244259+00', NULL, '2025-05-29 20:07:23.244259+00', 'a91cbbe7-2d45-4e35-b94c-e044fb6128db', 'PR-0000007 Venta', false, true, 'BOB', 152, 'ENABLED');
 
 
 --
--- TOC entry 4917 (class 0 OID 41508)
--- Dependencies: 322
+-- TOC entry 4946 (class 0 OID 19458)
+-- Dependencies: 320
 -- Data for Name: pricing_charges; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8535,27 +8417,11 @@ INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pric
 INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (998, 'Tasa_TVA', '2025-05-22 20:17:30.036692', NULL, 70, 1378);
 INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (999, 'TC', '2025-05-22 20:17:30.036692', NULL, 750, 1378);
 INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1000, 'Descuento', '2025-05-22 20:17:30.036692', NULL, 45, 1378);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1009, 'Flete', '2025-05-29 19:58:47.351019', NULL, 7, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1010, 'Importacion', '2025-05-29 19:58:47.351019', NULL, 13, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1011, 'Margen', '2025-05-29 19:58:47.351019', NULL, 25, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1012, 'Impuestos', '2025-05-29 19:58:47.351019', NULL, 19, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1013, 'Retencion', '2025-05-29 19:58:47.351019', NULL, 14, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1014, 'TVA', '2025-05-29 19:58:47.351019', NULL, 70, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1015, 'TC', '2025-05-29 19:58:47.351019', NULL, 750, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1016, 'Descuento', '2025-05-29 19:58:47.351019', NULL, 45, 1960);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1017, 'Flete', '2025-05-29 20:05:34.972305', NULL, 7, 1999);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1018, 'Importacion', '2025-05-29 20:05:34.972305', NULL, 13, 1999);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1019, 'Margen', '2025-05-29 20:05:34.972305', NULL, 25, 1999);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1020, 'Impuestos', '2025-05-29 20:05:34.972305', NULL, 19, 1999);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1021, 'Retencion', '2025-05-29 20:05:34.972305', NULL, 14, 1999);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1022, 'TVA', '2025-05-29 20:05:34.972305', NULL, 70, 1999);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1023, 'TC', '2025-05-29 20:05:34.972305', NULL, 750, 1999);
-INSERT INTO public.pricing_charges (id, name, created_at, deleted_at, rate, pricing_id) OVERRIDING SYSTEM VALUE VALUES (1024, 'Descuento', '2025-05-29 20:05:34.972305', NULL, 0, 1999);
 
 
 --
--- TOC entry 4915 (class 0 OID 41501)
--- Dependencies: 320
+-- TOC entry 4944 (class 0 OID 19451)
+-- Dependencies: 318
 -- Data for Name: pricing_line_items; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8568,15 +8434,11 @@ INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, 
 INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, part_number, description, quantity, pl_unit, pricing_id, fob_unit_fn, retention_fn, cost_zf_fn, cost_alm_fn, tva_fn, cantidad_fn, precio_unitario_fn, precio_total_fn, precio_unitario_tc_fn, precio_total_tc_fn, fob_total_fn, gpl_total_fn, tva_total_fn, is_title, color) OVERRIDING SYSTEM VALUE VALUES (331, '2025-05-22 20:17:29.094266', NULL, 1082, 'SV-2040E-R6S D480-436', '**New Product Launch** Streamvault™ 2040E Series -  1U 6-Bay Multi-Purpose Appliance 1x Xeon E-2436  32GB RAM 2x 480GB M.2 SSD 2x 1GbE RJ45 2x 600W  PSU Windows Server Standard 5YR NBD KYHD  Warranty - Genetec™ Security Center pre-installed.  License sold separately.', 1, 1029000, 1378, 'Pl_Unit * (1-Descuento)', NULL, 'Fob_Unit * (1+flete)', 'Cost_ZF * (1+Importacion)', NULL, 'Quantity', '(Cost_Alm/(1-Margen)+Tasa_TVA)/(1-Impuestos)', 'Cantidad * Precio_Unitario', 'Precio_Unitario * TC', 'Precio_Unitario_TC * Cantidad', 'Fob_Unit * Cantidad', 'Pl_Unit * Cantidad', 'TVA * Cantidad', NULL, NULL);
 INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, part_number, description, quantity, pl_unit, pricing_id, fob_unit_fn, retention_fn, cost_zf_fn, cost_alm_fn, tva_fn, cantidad_fn, precio_unitario_fn, precio_total_fn, precio_unitario_tc_fn, precio_total_tc_fn, fob_total_fn, gpl_total_fn, tva_total_fn, is_title, color) OVERRIDING SYSTEM VALUE VALUES (332, '2025-05-22 20:17:29.094266', NULL, NULL, NULL, 'SERVIDOR DE ALMACENAMIENTO SECURITY CENTER', NULL, NULL, 1378, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, true, NULL);
 INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, part_number, description, quantity, pl_unit, pricing_id, fob_unit_fn, retention_fn, cost_zf_fn, cost_alm_fn, tva_fn, cantidad_fn, precio_unitario_fn, precio_total_fn, precio_unitario_tc_fn, precio_total_tc_fn, fob_total_fn, gpl_total_fn, tva_total_fn, is_title, color) OVERRIDING SYSTEM VALUE VALUES (333, '2025-05-22 20:17:29.094266', NULL, 1109, 'SV-4040EX-R12-176T-16-410', 'Streamvault™ 4040EX Series - 2U 12-Bay Appliance 176TB Raw RAID 6 2x Xeon Silver 4410Y 64GB RAM 2x 480GB M.2 SSD 11x 16TB 3.5" Enterprise HDDs 2x 1GbE RJ45 2x 10/25GbE SFP28 2x 1100W PSU Windows Server Standard 5YR NBD KYHD Warranty - Genetec™ Security Center pre-installed. License sold separately.', 2, 3310000, 1378, 'Pl_Unit * (1-Descuento)', NULL, 'Fob_Unit * (1+flete)', 'Cost_ZF * (1+Importacion)', NULL, 'Quantity', '(Cost_Alm/(1-Margen)+Tasa_TVA)/(1-Impuestos)', 'Cantidad * Precio_Unitario', 'precio_unitario * tc', 'Precio_Unitario_TC * Cantidad', 'Fob_Unit * Cantidad', 'Pl_Unit * Cantidad', 'TVA * Cantidad', NULL, NULL);
-INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, part_number, description, quantity, pl_unit, pricing_id, fob_unit_fn, retention_fn, cost_zf_fn, cost_alm_fn, tva_fn, cantidad_fn, precio_unitario_fn, precio_total_fn, precio_unitario_tc_fn, precio_total_tc_fn, fob_total_fn, gpl_total_fn, tva_total_fn, is_title, color) OVERRIDING SYSTEM VALUE VALUES (336, '2025-05-29 19:58:47.330145', NULL, 1922, 'Laptop-HP-A41', 'Portátil HP con procesador de última generación (Intel o AMD, según modelo), pantalla Full HD de hasta 15.6 pulgadas, memoria RAM ampliable (8 GB o más), almacenamiento SSD de alta velocidad (256 GB o más), conectividad avanzada (Wi-Fi 6, Bluetooth 5), puertos USB-C y HDMI, teclado retroiluminado en algunos modelos y batería de larga duración. Ideal para productividad y uso diario.', 10, 67700, 1960, 'Pl_Unit * (1-Descuento)', NULL, 'Fob_Unit * (1+Flete)', 'Cost_Zf * (1+Importacion)', NULL, 'Quantity', '(Cost_Alm/(1-Margen)+TVA)/(1-Impuestos)', 'Cantidad * Precio_Unitario', 'Precio_Unitario * TC', 'Precio_Unitario_TC * Cantidad', 'Fob_Unit * Cantidad', 'Pl_Unit * Cantidad', 'TVA * Cantidad', NULL, NULL);
-INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, part_number, description, quantity, pl_unit, pricing_id, fob_unit_fn, retention_fn, cost_zf_fn, cost_alm_fn, tva_fn, cantidad_fn, precio_unitario_fn, precio_total_fn, precio_unitario_tc_fn, precio_total_tc_fn, fob_total_fn, gpl_total_fn, tva_total_fn, is_title, color) OVERRIDING SYSTEM VALUE VALUES (337, '2025-05-29 19:58:47.330145', NULL, 1922, 'Laptop-HP-A54', 'Portátil HP con procesador de última generación (Intel o AMD, según modelo), pantalla Full HD de hasta 15.6 pulgadas, memoria RAM ampliable (8 GB o más), almacenamiento SSD de alta velocidad (256 GB o más), conectividad avanzada (Wi-Fi 6, Bluetooth 5), puertos USB-C y HDMI, teclado retroiluminado en algunos modelos y batería de larga duración. Ideal para productividad y uso diario.', 5, 89900, 1960, 'Pl_Unit * (1-Descuento)', NULL, 'Fob_Unit * (1+Flete)', 'Cost_Zf * (1+Importacion)', NULL, 'Quantity', '(Cost_Alm/(1-Margen)+TVA)/(1-Impuestos)', 'Cantidad * Precio_Unitario', 'Precio_Unitario * TC', 'Precio_Unitario_TC * Cantidad', 'Fob_Unit * Cantidad', 'Pl_Unit * Cantidad', 'TVA * Cantidad', NULL, NULL);
-INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, part_number, description, quantity, pl_unit, pricing_id, fob_unit_fn, retention_fn, cost_zf_fn, cost_alm_fn, tva_fn, cantidad_fn, precio_unitario_fn, precio_total_fn, precio_unitario_tc_fn, precio_total_tc_fn, fob_total_fn, gpl_total_fn, tva_total_fn, is_title, color) OVERRIDING SYSTEM VALUE VALUES (338, '2025-05-29 20:05:34.950037', NULL, 1082, 'PL-321', 'Monitor de 21 pulgadas', 2, 60000, 1999, 'Pl_Unit * (1-Descuento)', NULL, 'Fob_Unit * (1+Flete)', 'Cost_Zf * (1+Importacion)', NULL, 'Quantity', '(Cost_Alm/(1-Margen)+TVA)/(1-Impuestos)', 'Cantidad * Precio_Unitario', 'Precio_Unitario * TC', 'Precio_Unitario_TC * Cantidad', 'Fob_Unit * Cantidad', 'Pl_Unit * Cantidad', 'TVA * Cantidad', NULL, NULL);
-INSERT INTO public.pricing_line_items (id, created_at, deleted_at, supplier_id, part_number, description, quantity, pl_unit, pricing_id, fob_unit_fn, retention_fn, cost_zf_fn, cost_alm_fn, tva_fn, cantidad_fn, precio_unitario_fn, precio_total_fn, precio_unitario_tc_fn, precio_total_tc_fn, fob_total_fn, gpl_total_fn, tva_total_fn, is_title, color) OVERRIDING SYSTEM VALUE VALUES (339, '2025-05-29 20:05:34.950037', NULL, 1082, 'TECL-132', 'Teclado hp', 2, 20000, 1999, 'Pl_Unit * (1-Descuento)', NULL, 'Fob_Unit * (1+Flete)', 'Cost_Zf * (1+Importacion)', NULL, 'Quantity', '(Cost_Alm/(1-Margen)+TVA)/(1-Impuestos)', 'Cantidad * Precio_Unitario', 'Precio_Unitario * TC', 'Precio_Unitario_TC * Cantidad', 'Fob_Unit * Cantidad', 'Pl_Unit * Cantidad', 'TVA * Cantidad', NULL, NULL);
 
 
 --
--- TOC entry 4919 (class 0 OID 41514)
--- Dependencies: 324
+-- TOC entry 4948 (class 0 OID 19464)
+-- Dependencies: 322
 -- Data for Name: pricings; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8585,13 +8447,11 @@ INSERT INTO public.pricings (id, created_at, deleted_at, code, status, company_i
 INSERT INTO public.pricings (id, created_at, deleted_at, code, status, company_id, project_id, cost_center_id, customer_id) VALUES (1756, '2025-02-21 19:36:26.690563', NULL, 'PR-0000004', 'SUBMITTED', 152, 243, 242, 1406);
 INSERT INTO public.pricings (id, created_at, deleted_at, code, status, company_id, project_id, cost_center_id, customer_id) VALUES (1760, '2025-02-21 19:42:37.159114', NULL, 'PR-0000005', 'SUBMITTED', 152, 243, 242, 1406);
 INSERT INTO public.pricings (id, created_at, deleted_at, code, status, company_id, project_id, cost_center_id, customer_id) VALUES (1378, '0001-01-01 00:00:00', NULL, 'PR-0000001', 'SUBMITTED', 152, 243, 242, 190);
-INSERT INTO public.pricings (id, created_at, deleted_at, code, status, company_id, project_id, cost_center_id, customer_id) VALUES (1960, '2025-05-29 19:43:05.662388', NULL, 'PR-0000006', 'SUBMITTED', 152, 1997, 242, 1406);
-INSERT INTO public.pricings (id, created_at, deleted_at, code, status, company_id, project_id, cost_center_id, customer_id) VALUES (1999, '2025-05-29 20:05:34.950037', NULL, 'PR-0000007', 'SUBMITTED', 152, 1997, 242, 240);
 
 
 --
--- TOC entry 4920 (class 0 OID 41520)
--- Dependencies: 325
+-- TOC entry 4949 (class 0 OID 19470)
+-- Dependencies: 323
 -- Data for Name: profiles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8607,8 +8467,8 @@ INSERT INTO public.profiles (id, created_at, deleted_at, updated_at, uuid, given
 
 
 --
--- TOC entry 4922 (class 0 OID 41529)
--- Dependencies: 327
+-- TOC entry 4951 (class 0 OID 19479)
+-- Dependencies: 325
 -- Data for Name: progress_invoices; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8632,16 +8492,11 @@ INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VAL
 INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (1925, 734500, 734500);
 INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (1945, 565000, 565000);
 INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (1957, 847500, 847500);
-INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (1972, 846545, 0);
-INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (1996, 10462224, 0);
-INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (2010, 193456, 0);
-INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (2012, 193456, 0);
-INSERT INTO public.progress_invoices (invoice_id, total_amount, paid_amount) VALUES (2013, 193456, 0);
 
 
 --
--- TOC entry 4923 (class 0 OID 41533)
--- Dependencies: 328
+-- TOC entry 4952 (class 0 OID 19483)
+-- Dependencies: 326
 -- Data for Name: progress_orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8667,26 +8522,21 @@ INSERT INTO public.progress_orders (order_id, total_items, received_items, total
 INSERT INTO public.progress_orders (order_id, total_items, received_items, total_amount, billed_amount) VALUES (1924, 1, 1, 734500, 734500);
 INSERT INTO public.progress_orders (order_id, total_items, received_items, total_amount, billed_amount) VALUES (1941, 1, 1, 565000, 565000);
 INSERT INTO public.progress_orders (order_id, total_items, received_items, total_amount, billed_amount) VALUES (1954, 1, 1, 847500, 847500);
-INSERT INTO public.progress_orders (order_id, total_items, received_items, total_amount, billed_amount) VALUES (1967, 15, 15, 846545, 846545);
-INSERT INTO public.progress_orders (order_id, total_items, received_items, total_amount, billed_amount) VALUES (1992, 15, 15, 10462224, 10462224);
-INSERT INTO public.progress_orders (order_id, total_items, received_items, total_amount, billed_amount) VALUES (2005, 4, 4, 193456, 0);
-INSERT INTO public.progress_orders (order_id, total_items, received_items, total_amount, billed_amount) VALUES (2011, 4, 0, 193456, 0);
 
 
 --
--- TOC entry 4924 (class 0 OID 41540)
--- Dependencies: 329
+-- TOC entry 4953 (class 0 OID 19490)
+-- Dependencies: 327
 -- Data for Name: projects; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.projects (id, created_at, deleted_at, updated_at, name, status, company_id, uuid) VALUES (243, '2024-11-17 15:54:35.071515', NULL, '2024-11-17 15:54:35.071515', 'Proyecto1', 'ENABLED', 152, '5296295e-57e7-4a8c-8214-633c04090b4e');
 INSERT INTO public.projects (id, created_at, deleted_at, updated_at, name, status, company_id, uuid) VALUES (712, '2024-12-04 17:11:11.840182', NULL, '2024-12-04 17:11:11.840182', 'Proyecto 2', 'ENABLED', 152, '38dc8004-fc79-4524-b936-b619917158de');
-INSERT INTO public.projects (id, created_at, deleted_at, updated_at, name, status, company_id, uuid) VALUES (1997, '2025-05-29 19:57:52.273463', NULL, '2025-05-29 19:57:52.273463', 'Compra de equipos', 'ENABLED', 152, '2f7a8242-e3f7-48a7-aab3-e724abde2eb0');
 
 
 --
--- TOC entry 4925 (class 0 OID 41546)
--- Dependencies: 330
+-- TOC entry 4954 (class 0 OID 19496)
+-- Dependencies: 328
 -- Data for Name: purchase_records; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8695,8 +8545,8 @@ INSERT INTO public.purchase_records (id, created_at, deleted_at, supplier_nit, s
 
 
 --
--- TOC entry 4926 (class 0 OID 41553)
--- Dependencies: 331
+-- TOC entry 4955 (class 0 OID 19503)
+-- Dependencies: 329
 -- Data for Name: quotations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8713,13 +8563,11 @@ INSERT INTO public.quotations (id, created_at, deleted_at, updated_at, posting_d
 INSERT INTO public.quotations (id, created_at, deleted_at, updated_at, posting_date, posting_time, party_id, status, company_id, currency, valid_till, code, tz, project_id, cost_center_id, price_list_id) VALUES (1923, '2025-05-23 18:41:58.900867', NULL, '2025-05-23 18:42:59.893368', '2025-05-23', '14:40:34', 1922, 'SUBMITTED', 152, 'BOB', '2025-06-23', 'CP-0000003', 'America/La_Paz', 243, 242, NULL);
 INSERT INTO public.quotations (id, created_at, deleted_at, updated_at, posting_date, posting_time, party_id, status, company_id, currency, valid_till, code, tz, project_id, cost_center_id, price_list_id) VALUES (1940, '2025-05-27 19:37:36.812684', NULL, '2025-05-27 19:37:58.164337', '2025-05-27', '15:26:15', 1922, 'SUBMITTED', 152, 'BOB', '2025-05-29', 'CP-0000004', 'America/La_Paz', 243, 242, NULL);
 INSERT INTO public.quotations (id, created_at, deleted_at, updated_at, posting_date, posting_time, party_id, status, company_id, currency, valid_till, code, tz, project_id, cost_center_id, price_list_id) VALUES (1953, '2025-05-28 18:21:06.787332', NULL, '2025-05-28 18:21:41.980362', '2025-05-28', '14:20:10', 1841, 'SUBMITTED', 152, 'BOB', '2025-06-28', 'COT-0000009', 'America/La_Paz', 243, 242, NULL);
-INSERT INTO public.quotations (id, created_at, deleted_at, updated_at, posting_date, posting_time, party_id, status, company_id, currency, valid_till, code, tz, project_id, cost_center_id, price_list_id) VALUES (1971, '2025-05-29 19:45:32.117167', NULL, '2025-05-29 19:52:25.278484', '2025-05-28', '19:45:32', 1959, 'SUBMITTED', 152, 'BOB', '2025-06-04', 'COT-0000010', 'America/La_Paz', 243, 242, 1968);
-INSERT INTO public.quotations (id, created_at, deleted_at, updated_at, posting_date, posting_time, party_id, status, company_id, currency, valid_till, code, tz, project_id, cost_center_id, price_list_id) VALUES (2009, '2025-05-29 20:07:23.244259', NULL, '2025-05-29 20:07:23.289522', '2025-05-29', '20:07:23', 240, 'DRAFT', 152, 'BOB', '2025-06-05', 'COT-0000011', 'America/La_Paz', 1997, 242, 2006);
 
 
 --
--- TOC entry 4927 (class 0 OID 41560)
--- Dependencies: 332
+-- TOC entry 4956 (class 0 OID 19510)
+-- Dependencies: 330
 -- Data for Name: r_booking_events; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -8852,8 +8700,8 @@ INSERT INTO public.r_booking_events (booking_id, event_id) VALUES (1907, 1906);
 
 
 --
--- TOC entry 4928 (class 0 OID 41563)
--- Dependencies: 333
+-- TOC entry 4957 (class 0 OID 19513)
+-- Dependencies: 331
 -- Data for Name: r_booking_prices; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -9026,8 +8874,8 @@ INSERT INTO public.r_booking_prices (id, total_price, paid, discount) VALUES (19
 
 
 --
--- TOC entry 4929 (class 0 OID 41567)
--- Dependencies: 334
+-- TOC entry 4958 (class 0 OID 19517)
+-- Dependencies: 332
 -- Data for Name: r_booking_slots; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -9185,8 +9033,8 @@ INSERT INTO public.r_booking_slots (id, court_id, paid_amount, datetime, booking
 
 
 --
--- TOC entry 4931 (class 0 OID 41576)
--- Dependencies: 336
+-- TOC entry 4960 (class 0 OID 19526)
+-- Dependencies: 334
 -- Data for Name: r_bookings; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -9359,8 +9207,8 @@ INSERT INTO public.r_bookings (id, created_at, updated_at, deleted_at, start_dat
 
 
 --
--- TOC entry 4932 (class 0 OID 41582)
--- Dependencies: 337
+-- TOC entry 4961 (class 0 OID 19532)
+-- Dependencies: 335
 -- Data for Name: r_court_rates; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -10291,8 +10139,8 @@ INSERT INTO public.r_court_rates (id, rate, enabled, court_id, day_week, company
 
 
 --
--- TOC entry 4934 (class 0 OID 41590)
--- Dependencies: 339
+-- TOC entry 4963 (class 0 OID 19540)
+-- Dependencies: 337
 -- Data for Name: r_courts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -10304,8 +10152,8 @@ INSERT INTO public.r_courts (id, name, created_at, updated_at, deleted_at, enabl
 
 
 --
--- TOC entry 4935 (class 0 OID 41599)
--- Dependencies: 340
+-- TOC entry 4964 (class 0 OID 19549)
+-- Dependencies: 338
 -- Data for Name: r_events; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -10321,8 +10169,8 @@ INSERT INTO public.r_events (id, created_at, deleted_at, updated_at, name, descr
 
 
 --
--- TOC entry 4936 (class 0 OID 41607)
--- Dependencies: 341
+-- TOC entry 4965 (class 0 OID 19557)
+-- Dependencies: 339
 -- Data for Name: receipts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -10336,12 +10184,11 @@ INSERT INTO public.receipts (id, created_at, deleted_at, updated_at, code, posti
 INSERT INTO public.receipts (id, created_at, deleted_at, updated_at, code, posting_date, party_id, currency, status, company_id, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1926, '2025-05-23 20:03:53.086483', NULL, '2025-05-23 20:05:52.582507', 'RC-0000005', '2025-05-23', 1922, 'BOB', 'PAID', 152, '16:03:33', 'America/La_Paz', 243, 242, 1924, NULL, 233);
 INSERT INTO public.receipts (id, created_at, deleted_at, updated_at, code, posting_date, party_id, currency, status, company_id, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1942, '2025-05-27 19:41:52.919389', NULL, '2025-05-27 19:42:15.628145', 'RC-0000006', '2025-05-27', 1922, 'BOB', 'TO_BILL', 152, '15:41:32', 'America/La_Paz', 243, 242, 1941, NULL, 185);
 INSERT INTO public.receipts (id, created_at, deleted_at, updated_at, code, posting_date, party_id, currency, status, company_id, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1955, '2025-05-28 18:23:27.213339', NULL, '2025-05-28 18:23:45.435638', 'NE-0000004', '2025-05-28', 1841, 'BOB', 'TO_BILL', 152, '14:23:12', 'America/La_Paz', 243, 242, 1954, NULL, 185);
-INSERT INTO public.receipts (id, created_at, deleted_at, updated_at, code, posting_date, party_id, currency, status, company_id, posting_time, tz, project_id, cost_center_id, doc_reference_id, price_list_id, warehouse_id) VALUES (1993, '2025-05-29 19:52:45.28897', NULL, '2025-05-29 19:52:47.390901', 'NE-0000005', '2025-05-29', 1959, 'BOB', 'TO_BILL', 152, '15:52:40', 'America/La_Paz', 243, 242, 1992, 1968, 185);
 
 
 --
--- TOC entry 4937 (class 0 OID 41615)
--- Dependencies: 342
+-- TOC entry 4966 (class 0 OID 19565)
+-- Dependencies: 340
 -- Data for Name: role_actions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11265,8 +11112,8 @@ INSERT INTO public.role_actions (role_id, action_id, deleted_at) VALUES (153, 21
 
 
 --
--- TOC entry 4938 (class 0 OID 41618)
--- Dependencies: 343
+-- TOC entry 4967 (class 0 OID 19568)
+-- Dependencies: 341
 -- Data for Name: role_templates; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11274,8 +11121,8 @@ INSERT INTO public.role_templates (id, name, created_at, deleted_at) VALUES (3, 
 
 
 --
--- TOC entry 4939 (class 0 OID 41624)
--- Dependencies: 344
+-- TOC entry 4968 (class 0 OID 19574)
+-- Dependencies: 342
 -- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11296,16 +11143,16 @@ INSERT INTO public.roles (id, created_at, updated_at, deleted_at, uuid, code, de
 
 
 --
--- TOC entry 4941 (class 0 OID 41633)
--- Dependencies: 346
+-- TOC entry 4970 (class 0 OID 19583)
+-- Dependencies: 344
 -- Data for Name: sales_records; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4942 (class 0 OID 41640)
--- Dependencies: 347
+-- TOC entry 4971 (class 0 OID 19590)
+-- Dependencies: 345
 -- Data for Name: serial_no_transactions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11336,41 +11183,11 @@ INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, st
 INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (396, '2025-05-23 20:05:44.005387', 1928, 1, 'ACTIVE', 1927, NULL);
 INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (397, '2025-05-27 19:42:14.957926', 1944, 1, 'ACTIVE', 1943, NULL);
 INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (398, '2025-05-28 18:23:46.382753', 1944, -1, 'DELIVERED', 1956, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (399, '2025-05-29 19:46:26.913252', 1974, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (400, '2025-05-29 19:46:26.913252', 1975, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (401, '2025-05-29 19:46:26.913252', 1976, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (402, '2025-05-29 19:46:26.913252', 1977, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (403, '2025-05-29 19:46:26.913252', 1978, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (404, '2025-05-29 19:46:26.913252', 1979, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (405, '2025-05-29 19:46:26.913252', 1980, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (406, '2025-05-29 19:46:26.913252', 1981, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (407, '2025-05-29 19:46:26.913252', 1982, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (408, '2025-05-29 19:46:26.913252', 1983, 1, 'ACTIVE', 1973, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (409, '2025-05-29 19:46:26.913252', 1985, 1, 'ACTIVE', 1984, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (410, '2025-05-29 19:46:26.913252', 1986, 1, 'ACTIVE', 1984, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (411, '2025-05-29 19:46:26.913252', 1987, 1, 'ACTIVE', 1984, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (412, '2025-05-29 19:46:26.913252', 1988, 1, 'ACTIVE', 1984, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (413, '2025-05-29 19:46:26.913252', 1989, 1, 'ACTIVE', 1984, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (414, '2025-05-29 19:52:47.388688', 1974, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (415, '2025-05-29 19:52:47.388688', 1975, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (416, '2025-05-29 19:52:47.388688', 1976, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (417, '2025-05-29 19:52:47.388688', 1977, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (418, '2025-05-29 19:52:47.388688', 1978, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (419, '2025-05-29 19:52:47.388688', 1979, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (420, '2025-05-29 19:52:47.388688', 1980, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (421, '2025-05-29 19:52:47.388688', 1981, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (422, '2025-05-29 19:52:47.388688', 1982, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (423, '2025-05-29 19:52:47.388688', 1983, -1, 'DELIVERED', 1994, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (424, '2025-05-29 19:52:47.388688', 1985, -1, 'DELIVERED', 1995, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (425, '2025-05-29 19:52:47.388688', 1986, -1, 'DELIVERED', 1995, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (426, '2025-05-29 19:52:47.388688', 1987, -1, 'DELIVERED', 1995, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (427, '2025-05-29 19:52:47.388688', 1988, -1, 'DELIVERED', 1995, NULL);
-INSERT INTO public.serial_no_transactions (id, created_at, serial_no_id, qty, status, batch_bundle_id, deleted_at) OVERRIDING SYSTEM VALUE VALUES (428, '2025-05-29 19:52:47.388688', 1989, -1, 'DELIVERED', 1995, NULL);
 
 
 --
--- TOC entry 4944 (class 0 OID 41647)
--- Dependencies: 349
+-- TOC entry 4973 (class 0 OID 19597)
+-- Dependencies: 347
 -- Data for Name: serial_nos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11393,26 +11210,21 @@ INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, ba
 INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1822, '2025-04-02 22:30:15.284747', NULL, 'ACTIVE', 'SN-0000017', 1821, 10000, 313);
 INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1928, '2025-05-23 20:05:44.005387', NULL, 'ACTIVE', 'SN-0000018', 1927, 650000, 1290);
 INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1944, '2025-05-27 19:42:14.957926', NULL, 'DELIVERED', 'SN-0000019', 1956, 500000, 1290);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1974, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000020', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1975, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000021', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1976, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000022', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1977, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000023', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1978, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000024', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1979, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000025', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1980, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000026', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1981, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000027', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1982, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000028', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1983, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000029', 1994, 945462, 1963);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1985, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000030', 1995, 1255527, 1965);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1986, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000031', 1995, 1255527, 1965);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1987, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000032', 1995, 1255527, 1965);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1988, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000033', 1995, 1255527, 1965);
-INSERT INTO public.serial_nos (id, created_at, deleted_at, status, serial_no, batch_bundle_id, valuation_rate, item_id) VALUES (1989, '2025-05-29 19:46:26.913252', NULL, 'DELIVERED', 'SN-0000034', 1995, 1255527, 1965);
 
 
 --
--- TOC entry 4945 (class 0 OID 41653)
--- Dependencies: 350
+-- TOC entry 5011 (class 0 OID 21494)
+-- Dependencies: 385
+-- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.sessions (id, expires_at, token, created_at, updated_at, ip_address, user_agent, user_id, impersonated_by, active_company_id) OVERRIDING SYSTEM VALUE VALUES (1, '2025-08-02 19:49:26.086127+00', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQxNjQxNjYsImlkIjo0LCJ1dWlkIjoiIn0.R1QidjpSR2rMRG6u3xx6vSWQcotQvZM767zjMe2m26o', '2025-08-01 19:49:26.086127+00', '2025-08-01 19:49:26.163351+00', NULL, NULL, 4, NULL, 152);
+INSERT INTO public.sessions (id, expires_at, token, created_at, updated_at, ip_address, user_agent, user_id, impersonated_by, active_company_id) OVERRIDING SYSTEM VALUE VALUES (2, '2025-08-06 15:03:31.36109+00', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQ0OTI2MTEsImlkIjo0LCJ1dWlkIjoiZGM5YWZmZGItNDVjZS00NWJhLWI3YWItYzZjYTNmNTFmYzI3In0.QnusF1SPPeRZFsuS5aol6ll9mBDT9rSLDv93PH3qc3Q', '2025-08-05 15:03:31.36109+00', '2025-08-05 15:03:31.789553+00', NULL, NULL, 4, NULL, 152);
+
+
+--
+-- TOC entry 4974 (class 0 OID 19603)
+-- Dependencies: 348
 -- Data for Name: stages; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11427,18 +11239,12 @@ INSERT INTO public.stages (name, company_id, entity_id, color, created_at, delet
 INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('GANADO', 275, 64, '#0891b2', '2025-04-05 12:26:49.738282', NULL, 15, 1);
 INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('OBSERVADO', 275, 64, '#65a30d', '2025-04-05 20:08:55.19847', NULL, 17, 3);
 INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('ETAPA1', 275, 64, '#004777', '2025-05-20 20:44:19.910575', NULL, 18, 4);
-INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('', 275, 64, '#004777', '2025-05-20 21:13:24.688344', '2025-05-21 13:09:42.895478', 23, 11);
-INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('', 275, 64, '#004777', '2025-05-20 21:13:22.077271', '2025-05-21 13:09:49.217721', 22, 10);
-INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('', 275, 64, '#004777', '2025-05-20 21:13:07.658247', '2025-05-21 13:10:03.315628', 19, 5);
-INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('', 275, 64, '#004777', '2025-05-20 21:13:51.367833', '2025-05-21 13:10:05.267568', 24, 5);
-INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('', 275, 64, '#004777', '2025-05-20 21:13:58.216045', '2025-05-21 13:10:06.930396', 25, 6);
-INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('', 275, 64, '#004777', '2025-05-20 21:13:14.806048', '2025-05-21 13:11:17.83726', 21, 9);
-INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('', 275, 64, '#004777', '2025-05-20 21:13:12.46342', '2025-05-21 13:11:37.93445', 20, 8);
+INSERT INTO public.stages (name, company_id, entity_id, color, created_at, deleted_at, id, index) VALUES ('TO DO', 152, 69, '#2DA633', '2025-08-05 19:34:30.431553', NULL, 26, 0);
 
 
 --
--- TOC entry 4947 (class 0 OID 41661)
--- Dependencies: 352
+-- TOC entry 4976 (class 0 OID 19611)
+-- Dependencies: 350
 -- Data for Name: states; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11470,8 +11276,8 @@ INSERT INTO public.states (state) VALUES ('DISABLED');
 
 
 --
--- TOC entry 4948 (class 0 OID 41666)
--- Dependencies: 353
+-- TOC entry 4977 (class 0 OID 19616)
+-- Dependencies: 351
 -- Data for Name: stock_defaults; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11479,8 +11285,8 @@ INSERT INTO public.stock_defaults (id, created_at, updated_at, company_id, valua
 
 
 --
--- TOC entry 4949 (class 0 OID 41673)
--- Dependencies: 354
+-- TOC entry 4978 (class 0 OID 19623)
+-- Dependencies: 352
 -- Data for Name: stock_entries; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11490,24 +11296,24 @@ INSERT INTO public.stock_entries (id, code, created_at, deleted_at, updated_at, 
 
 
 --
--- TOC entry 4950 (class 0 OID 41680)
--- Dependencies: 355
+-- TOC entry 4979 (class 0 OID 19630)
+-- Dependencies: 353
 -- Data for Name: stock_levels; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4951 (class 0 OID 41686)
--- Dependencies: 356
+-- TOC entry 4980 (class 0 OID 19636)
+-- Dependencies: 354
 -- Data for Name: stock_movements; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4953 (class 0 OID 41694)
--- Dependencies: 358
+-- TOC entry 4982 (class 0 OID 19644)
+-- Dependencies: 356
 -- Data for Name: stock_settings; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11519,8 +11325,8 @@ INSERT INTO public.stock_settings (id, inventory_account, stock_received_but_not
 
 
 --
--- TOC entry 4955 (class 0 OID 41698)
--- Dependencies: 360
+-- TOC entry 4984 (class 0 OID 19648)
+-- Dependencies: 358
 -- Data for Name: stock_transactions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11534,6 +11340,7 @@ INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, 
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (152, '2025-01-17 20:01:07.708918', 835, 6, 0, 0, 2, 317, 5000, 20000, 5000, 'purchaseReceipt', 'FC-0000005', 'BOB', 6250, 0, '2025-01-17 16:09:54.827034', '2025-01-17');
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (153, '2025-01-17 20:14:11.833907', 835, 6, 0, 0, 2, 317, 5000, 20000, 5000, 'purchaseInvoice', 'FC-0000006', 'BOB', 6250, 0, '2025-01-17 16:15:02.151446', '2025-01-17');
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (154, '2025-01-17 20:18:37.03126', 835, 6, 0, 0, 2, 317, 5000, 20000, 5000, 'purchaseInvoice', 'FC-0000007', 'BOB', 6250, 0, '2025-01-17 16:21:18.522975', '2025-01-17');
+INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (155, '2025-01-17 20:24:14.632858', 1651, 5, 3, 0, 3, 317, 10000, 30000, 10000, 'purchaseInvoice', 'FC-0000008', 'BOB', 10000, 3, NULL, '2025-01-17');
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (156, '2025-01-17 21:01:30.208842', 1651, 5, 0, 3, 0, 317, 15000, 0, 15000, 'deliveryNote', 'FV-0000001', 'BOB', 12500, 0, NULL, '2025-01-17');
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (157, '2025-02-10 12:59:53.850958', 1387, 5, 1, 0, 1, 234, 684292, 684292, 684292, 'purchaseReceipt', 'RC-0000002', 'BOB', 4755062, 1, NULL, '2025-02-06');
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (158, '2025-02-11 19:53:26.793211', 1388, 5, 1, 0, 1, 185, 16508760, 16508760, 16508760, 'purchaseReceipt', 'RC-0000003', 'BOB', 16508760, 1, NULL, '2025-02-11');
@@ -11543,24 +11350,19 @@ INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, 
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (162, '2025-05-23 20:05:44.005387', 1290, 5, 1, 0, 1, 233, 650000, 650000, 650000, 'purchaseReceipt', 'RC-0000005', 'BOB', 650000, 1, NULL, '2025-05-23');
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (163, '2025-05-27 19:42:14.957926', 1290, 5, 1, 0, 1, 185, 500000, 500000, 500000, 'purchaseReceipt', 'RC-0000006', 'BOB', 500000, 1, NULL, '2025-05-27');
 INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (164, '2025-05-28 18:23:46.382753', 1290, 5, 0, 1, 0, 185, 750000, 0, 750000, 'deliveryNote', 'NE-0000004', 'BOB', 625000, 0, NULL, '2025-05-28');
-INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (165, '2025-05-29 19:46:26.913252', 1963, 5, 10, 0, 10, 185, 945462, 9454620, 945462, 'purchaseInvoice', 'FC-0000007', 'BOB', 945462, 10, NULL, '2025-05-29');
-INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (166, '2025-05-29 19:46:26.913252', 1965, 5, 5, 0, 5, 185, 1255527, 6277635, 1255527, 'purchaseInvoice', 'FC-0000007', 'BOB', 1255527, 5, NULL, '2025-05-29');
-INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (167, '2025-05-29 19:52:47.388688', 1963, 5, 0, 10, 0, 185, 556478, 0, 556478, 'deliveryNote', 'NE-0000005', 'BOB', 750970, 0, NULL, '2025-05-29');
-INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (168, '2025-05-29 19:52:47.388688', 1965, 5, 0, 5, 0, 185, 738765, 0, 738765, 'deliveryNote', 'NE-0000005', 'BOB', 997146, 0, NULL, '2025-05-29');
-INSERT INTO public.stock_transactions (id, created_at, item_id, uom_id, in_qty, out_qty, balance_qty, warehouse_id, incoming_rate, balance_value, valuation_rate, voucher_type, voucher_no, currency, average_rate, available_qty, deleted_at, posting_date) OVERRIDING SYSTEM VALUE VALUES (155, '2025-01-17 20:24:14.632858', 1651, 5, 3, 0, 3, 317, 10000, 30000, 10000, 'purchaseInvoice', 'FC-0000008', 'BOB', 10000, 3, '2025-05-29 20:23:54.481912', '2025-01-17');
 
 
 --
--- TOC entry 4957 (class 0 OID 41713)
--- Dependencies: 362
+-- TOC entry 4986 (class 0 OID 19663)
+-- Dependencies: 360
 -- Data for Name: supplier_orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4958 (class 0 OID 41716)
--- Dependencies: 363
+-- TOC entry 4987 (class 0 OID 19666)
+-- Dependencies: 361
 -- Data for Name: suppliers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11579,8 +11381,16 @@ INSERT INTO public.suppliers (id, created_at, deleted_at, updated_at, uuid, name
 
 
 --
--- TOC entry 4959 (class 0 OID 41724)
--- Dependencies: 364
+-- TOC entry 5014 (class 0 OID 21534)
+-- Dependencies: 388
+-- Data for Name: tasks; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 4988 (class 0 OID 19674)
+-- Dependencies: 362
 -- Data for Name: tax_and_charge_lines; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11611,25 +11421,19 @@ INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_p
 INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (233, 'ON_NET_TOTAL', 512, 13, 1954, '2025-05-28 18:22:36.404007', 97500, false, NULL);
 INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (234, 'ON_NET_TOTAL', 512, 13, 1955, '2025-05-28 18:23:27.213339', 97500, false, NULL);
 INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (235, 'ON_NET_TOTAL', 512, 13, 1957, '2025-05-28 18:24:54.788661', 97500, false, NULL);
-INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (236, 'ON_NET_TOTAL', 713, 13, 1967, '2025-05-29 19:46:04.051638', 97390, false, NULL);
-INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (237, 'ON_NET_TOTAL', 713, 13, 1972, '2025-05-29 19:46:24.643791', 97390, false, NULL);
-INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (238, 'ON_NET_TOTAL', 512, 13, 1971, '2025-05-29 19:52:23.326641', 1203619, false, NULL);
-INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (239, 'ON_NET_TOTAL', 512, 13, 1992, '2025-05-29 19:52:32.750342', 1203619, false, NULL);
-INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (240, 'ON_NET_TOTAL', 512, 13, 1993, '2025-05-29 19:52:45.28897', 1203619, false, NULL);
-INSERT INTO public.tax_and_charge_lines (id, type, account_head, tax_rate, doc_party_id, created_at, amount, is_deducted, deleted_at) OVERRIDING SYSTEM VALUE VALUES (241, 'ON_NET_TOTAL', 512, 13, 1996, '2025-05-29 19:54:13.659514', 1203619, false, NULL);
 
 
 --
--- TOC entry 4961 (class 0 OID 41733)
--- Dependencies: 366
+-- TOC entry 4990 (class 0 OID 19683)
+-- Dependencies: 364
 -- Data for Name: taxes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4963 (class 0 OID 41743)
--- Dependencies: 368
+-- TOC entry 4992 (class 0 OID 19693)
+-- Dependencies: 366
 -- Data for Name: terms_and_conditions; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11637,16 +11441,16 @@ INSERT INTO public.terms_and_conditions (id, uuid, created_at, deleted_at, name,
 
 
 --
--- TOC entry 4964 (class 0 OID 41750)
--- Dependencies: 369
+-- TOC entry 4993 (class 0 OID 19700)
+-- Dependencies: 367
 -- Data for Name: transaction_accounts; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4965 (class 0 OID 41756)
--- Dependencies: 370
+-- TOC entry 4994 (class 0 OID 19706)
+-- Dependencies: 368
 -- Data for Name: transaction_ledgers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11700,6 +11504,8 @@ INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, vo
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (286, NULL, 'FC-0000006', 'purchaseInvoice', 'purchaseInvoice', NULL, 1070, 0, 0, 'BOB', '2025-01-17 20:14:11.833907', '2025-01-17', NULL, NULL, '16:09:58', '2025-01-17 16:15:02.179403');
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (290, NULL, 'FC-0000007', 'purchaseInvoice', 'creditNote', 832, 1071, 5000, 0, 'BOB', '2025-01-17 20:18:37.03126', '2025-01-17', NULL, NULL, '16:15:10', '2025-01-17 16:21:18.542157');
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (286, NULL, 'FC-0000007', 'purchaseInvoice', 'purchaseInvoice', NULL, 1072, 0, 5000, 'BOB', '2025-01-17 20:18:37.03126', '2025-01-17', NULL, NULL, '16:15:10', '2025-01-17 16:21:18.542157');
+INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (290, NULL, 'FC-0000008', 'purchaseInvoice', 'creditNote', 832, 1073, 30000, 0, 'BOB', '2025-01-17 20:24:14.632858', '2025-01-17', NULL, NULL, '16:21:27', NULL);
+INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (286, NULL, 'FC-0000008', 'purchaseInvoice', 'purchaseInvoice', NULL, 1074, 0, 30000, 'BOB', '2025-01-17 20:24:14.632858', '2025-01-17', NULL, NULL, '16:21:27', NULL);
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (290, 280, '1D2B66E7', 'payment', 'PAY', 832, 1075, 0, 30000, 'USD', '2025-01-17 20:26:35.311935', '2025-01-17', NULL, NULL, 'CURRENT_TIME', NULL);
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (280, 290, '1D2B66E7', 'payment', 'PAY', NULL, 1076, 30000, 0, 'USD', '2025-01-17 20:26:35.311935', '2025-01-17', NULL, NULL, 'CURRENT_TIME', NULL);
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (286, 299, 'FV-0000001', 'saleInvoice', '', NULL, 1077, 30000, 0, 'BOB', '2025-01-17 21:01:30.208842', '2025-01-17', NULL, NULL, '16:28:55', NULL);
@@ -11869,51 +11675,35 @@ INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, vo
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (512, NULL, 'FV-0000005', 'saleInvoice', 'debitNote', NULL, 1243, 97500, 0, 'BOB', '2025-05-28 18:31:58.333942', '2025-05-28', 242, 243, '14:24:49', NULL);
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (157, 161, '85B80F9A', 'payment', 'RECEIVE', NULL, 1244, 0, 847500, 'BOB', '2025-05-28 18:36:44.421332', '2025-05-28', NULL, NULL, 'CURRENT_TIME', NULL);
 INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (161, 157, '85B80F9A', 'payment', 'RECEIVE', 1841, 1245, 847500, 0, 'BOB', '2025-05-28 18:36:44.421332', '2025-05-28', NULL, NULL, 'CURRENT_TIME', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (167, NULL, 'FC-0000007', 'purchaseInvoice', 'creditNote', 1922, 1246, 17777445, 0, 'BOB', '2025-05-29 19:46:26.913252', '2025-05-29', 242, 243, '15:46:10', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (163, NULL, 'FC-0000007', 'purchaseInvoice', 'purchaseInvoice', NULL, 1247, 0, 15732255, 'BOB', '2025-05-29 19:46:26.913252', '2025-05-29', 242, 243, '15:46:10', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (713, NULL, 'FC-0000007', 'purchaseInvoice', 'debitNote', NULL, 1248, 0, 2045190, 'BOB', '2025-05-29 19:46:26.913252', '2025-05-29', 242, 243, '15:46:10', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (163, 176, 'NE-0000005', 'deliveryNote', '', NULL, 1249, 15732255, 0, 'BOB', '2025-05-29 19:52:47.388688', '2025-05-29', 242, 243, '15:52:40', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (176, 163, 'NE-0000005', 'deliveryNote', '', NULL, 1250, 0, 15732255, 'BOB', '2025-05-29 19:52:47.388688', '2025-05-29', 242, 243, '15:52:40', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (161, 172, 'FV-0000006', 'saleInvoice', 'debitNote', 1959, 1251, 0, 10462224, 'BOB', '2025-05-29 19:54:15.758743', '2025-05-29', 242, 243, '15:54:09', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (172, 161, 'FV-0000006', 'saleInvoice', 'debitNote', NULL, 1252, 9258605, 0, 'BOB', '2025-05-29 19:54:15.758743', '2025-05-29', 242, 243, '15:54:09', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (512, NULL, 'FV-0000006', 'saleInvoice', 'debitNote', NULL, 1253, 1203619, 0, 'BOB', '2025-05-29 19:54:15.758743', '2025-05-29', 242, 243, '15:54:09', NULL);
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (290, NULL, 'FC-0000008', 'purchaseInvoice', 'creditNote', 832, 1073, 30000, 0, 'BOB', '2025-01-17 20:24:14.632858', '2025-01-17', NULL, NULL, '16:21:27', '2025-05-29 20:23:54.501812');
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (286, NULL, 'FC-0000008', 'purchaseInvoice', 'purchaseInvoice', NULL, 1074, 0, 30000, 'BOB', '2025-01-17 20:24:14.632858', '2025-01-17', NULL, NULL, '16:21:27', '2025-05-29 20:23:54.501812');
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (167, NULL, 'FC-0000008', 'purchaseInvoice', 'creditNote', 1082, 1254, 1450920, 0, 'BOB', '2025-05-29 20:21:12.916514', '2025-05-29', 242, 1997, '16:19:53', '2025-05-29 20:23:54.501812');
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (169, NULL, 'FC-0000008', 'purchaseInvoice', 'creditNote', NULL, 1255, 0, 1450920, 'BOB', '2025-05-29 20:21:12.916514', '2025-05-29', 242, 1997, '16:19:53', '2025-05-29 20:23:54.501812');
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (167, NULL, 'FC-0000009', 'purchaseInvoice', 'creditNote', 1082, 1256, 1450920, 0, 'BOB', '2025-05-29 20:30:05.540743', '2025-05-29', 242, 1997, '16:30:00', '2025-05-29 20:30:20.280696');
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (169, NULL, 'FC-0000009', 'purchaseInvoice', 'creditNote', NULL, 1257, 0, 1450920, 'BOB', '2025-05-29 20:30:05.540743', '2025-05-29', 242, 1997, '16:30:00', '2025-05-29 20:30:20.280696');
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (167, NULL, 'FC-0000010', 'purchaseInvoice', 'creditNote', 1082, 1258, 1450920, 0, 'BOB', '2025-05-29 20:30:43.124561', '2025-05-29', 242, 1997, '16:30:29', '2025-05-29 20:30:52.504404');
-INSERT INTO public.transaction_ledgers (ledger, ledger_against, voucher_code, voucher_type, voucher_subtype, party_id, id, credit, debit, currency, created_at, posting_date, cost_center_id, project_id, posting_time, deleted_at) OVERRIDING SYSTEM VALUE VALUES (169, NULL, 'FC-0000010', 'purchaseInvoice', 'creditNote', NULL, 1259, 0, 1450920, 'BOB', '2025-05-29 20:30:43.124561', '2025-05-29', 242, 1997, '16:30:29', '2025-05-29 20:30:52.504404');
 
 
 --
--- TOC entry 4967 (class 0 OID 41768)
--- Dependencies: 372
+-- TOC entry 4996 (class 0 OID 19718)
+-- Dependencies: 370
 -- Data for Name: transaction_type_de; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4968 (class 0 OID 41773)
--- Dependencies: 373
+-- TOC entry 4997 (class 0 OID 19723)
+-- Dependencies: 371
 -- Data for Name: transaction_type_ext; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4969 (class 0 OID 41779)
--- Dependencies: 374
+-- TOC entry 4998 (class 0 OID 19729)
+-- Dependencies: 372
 -- Data for Name: transaction_type_ledgers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4970 (class 0 OID 41784)
--- Dependencies: 375
+-- TOC entry 4999 (class 0 OID 19734)
+-- Dependencies: 373
 -- Data for Name: unit_of_measure_translations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11936,8 +11726,8 @@ INSERT INTO public.unit_of_measure_translations (language_code, id, created_at, 
 
 
 --
--- TOC entry 4972 (class 0 OID 41792)
--- Dependencies: 377
+-- TOC entry 5001 (class 0 OID 19742)
+-- Dependencies: 375
 -- Data for Name: unit_of_measures; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11952,8 +11742,8 @@ INSERT INTO public.unit_of_measures (id, created_at, deleted_at, updated_at, cod
 
 
 --
--- TOC entry 4974 (class 0 OID 41800)
--- Dependencies: 379
+-- TOC entry 5003 (class 0 OID 19750)
+-- Dependencies: 377
 -- Data for Name: user_relations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11969,8 +11759,8 @@ INSERT INTO public.user_relations (user_id, profile_id, company_id, role_id, uui
 
 
 --
--- TOC entry 4975 (class 0 OID 41805)
--- Dependencies: 380
+-- TOC entry 5004 (class 0 OID 19755)
+-- Dependencies: 378
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -11988,8 +11778,8 @@ INSERT INTO public.users (id, created_at, updated_at, deleted_at, uuid, identifi
 
 
 --
--- TOC entry 4977 (class 0 OID 41814)
--- Dependencies: 382
+-- TOC entry 5006 (class 0 OID 19764)
+-- Dependencies: 380
 -- Data for Name: ware_houses; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -12001,12 +11791,11 @@ INSERT INTO public.ware_houses (id, created_at, deleted_at, updated_at, name, pa
 INSERT INTO public.ware_houses (id, created_at, deleted_at, updated_at, name, parent_id, ordinal, company_id, enabled, uuid, is_group) VALUES (1816, '2025-04-02 22:26:10.409221+00', NULL, '2025-04-02 22:26:10.409221+00', 'Almacen 2', NULL, 0, 275, false, 'f6c7ca3c-d1ed-4e28-bc73-0b51e81332ef', false);
 INSERT INTO public.ware_houses (id, created_at, deleted_at, updated_at, name, parent_id, ordinal, company_id, enabled, uuid, is_group) VALUES (1817, '2025-04-02 22:26:27.118036+00', NULL, '2025-04-02 22:26:27.118036+00', 'Almacen Grupo', NULL, 0, 275, false, 'b0a9c51d-cb3c-4acf-8f3e-0c2c4ae39139', true);
 INSERT INTO public.ware_houses (id, created_at, deleted_at, updated_at, name, parent_id, ordinal, company_id, enabled, uuid, is_group) VALUES (317, '2024-11-19 11:45:01.275449+00', NULL, '2025-04-02 22:27:17.869711+00', 'Almacen.', NULL, 0, 275, true, 'dfa165c4-225c-4697-8943-98c9fcd0cd8f', false);
-INSERT INTO public.ware_houses (id, created_at, deleted_at, updated_at, name, parent_id, ordinal, company_id, enabled, uuid, is_group) VALUES (1998, '2025-05-29 19:58:12.199859+00', NULL, '2025-05-29 19:58:12.199859+00', 'Almacen Teclu', NULL, 0, 152, false, '52afc246-5620-4c5f-80c8-0931f4dd8e26', false);
 
 
 --
--- TOC entry 4979 (class 0 OID 41824)
--- Dependencies: 384
+-- TOC entry 5008 (class 0 OID 19774)
+-- Dependencies: 382
 -- Data for Name: workspace_modules; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -12021,31 +11810,29 @@ INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, delet
 INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1875, 1414, '2025-05-19 21:19:34.046009', NULL, '2025-05-19 21:19:34.046009');
 INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1875, 1419, '2025-05-19 21:19:34.046009', NULL, '2025-05-19 21:19:34.046009');
 INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1875, 1650, '2025-05-19 21:19:34.046009', NULL, '2025-05-19 21:19:34.046009');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1637, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1370, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1375, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1853, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1373, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1374, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1372, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1371, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1990, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
-INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1991, '2025-05-29 19:51:22.365061', NULL, '2025-05-29 19:51:22.365061');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1371, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1372, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1637, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1370, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1373, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1374, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1375, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
+INSERT INTO public.workspace_modules (workspace_id, module_id, created_at, deleted_at, updated_at) VALUES (1909, 1853, '2025-05-21 18:26:35.054278', NULL, '2025-05-21 18:26:35.054278');
 
 
 --
--- TOC entry 4980 (class 0 OID 41829)
--- Dependencies: 385
+-- TOC entry 5009 (class 0 OID 19778)
+-- Dependencies: 383
 -- Data for Name: workspaces; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.workspaces (id, name, created_at, updated_at, company_id, deleted_at, status) VALUES (1875, 'Admin.', '2025-05-19 14:47:22.310415', '2025-05-19 21:19:33.12041', 275, NULL, 'ENABLED');
-INSERT INTO public.workspaces (id, name, created_at, updated_at, company_id, deleted_at, status) VALUES (1909, 'Admin', '2025-05-21 18:25:39.871425', '2025-05-29 19:51:22.366873', 152, NULL, 'ENABLED');
+INSERT INTO public.workspaces (id, name, created_at, updated_at, company_id, deleted_at, status) VALUES (1909, 'Admin', '2025-05-21 18:25:39.871425', '2025-05-21 18:26:40.218558', 152, NULL, 'ENABLED');
 
 
 --
--- TOC entry 5011 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 5045 (class 0 OID 0)
+-- Dependencies: 218
 -- Name: account_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12053,8 +11840,8 @@ SELECT pg_catalog.setval('public.account_settings_id_seq', 7, true);
 
 
 --
--- TOC entry 5012 (class 0 OID 0)
--- Dependencies: 226
+-- TOC entry 5046 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: actions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12062,17 +11849,17 @@ SELECT pg_catalog.setval('public.actions_id_seq', 218, true);
 
 
 --
--- TOC entry 5013 (class 0 OID 0)
--- Dependencies: 228
+-- TOC entry 5047 (class 0 OID 0)
+-- Dependencies: 226
 -- Name: activities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.activities_id_seq', 1959, true);
+SELECT pg_catalog.setval('public.activities_id_seq', 1921, true);
 
 
 --
--- TOC entry 5014 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 5048 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: activity_mentions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12080,8 +11867,8 @@ SELECT pg_catalog.setval('public.activity_mentions_id_seq', 51, true);
 
 
 --
--- TOC entry 5015 (class 0 OID 0)
--- Dependencies: 235
+-- TOC entry 5049 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: addresses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12089,8 +11876,8 @@ SELECT pg_catalog.setval('public.addresses_id_seq', 1, false);
 
 
 --
--- TOC entry 5016 (class 0 OID 0)
--- Dependencies: 242
+-- TOC entry 5050 (class 0 OID 0)
+-- Dependencies: 240
 -- Name: chat_members_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12098,8 +11885,8 @@ SELECT pg_catalog.setval('public.chat_members_id_seq', 14, true);
 
 
 --
--- TOC entry 5017 (class 0 OID 0)
--- Dependencies: 244
+-- TOC entry 5051 (class 0 OID 0)
+-- Dependencies: 242
 -- Name: chat_messages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12107,8 +11894,8 @@ SELECT pg_catalog.setval('public.chat_messages_id_seq', 103, true);
 
 
 --
--- TOC entry 5018 (class 0 OID 0)
--- Dependencies: 247
+-- TOC entry 5052 (class 0 OID 0)
+-- Dependencies: 245
 -- Name: companies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12116,8 +11903,8 @@ SELECT pg_catalog.setval('public.companies_id_seq', 1, false);
 
 
 --
--- TOC entry 5019 (class 0 OID 0)
--- Dependencies: 249
+-- TOC entry 5053 (class 0 OID 0)
+-- Dependencies: 247
 -- Name: company_defaults_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12125,17 +11912,26 @@ SELECT pg_catalog.setval('public.company_defaults_id_seq', 4, true);
 
 
 --
--- TOC entry 5020 (class 0 OID 0)
--- Dependencies: 262
+-- TOC entry 5054 (class 0 OID 0)
+-- Dependencies: 386
+-- Name: connection_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.connection_id_seq', 1, false);
+
+
+--
+-- TOC entry 5055 (class 0 OID 0)
+-- Dependencies: 260
 -- Name: entities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.entities_id_seq', 69, true);
+SELECT pg_catalog.setval('public.entities_id_seq', 70, true);
 
 
 --
--- TOC entry 5021 (class 0 OID 0)
--- Dependencies: 268
+-- TOC entry 5056 (class 0 OID 0)
+-- Dependencies: 266
 -- Name: item_attribute_values_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12143,8 +11939,8 @@ SELECT pg_catalog.setval('public.item_attribute_values_id_seq', 1, true);
 
 
 --
--- TOC entry 5022 (class 0 OID 0)
--- Dependencies: 270
+-- TOC entry 5057 (class 0 OID 0)
+-- Dependencies: 268
 -- Name: item_attributes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12152,8 +11948,8 @@ SELECT pg_catalog.setval('public.item_attributes_id_seq', 1, false);
 
 
 --
--- TOC entry 5023 (class 0 OID 0)
--- Dependencies: 274
+-- TOC entry 5058 (class 0 OID 0)
+-- Dependencies: 272
 -- Name: item_line_stock_entries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12161,17 +11957,17 @@ SELECT pg_catalog.setval('public.item_line_stock_entries_id_seq', 41, true);
 
 
 --
--- TOC entry 5024 (class 0 OID 0)
--- Dependencies: 277
+-- TOC entry 5059 (class 0 OID 0)
+-- Dependencies: 275
 -- Name: item_lines_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.item_lines_id_seq', 889, true);
+SELECT pg_catalog.setval('public.item_lines_id_seq', 861, true);
 
 
 --
--- TOC entry 5025 (class 0 OID 0)
--- Dependencies: 279
+-- TOC entry 5060 (class 0 OID 0)
+-- Dependencies: 277
 -- Name: item_price_lists_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12179,8 +11975,8 @@ SELECT pg_catalog.setval('public.item_price_lists_id_seq', 4, true);
 
 
 --
--- TOC entry 5026 (class 0 OID 0)
--- Dependencies: 282
+-- TOC entry 5061 (class 0 OID 0)
+-- Dependencies: 280
 -- Name: item_prices_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12188,8 +11984,8 @@ SELECT pg_catalog.setval('public.item_prices_id_seq', 1, false);
 
 
 --
--- TOC entry 5027 (class 0 OID 0)
--- Dependencies: 285
+-- TOC entry 5062 (class 0 OID 0)
+-- Dependencies: 283
 -- Name: items_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12197,8 +11993,8 @@ SELECT pg_catalog.setval('public.items_id_seq', 1, false);
 
 
 --
--- TOC entry 5028 (class 0 OID 0)
--- Dependencies: 288
+-- TOC entry 5063 (class 0 OID 0)
+-- Dependencies: 286
 -- Name: journal_entry_lines_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12206,8 +12002,8 @@ SELECT pg_catalog.setval('public.journal_entry_lines_id_seq', 34, true);
 
 
 --
--- TOC entry 5029 (class 0 OID 0)
--- Dependencies: 290
+-- TOC entry 5064 (class 0 OID 0)
+-- Dependencies: 288
 -- Name: key_values_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12215,17 +12011,17 @@ SELECT pg_catalog.setval('public.key_values_id_seq', 1, false);
 
 
 --
--- TOC entry 5030 (class 0 OID 0)
--- Dependencies: 297
+-- TOC entry 5065 (class 0 OID 0)
+-- Dependencies: 295
 -- Name: module_sections_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.module_sections_id_seq', 563, true);
+SELECT pg_catalog.setval('public.module_sections_id_seq', 490, true);
 
 
 --
--- TOC entry 5031 (class 0 OID 0)
--- Dependencies: 299
+-- TOC entry 5066 (class 0 OID 0)
+-- Dependencies: 297
 -- Name: notification_mentions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12233,8 +12029,8 @@ SELECT pg_catalog.setval('public.notification_mentions_id_seq', 78, true);
 
 
 --
--- TOC entry 5032 (class 0 OID 0)
--- Dependencies: 301
+-- TOC entry 5067 (class 0 OID 0)
+-- Dependencies: 299
 -- Name: notifications_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12242,8 +12038,8 @@ SELECT pg_catalog.setval('public.notifications_id_seq', 82, true);
 
 
 --
--- TOC entry 5033 (class 0 OID 0)
--- Dependencies: 304
+-- TOC entry 5068 (class 0 OID 0)
+-- Dependencies: 302
 -- Name: parties_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12251,17 +12047,17 @@ SELECT pg_catalog.setval('public.parties_id_seq', 1423, true);
 
 
 --
--- TOC entry 5034 (class 0 OID 0)
--- Dependencies: 305
+-- TOC entry 5069 (class 0 OID 0)
+-- Dependencies: 303
 -- Name: parties_id_seq1; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.parties_id_seq1', 2013, true);
+SELECT pg_catalog.setval('public.parties_id_seq1', 1961, true);
 
 
 --
--- TOC entry 5035 (class 0 OID 0)
--- Dependencies: 311
+-- TOC entry 5070 (class 0 OID 0)
+-- Dependencies: 309
 -- Name: payment_references_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12269,8 +12065,8 @@ SELECT pg_catalog.setval('public.payment_references_id_seq', 45, true);
 
 
 --
--- TOC entry 5036 (class 0 OID 0)
--- Dependencies: 314
+-- TOC entry 5071 (class 0 OID 0)
+-- Dependencies: 312
 -- Name: payment_terms_lines_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12278,8 +12074,8 @@ SELECT pg_catalog.setval('public.payment_terms_lines_id_seq', 5, true);
 
 
 --
--- TOC entry 5037 (class 0 OID 0)
--- Dependencies: 319
+-- TOC entry 5072 (class 0 OID 0)
+-- Dependencies: 317
 -- Name: plugins_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12287,26 +12083,26 @@ SELECT pg_catalog.setval('public.plugins_id_seq', 1, false);
 
 
 --
--- TOC entry 5038 (class 0 OID 0)
--- Dependencies: 321
+-- TOC entry 5073 (class 0 OID 0)
+-- Dependencies: 319
 -- Name: priced_item_lines_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.priced_item_lines_id_seq', 339, true);
+SELECT pg_catalog.setval('public.priced_item_lines_id_seq', 333, true);
 
 
 --
--- TOC entry 5039 (class 0 OID 0)
--- Dependencies: 323
+-- TOC entry 5074 (class 0 OID 0)
+-- Dependencies: 321
 -- Name: pricing_charges_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.pricing_charges_id_seq', 1024, true);
+SELECT pg_catalog.setval('public.pricing_charges_id_seq', 1000, true);
 
 
 --
--- TOC entry 5040 (class 0 OID 0)
--- Dependencies: 326
+-- TOC entry 5075 (class 0 OID 0)
+-- Dependencies: 324
 -- Name: profiles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12314,8 +12110,8 @@ SELECT pg_catalog.setval('public.profiles_id_seq', 1, false);
 
 
 --
--- TOC entry 5041 (class 0 OID 0)
--- Dependencies: 335
+-- TOC entry 5076 (class 0 OID 0)
+-- Dependencies: 333
 -- Name: r_booking_slots_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12323,8 +12119,8 @@ SELECT pg_catalog.setval('public.r_booking_slots_id_seq', 409, true);
 
 
 --
--- TOC entry 5042 (class 0 OID 0)
--- Dependencies: 338
+-- TOC entry 5077 (class 0 OID 0)
+-- Dependencies: 336
 -- Name: r_court_rates_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12332,8 +12128,8 @@ SELECT pg_catalog.setval('public.r_court_rates_id_seq', 2326, true);
 
 
 --
--- TOC entry 5043 (class 0 OID 0)
--- Dependencies: 345
+-- TOC entry 5078 (class 0 OID 0)
+-- Dependencies: 343
 -- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12341,26 +12137,35 @@ SELECT pg_catalog.setval('public.roles_id_seq', 4, true);
 
 
 --
--- TOC entry 5044 (class 0 OID 0)
--- Dependencies: 348
+-- TOC entry 5079 (class 0 OID 0)
+-- Dependencies: 346
 -- Name: serial_no_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.serial_no_transactions_id_seq', 428, true);
+SELECT pg_catalog.setval('public.serial_no_transactions_id_seq', 398, true);
 
 
 --
--- TOC entry 5045 (class 0 OID 0)
--- Dependencies: 351
+-- TOC entry 5080 (class 0 OID 0)
+-- Dependencies: 384
+-- Name: session_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.session_id_seq', 2, true);
+
+
+--
+-- TOC entry 5081 (class 0 OID 0)
+-- Dependencies: 349
 -- Name: stages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.stages_id_seq', 25, true);
+SELECT pg_catalog.setval('public.stages_id_seq', 26, true);
 
 
 --
--- TOC entry 5046 (class 0 OID 0)
--- Dependencies: 357
+-- TOC entry 5082 (class 0 OID 0)
+-- Dependencies: 355
 -- Name: stock_movements_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12368,8 +12173,8 @@ SELECT pg_catalog.setval('public.stock_movements_id_seq', 1, false);
 
 
 --
--- TOC entry 5047 (class 0 OID 0)
--- Dependencies: 359
+-- TOC entry 5083 (class 0 OID 0)
+-- Dependencies: 357
 -- Name: stock_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12377,26 +12182,26 @@ SELECT pg_catalog.setval('public.stock_settings_id_seq', 5, true);
 
 
 --
--- TOC entry 5048 (class 0 OID 0)
--- Dependencies: 361
+-- TOC entry 5084 (class 0 OID 0)
+-- Dependencies: 359
 -- Name: stock_transactions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.stock_transactions_id_seq', 168, true);
+SELECT pg_catalog.setval('public.stock_transactions_id_seq', 164, true);
 
 
 --
--- TOC entry 5049 (class 0 OID 0)
--- Dependencies: 365
+-- TOC entry 5085 (class 0 OID 0)
+-- Dependencies: 363
 -- Name: tax_and_charge_lines_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.tax_and_charge_lines_id_seq', 241, true);
+SELECT pg_catalog.setval('public.tax_and_charge_lines_id_seq', 235, true);
 
 
 --
--- TOC entry 5050 (class 0 OID 0)
--- Dependencies: 367
+-- TOC entry 5086 (class 0 OID 0)
+-- Dependencies: 365
 -- Name: taxes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12404,17 +12209,17 @@ SELECT pg_catalog.setval('public.taxes_id_seq', 1, false);
 
 
 --
--- TOC entry 5051 (class 0 OID 0)
--- Dependencies: 371
+-- TOC entry 5087 (class 0 OID 0)
+-- Dependencies: 369
 -- Name: transaction_ledgers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.transaction_ledgers_id_seq', 1259, true);
+SELECT pg_catalog.setval('public.transaction_ledgers_id_seq', 1245, true);
 
 
 --
--- TOC entry 5052 (class 0 OID 0)
--- Dependencies: 376
+-- TOC entry 5088 (class 0 OID 0)
+-- Dependencies: 374
 -- Name: unit_of_measure_translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12422,8 +12227,8 @@ SELECT pg_catalog.setval('public.unit_of_measure_translations_id_seq', 16, true)
 
 
 --
--- TOC entry 5053 (class 0 OID 0)
--- Dependencies: 378
+-- TOC entry 5089 (class 0 OID 0)
+-- Dependencies: 376
 -- Name: unit_of_measures_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12431,8 +12236,8 @@ SELECT pg_catalog.setval('public.unit_of_measures_id_seq', 1, true);
 
 
 --
--- TOC entry 5054 (class 0 OID 0)
--- Dependencies: 381
+-- TOC entry 5090 (class 0 OID 0)
+-- Dependencies: 379
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12440,8 +12245,8 @@ SELECT pg_catalog.setval('public.users_id_seq', 4, true);
 
 
 --
--- TOC entry 5055 (class 0 OID 0)
--- Dependencies: 383
+-- TOC entry 5091 (class 0 OID 0)
+-- Dependencies: 381
 -- Name: ware_houses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -12449,7 +12254,7 @@ SELECT pg_catalog.setval('public.ware_houses_id_seq', 1, false);
 
 
 --
--- TOC entry 4035 (class 2606 OID 41858)
+-- TOC entry 4047 (class 2606 OID 19807)
 -- Name: account_settings account_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12458,7 +12263,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4038 (class 2606 OID 41860)
+-- TOC entry 4050 (class 2606 OID 19809)
 -- Name: account_statements account_statements_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12467,7 +12272,7 @@ ALTER TABLE ONLY public.account_statements
 
 
 --
--- TOC entry 4040 (class 2606 OID 41862)
+-- TOC entry 4052 (class 2606 OID 19811)
 -- Name: account_type_exts account_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12476,7 +12281,7 @@ ALTER TABLE ONLY public.account_type_exts
 
 
 --
--- TOC entry 4042 (class 2606 OID 41864)
+-- TOC entry 4054 (class 2606 OID 19813)
 -- Name: account_types account_types_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12485,7 +12290,7 @@ ALTER TABLE ONLY public.account_types
 
 
 --
--- TOC entry 4044 (class 2606 OID 41866)
+-- TOC entry 4056 (class 2606 OID 19815)
 -- Name: actions actions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12494,7 +12299,7 @@ ALTER TABLE ONLY public.actions
 
 
 --
--- TOC entry 4047 (class 2606 OID 41868)
+-- TOC entry 4059 (class 2606 OID 19817)
 -- Name: activities activities_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12503,7 +12308,7 @@ ALTER TABLE ONLY public.activities
 
 
 --
--- TOC entry 4051 (class 2606 OID 41870)
+-- TOC entry 4063 (class 2606 OID 19819)
 -- Name: activity_comments activity_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12512,7 +12317,7 @@ ALTER TABLE ONLY public.activity_comments
 
 
 --
--- TOC entry 4053 (class 2606 OID 41872)
+-- TOC entry 4065 (class 2606 OID 19821)
 -- Name: activity_deadlines activity_deadlines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12521,7 +12326,7 @@ ALTER TABLE ONLY public.activity_deadlines
 
 
 --
--- TOC entry 4055 (class 2606 OID 41874)
+-- TOC entry 4067 (class 2606 OID 19823)
 -- Name: activity_mentions activity_mentions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12530,7 +12335,7 @@ ALTER TABLE ONLY public.activity_mentions
 
 
 --
--- TOC entry 4058 (class 2606 OID 41876)
+-- TOC entry 4070 (class 2606 OID 19825)
 -- Name: address_and_contacts address_and_contacts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12539,7 +12344,7 @@ ALTER TABLE ONLY public.address_and_contacts
 
 
 --
--- TOC entry 4061 (class 2606 OID 41878)
+-- TOC entry 4073 (class 2606 OID 19827)
 -- Name: addresses addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12548,7 +12353,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- TOC entry 4065 (class 2606 OID 41880)
+-- TOC entry 4077 (class 2606 OID 19829)
 -- Name: bank_accounts bank_accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12557,7 +12362,7 @@ ALTER TABLE ONLY public.bank_accounts
 
 
 --
--- TOC entry 4068 (class 2606 OID 41882)
+-- TOC entry 4080 (class 2606 OID 19831)
 -- Name: banks banks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12566,7 +12371,7 @@ ALTER TABLE ONLY public.banks
 
 
 --
--- TOC entry 4071 (class 2606 OID 41884)
+-- TOC entry 4083 (class 2606 OID 19833)
 -- Name: batch_bundles batch_bundles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12575,7 +12380,7 @@ ALTER TABLE ONLY public.batch_bundles
 
 
 --
--- TOC entry 4073 (class 2606 OID 41886)
+-- TOC entry 4085 (class 2606 OID 19835)
 -- Name: cash_outflows cash_outflows_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12584,7 +12389,7 @@ ALTER TABLE ONLY public.cash_outflows
 
 
 --
--- TOC entry 4077 (class 2606 OID 41888)
+-- TOC entry 4089 (class 2606 OID 19837)
 -- Name: charges_template charges_template_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12593,7 +12398,7 @@ ALTER TABLE ONLY public.charges_template
 
 
 --
--- TOC entry 4080 (class 2606 OID 41890)
+-- TOC entry 4092 (class 2606 OID 19839)
 -- Name: chat_members chat_members_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12602,7 +12407,7 @@ ALTER TABLE ONLY public.chat_members
 
 
 --
--- TOC entry 4084 (class 2606 OID 41892)
+-- TOC entry 4096 (class 2606 OID 19841)
 -- Name: chat_messages chat_messages_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12611,7 +12416,7 @@ ALTER TABLE ONLY public.chat_messages
 
 
 --
--- TOC entry 4087 (class 2606 OID 41894)
+-- TOC entry 4099 (class 2606 OID 19843)
 -- Name: chats chats_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12620,7 +12425,7 @@ ALTER TABLE ONLY public.chats
 
 
 --
--- TOC entry 4089 (class 2606 OID 41896)
+-- TOC entry 4101 (class 2606 OID 19845)
 -- Name: companies companies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12629,7 +12434,7 @@ ALTER TABLE ONLY public.companies
 
 
 --
--- TOC entry 4093 (class 2606 OID 41898)
+-- TOC entry 4105 (class 2606 OID 19847)
 -- Name: company_defaults company_defaults_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12638,7 +12443,7 @@ ALTER TABLE ONLY public.company_defaults
 
 
 --
--- TOC entry 4096 (class 2606 OID 41900)
+-- TOC entry 4108 (class 2606 OID 19849)
 -- Name: company_entities company_entities_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12647,7 +12452,16 @@ ALTER TABLE ONLY public.company_entities
 
 
 --
--- TOC entry 4100 (class 2606 OID 41902)
+-- TOC entry 4425 (class 2606 OID 21523)
+-- Name: connections connection_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.connections
+    ADD CONSTRAINT connection_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4112 (class 2606 OID 19851)
 -- Name: contacts contact_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12656,7 +12470,7 @@ ALTER TABLE ONLY public.contacts
 
 
 --
--- TOC entry 4104 (class 2606 OID 41904)
+-- TOC entry 4116 (class 2606 OID 19853)
 -- Name: cost_centers cost_centers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12665,7 +12479,7 @@ ALTER TABLE ONLY public.cost_centers
 
 
 --
--- TOC entry 4298 (class 2606 OID 41906)
+-- TOC entry 4310 (class 2606 OID 19855)
 -- Name: r_courts courts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12674,7 +12488,7 @@ ALTER TABLE ONLY public.r_courts
 
 
 --
--- TOC entry 4106 (class 2606 OID 41908)
+-- TOC entry 4118 (class 2606 OID 19857)
 -- Name: currencies currencies_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12683,7 +12497,7 @@ ALTER TABLE ONLY public.currencies
 
 
 --
--- TOC entry 4108 (class 2606 OID 41910)
+-- TOC entry 4120 (class 2606 OID 19859)
 -- Name: currency_exchanges currency_exchanges_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12692,7 +12506,7 @@ ALTER TABLE ONLY public.currency_exchanges
 
 
 --
--- TOC entry 4111 (class 2606 OID 41912)
+-- TOC entry 4123 (class 2606 OID 19861)
 -- Name: customers customers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12701,7 +12515,7 @@ ALTER TABLE ONLY public.customers
 
 
 --
--- TOC entry 4115 (class 2606 OID 41914)
+-- TOC entry 4127 (class 2606 OID 19863)
 -- Name: deal_participants deal_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12710,7 +12524,7 @@ ALTER TABLE ONLY public.deal_participants
 
 
 --
--- TOC entry 4118 (class 2606 OID 41916)
+-- TOC entry 4130 (class 2606 OID 19865)
 -- Name: deals deals_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12719,7 +12533,7 @@ ALTER TABLE ONLY public.deals
 
 
 --
--- TOC entry 4121 (class 2606 OID 41918)
+-- TOC entry 4133 (class 2606 OID 19867)
 -- Name: delivery_line_items delivery_line_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12728,7 +12542,7 @@ ALTER TABLE ONLY public.delivery_line_items
 
 
 --
--- TOC entry 4123 (class 2606 OID 41920)
+-- TOC entry 4135 (class 2606 OID 19869)
 -- Name: doc_accounts doc_accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12737,7 +12551,7 @@ ALTER TABLE ONLY public.doc_accounts
 
 
 --
--- TOC entry 4125 (class 2606 OID 41922)
+-- TOC entry 4137 (class 2606 OID 19871)
 -- Name: doc_terms doc_terms_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12746,7 +12560,7 @@ ALTER TABLE ONLY public.doc_terms
 
 
 --
--- TOC entry 4127 (class 2606 OID 41924)
+-- TOC entry 4139 (class 2606 OID 19873)
 -- Name: entities entities_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12755,7 +12569,7 @@ ALTER TABLE ONLY public.entities
 
 
 --
--- TOC entry 4129 (class 2606 OID 41926)
+-- TOC entry 4141 (class 2606 OID 19875)
 -- Name: entity_types entity_types_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12764,7 +12578,7 @@ ALTER TABLE ONLY public.entity_types
 
 
 --
--- TOC entry 4133 (class 2606 OID 41928)
+-- TOC entry 4145 (class 2606 OID 19877)
 -- Name: groups groups_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12773,7 +12587,7 @@ ALTER TABLE ONLY public.groups
 
 
 --
--- TOC entry 4136 (class 2606 OID 41930)
+-- TOC entry 4148 (class 2606 OID 19879)
 -- Name: invoiced_item_lines invoiced_item_lines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12782,7 +12596,7 @@ ALTER TABLE ONLY public.invoiced_item_lines
 
 
 --
--- TOC entry 4139 (class 2606 OID 41932)
+-- TOC entry 4151 (class 2606 OID 19881)
 -- Name: invoices invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12791,7 +12605,7 @@ ALTER TABLE ONLY public.invoices
 
 
 --
--- TOC entry 4142 (class 2606 OID 41934)
+-- TOC entry 4154 (class 2606 OID 19883)
 -- Name: item_attribute_values item_attribute_values_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12800,7 +12614,7 @@ ALTER TABLE ONLY public.item_attribute_values
 
 
 --
--- TOC entry 4146 (class 2606 OID 41936)
+-- TOC entry 4158 (class 2606 OID 19885)
 -- Name: item_attributes item_attributes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12809,7 +12623,7 @@ ALTER TABLE ONLY public.item_attributes
 
 
 --
--- TOC entry 4148 (class 2606 OID 41938)
+-- TOC entry 4160 (class 2606 OID 19887)
 -- Name: item_inventory_settings item_inventory_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12818,7 +12632,7 @@ ALTER TABLE ONLY public.item_inventory_settings
 
 
 --
--- TOC entry 4157 (class 2606 OID 41940)
+-- TOC entry 4169 (class 2606 OID 19889)
 -- Name: item_line_stock_entries item_line_stock_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12827,7 +12641,7 @@ ALTER TABLE ONLY public.item_line_stock_entries
 
 
 --
--- TOC entry 4159 (class 2606 OID 41942)
+-- TOC entry 4171 (class 2606 OID 19891)
 -- Name: item_line_types item_line_types_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12836,7 +12650,7 @@ ALTER TABLE ONLY public.item_line_types
 
 
 --
--- TOC entry 4154 (class 2606 OID 41944)
+-- TOC entry 4166 (class 2606 OID 19893)
 -- Name: item_line_receipts item_line_warehouse_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12845,7 +12659,7 @@ ALTER TABLE ONLY public.item_line_receipts
 
 
 --
--- TOC entry 4162 (class 2606 OID 41946)
+-- TOC entry 4174 (class 2606 OID 19895)
 -- Name: item_lines item_lines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12854,7 +12668,7 @@ ALTER TABLE ONLY public.item_lines
 
 
 --
--- TOC entry 4165 (class 2606 OID 41948)
+-- TOC entry 4177 (class 2606 OID 19897)
 -- Name: price_lists item_price_lists_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12863,7 +12677,7 @@ ALTER TABLE ONLY public.price_lists
 
 
 --
--- TOC entry 4167 (class 2606 OID 41950)
+-- TOC entry 4179 (class 2606 OID 19899)
 -- Name: item_price_plugins item_price_plugins_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12872,7 +12686,7 @@ ALTER TABLE ONLY public.item_price_plugins
 
 
 --
--- TOC entry 4170 (class 2606 OID 41952)
+-- TOC entry 4182 (class 2606 OID 19901)
 -- Name: item_prices item_prices_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12881,7 +12695,7 @@ ALTER TABLE ONLY public.item_prices
 
 
 --
--- TOC entry 4172 (class 2606 OID 41954)
+-- TOC entry 4184 (class 2606 OID 19903)
 -- Name: item_variants item_variants_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12890,7 +12704,7 @@ ALTER TABLE ONLY public.item_variants
 
 
 --
--- TOC entry 4177 (class 2606 OID 41956)
+-- TOC entry 4189 (class 2606 OID 19905)
 -- Name: items items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12899,7 +12713,7 @@ ALTER TABLE ONLY public.items
 
 
 --
--- TOC entry 4180 (class 2606 OID 41958)
+-- TOC entry 4192 (class 2606 OID 19907)
 -- Name: journal_entries journal_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12908,7 +12722,7 @@ ALTER TABLE ONLY public.journal_entries
 
 
 --
--- TOC entry 4183 (class 2606 OID 41960)
+-- TOC entry 4195 (class 2606 OID 19909)
 -- Name: journal_entry_lines journal_entry_lines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12917,7 +12731,7 @@ ALTER TABLE ONLY public.journal_entry_lines
 
 
 --
--- TOC entry 4186 (class 2606 OID 41962)
+-- TOC entry 4198 (class 2606 OID 19911)
 -- Name: key_values key_values_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12926,7 +12740,7 @@ ALTER TABLE ONLY public.key_values
 
 
 --
--- TOC entry 4190 (class 2606 OID 41964)
+-- TOC entry 4202 (class 2606 OID 19913)
 -- Name: ledger_accounts ledger_accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12935,7 +12749,7 @@ ALTER TABLE ONLY public.ledger_accounts
 
 
 --
--- TOC entry 4192 (class 2606 OID 41966)
+-- TOC entry 4204 (class 2606 OID 19915)
 -- Name: ledger_statements ledger_statements_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12944,7 +12758,7 @@ ALTER TABLE ONLY public.ledger_statements
 
 
 --
--- TOC entry 4194 (class 2606 OID 41968)
+-- TOC entry 4206 (class 2606 OID 19917)
 -- Name: ledger_types ledger_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12953,7 +12767,7 @@ ALTER TABLE ONLY public.ledger_types
 
 
 --
--- TOC entry 4201 (class 2606 OID 41970)
+-- TOC entry 4213 (class 2606 OID 19919)
 -- Name: ledgers ledgers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12962,7 +12776,7 @@ ALTER TABLE ONLY public.ledgers
 
 
 --
--- TOC entry 4206 (class 2606 OID 41972)
+-- TOC entry 4218 (class 2606 OID 19921)
 -- Name: module_sections module_sections_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12971,7 +12785,7 @@ ALTER TABLE ONLY public.module_sections
 
 
 --
--- TOC entry 4209 (class 2606 OID 41974)
+-- TOC entry 4221 (class 2606 OID 19923)
 -- Name: modules modules_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12980,7 +12794,7 @@ ALTER TABLE ONLY public.modules
 
 
 --
--- TOC entry 4204 (class 2606 OID 41976)
+-- TOC entry 4216 (class 2606 OID 19925)
 -- Name: mentions notification_mentions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12989,7 +12803,7 @@ ALTER TABLE ONLY public.mentions
 
 
 --
--- TOC entry 4212 (class 2606 OID 41978)
+-- TOC entry 4224 (class 2606 OID 19927)
 -- Name: notifications notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -12998,7 +12812,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- TOC entry 4217 (class 2606 OID 41980)
+-- TOC entry 4229 (class 2606 OID 19929)
 -- Name: orders order_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13007,7 +12821,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 4220 (class 2606 OID 41982)
+-- TOC entry 4232 (class 2606 OID 19931)
 -- Name: parties parties_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13016,7 +12830,7 @@ ALTER TABLE ONLY public.parties
 
 
 --
--- TOC entry 4224 (class 2606 OID 41984)
+-- TOC entry 4236 (class 2606 OID 19933)
 -- Name: party_addresses party_addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13025,7 +12839,7 @@ ALTER TABLE ONLY public.party_addresses
 
 
 --
--- TOC entry 4228 (class 2606 OID 41986)
+-- TOC entry 4240 (class 2606 OID 19935)
 -- Name: party_payments party_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13034,7 +12848,7 @@ ALTER TABLE ONLY public.party_payments
 
 
 --
--- TOC entry 4232 (class 2606 OID 41988)
+-- TOC entry 4244 (class 2606 OID 19937)
 -- Name: party_references party_references_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13043,7 +12857,7 @@ ALTER TABLE ONLY public.party_references
 
 
 --
--- TOC entry 4234 (class 2606 OID 41990)
+-- TOC entry 4246 (class 2606 OID 19939)
 -- Name: party_types party_types_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13052,7 +12866,7 @@ ALTER TABLE ONLY public.party_types
 
 
 --
--- TOC entry 4238 (class 2606 OID 41992)
+-- TOC entry 4250 (class 2606 OID 19941)
 -- Name: payment_references payment_references_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13061,7 +12875,7 @@ ALTER TABLE ONLY public.payment_references
 
 
 --
--- TOC entry 4244 (class 2606 OID 41994)
+-- TOC entry 4256 (class 2606 OID 19943)
 -- Name: payment_terms_lines payment_terms_lines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13070,7 +12884,7 @@ ALTER TABLE ONLY public.payment_terms_lines
 
 
 --
--- TOC entry 4241 (class 2606 OID 41996)
+-- TOC entry 4253 (class 2606 OID 19945)
 -- Name: payment_terms payment_terms_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13079,7 +12893,7 @@ ALTER TABLE ONLY public.payment_terms
 
 
 --
--- TOC entry 4247 (class 2606 OID 41998)
+-- TOC entry 4259 (class 2606 OID 19947)
 -- Name: payment_terms_templates payment_terms_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13088,7 +12902,7 @@ ALTER TABLE ONLY public.payment_terms_templates
 
 
 --
--- TOC entry 4252 (class 2606 OID 42000)
+-- TOC entry 4264 (class 2606 OID 19949)
 -- Name: payments payments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13097,7 +12911,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- TOC entry 4256 (class 2606 OID 42002)
+-- TOC entry 4268 (class 2606 OID 19951)
 -- Name: piano_form piano_form_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13106,7 +12920,7 @@ ALTER TABLE ONLY public.piano_form
 
 
 --
--- TOC entry 4258 (class 2606 OID 42004)
+-- TOC entry 4270 (class 2606 OID 19953)
 -- Name: plugins plugins_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13115,7 +12929,7 @@ ALTER TABLE ONLY public.plugins
 
 
 --
--- TOC entry 4260 (class 2606 OID 42006)
+-- TOC entry 4272 (class 2606 OID 19955)
 -- Name: pricing_line_items priced_item_lines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13124,7 +12938,7 @@ ALTER TABLE ONLY public.pricing_line_items
 
 
 --
--- TOC entry 4262 (class 2606 OID 42008)
+-- TOC entry 4274 (class 2606 OID 19957)
 -- Name: pricing_charges pricer_defaults_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13133,7 +12947,7 @@ ALTER TABLE ONLY public.pricing_charges
 
 
 --
--- TOC entry 4264 (class 2606 OID 42010)
+-- TOC entry 4276 (class 2606 OID 19959)
 -- Name: pricings pricings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13142,7 +12956,7 @@ ALTER TABLE ONLY public.pricings
 
 
 --
--- TOC entry 4269 (class 2606 OID 42012)
+-- TOC entry 4281 (class 2606 OID 19961)
 -- Name: profiles profiles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13151,7 +12965,7 @@ ALTER TABLE ONLY public.profiles
 
 
 --
--- TOC entry 4271 (class 2606 OID 42014)
+-- TOC entry 4283 (class 2606 OID 19963)
 -- Name: progress_invoices progress_invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13160,7 +12974,7 @@ ALTER TABLE ONLY public.progress_invoices
 
 
 --
--- TOC entry 4273 (class 2606 OID 42016)
+-- TOC entry 4285 (class 2606 OID 19965)
 -- Name: progress_orders progress_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13169,7 +12983,7 @@ ALTER TABLE ONLY public.progress_orders
 
 
 --
--- TOC entry 4276 (class 2606 OID 42018)
+-- TOC entry 4288 (class 2606 OID 19967)
 -- Name: projects project_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13178,7 +12992,7 @@ ALTER TABLE ONLY public.projects
 
 
 --
--- TOC entry 4281 (class 2606 OID 42020)
+-- TOC entry 4293 (class 2606 OID 19969)
 -- Name: purchase_records purchase_records_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13187,7 +13001,7 @@ ALTER TABLE ONLY public.purchase_records
 
 
 --
--- TOC entry 4284 (class 2606 OID 42022)
+-- TOC entry 4296 (class 2606 OID 19971)
 -- Name: quotations quotations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13196,7 +13010,7 @@ ALTER TABLE ONLY public.quotations
 
 
 --
--- TOC entry 4286 (class 2606 OID 42024)
+-- TOC entry 4298 (class 2606 OID 19973)
 -- Name: r_booking_events r_booking_events_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13205,7 +13019,7 @@ ALTER TABLE ONLY public.r_booking_events
 
 
 --
--- TOC entry 4288 (class 2606 OID 42026)
+-- TOC entry 4300 (class 2606 OID 19975)
 -- Name: r_booking_prices r_booking_prices_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13214,7 +13028,7 @@ ALTER TABLE ONLY public.r_booking_prices
 
 
 --
--- TOC entry 4290 (class 2606 OID 42028)
+-- TOC entry 4302 (class 2606 OID 19977)
 -- Name: r_booking_slots r_booking_slots_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13223,7 +13037,7 @@ ALTER TABLE ONLY public.r_booking_slots
 
 
 --
--- TOC entry 4293 (class 2606 OID 42030)
+-- TOC entry 4305 (class 2606 OID 19979)
 -- Name: r_bookings r_bookings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13232,7 +13046,7 @@ ALTER TABLE ONLY public.r_bookings
 
 
 --
--- TOC entry 4296 (class 2606 OID 42032)
+-- TOC entry 4308 (class 2606 OID 19981)
 -- Name: r_court_rates r_court_rates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13241,7 +13055,7 @@ ALTER TABLE ONLY public.r_court_rates
 
 
 --
--- TOC entry 4303 (class 2606 OID 42034)
+-- TOC entry 4315 (class 2606 OID 19983)
 -- Name: r_events r_events_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13250,7 +13064,7 @@ ALTER TABLE ONLY public.r_events
 
 
 --
--- TOC entry 4308 (class 2606 OID 42036)
+-- TOC entry 4320 (class 2606 OID 19985)
 -- Name: receipts receipts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13259,7 +13073,7 @@ ALTER TABLE ONLY public.receipts
 
 
 --
--- TOC entry 4310 (class 2606 OID 42038)
+-- TOC entry 4322 (class 2606 OID 19987)
 -- Name: role_actions role_definitions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13268,7 +13082,7 @@ ALTER TABLE ONLY public.role_actions
 
 
 --
--- TOC entry 4312 (class 2606 OID 42040)
+-- TOC entry 4324 (class 2606 OID 19989)
 -- Name: role_templates role_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13277,7 +13091,7 @@ ALTER TABLE ONLY public.role_templates
 
 
 --
--- TOC entry 4316 (class 2606 OID 42042)
+-- TOC entry 4328 (class 2606 OID 19991)
 -- Name: roles roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13286,7 +13100,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- TOC entry 4321 (class 2606 OID 42044)
+-- TOC entry 4333 (class 2606 OID 19993)
 -- Name: sales_records sales_records_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13295,7 +13109,7 @@ ALTER TABLE ONLY public.sales_records
 
 
 --
--- TOC entry 4323 (class 2606 OID 42046)
+-- TOC entry 4335 (class 2606 OID 19995)
 -- Name: serial_no_transactions serial_no_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13304,7 +13118,7 @@ ALTER TABLE ONLY public.serial_no_transactions
 
 
 --
--- TOC entry 4327 (class 2606 OID 42048)
+-- TOC entry 4339 (class 2606 OID 19997)
 -- Name: serial_nos serial_nos_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13313,7 +13127,16 @@ ALTER TABLE ONLY public.serial_nos
 
 
 --
--- TOC entry 4331 (class 2606 OID 42050)
+-- TOC entry 4421 (class 2606 OID 21502)
+-- Name: sessions session_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT session_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4343 (class 2606 OID 19999)
 -- Name: stages stages_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13322,7 +13145,7 @@ ALTER TABLE ONLY public.stages
 
 
 --
--- TOC entry 4333 (class 2606 OID 42052)
+-- TOC entry 4345 (class 2606 OID 20001)
 -- Name: states states_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13331,7 +13154,7 @@ ALTER TABLE ONLY public.states
 
 
 --
--- TOC entry 4337 (class 2606 OID 42054)
+-- TOC entry 4349 (class 2606 OID 20003)
 -- Name: stock_entries stock_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13340,7 +13163,7 @@ ALTER TABLE ONLY public.stock_entries
 
 
 --
--- TOC entry 4340 (class 2606 OID 42056)
+-- TOC entry 4352 (class 2606 OID 20005)
 -- Name: stock_levels stock_levels_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13349,7 +13172,7 @@ ALTER TABLE ONLY public.stock_levels
 
 
 --
--- TOC entry 4343 (class 2606 OID 42058)
+-- TOC entry 4355 (class 2606 OID 20007)
 -- Name: stock_movements stock_movements_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13358,7 +13181,7 @@ ALTER TABLE ONLY public.stock_movements
 
 
 --
--- TOC entry 4335 (class 2606 OID 42060)
+-- TOC entry 4347 (class 2606 OID 20009)
 -- Name: stock_defaults stock_setting_defaults_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13367,7 +13190,7 @@ ALTER TABLE ONLY public.stock_defaults
 
 
 --
--- TOC entry 4346 (class 2606 OID 42062)
+-- TOC entry 4358 (class 2606 OID 20011)
 -- Name: stock_settings stock_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13376,7 +13199,7 @@ ALTER TABLE ONLY public.stock_settings
 
 
 --
--- TOC entry 4350 (class 2606 OID 42064)
+-- TOC entry 4362 (class 2606 OID 20013)
 -- Name: stock_transactions stock_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13385,7 +13208,7 @@ ALTER TABLE ONLY public.stock_transactions
 
 
 --
--- TOC entry 4354 (class 2606 OID 42066)
+-- TOC entry 4366 (class 2606 OID 20015)
 -- Name: supplier_orders supplier_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13394,7 +13217,7 @@ ALTER TABLE ONLY public.supplier_orders
 
 
 --
--- TOC entry 4360 (class 2606 OID 42068)
+-- TOC entry 4372 (class 2606 OID 20017)
 -- Name: suppliers suppliers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13403,7 +13226,16 @@ ALTER TABLE ONLY public.suppliers
 
 
 --
--- TOC entry 4363 (class 2606 OID 42070)
+-- TOC entry 4429 (class 2606 OID 21541)
+-- Name: tasks tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tasks
+    ADD CONSTRAINT tasks_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 4375 (class 2606 OID 20019)
 -- Name: tax_and_charge_lines tax_and_charge_lines_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13412,7 +13244,7 @@ ALTER TABLE ONLY public.tax_and_charge_lines
 
 
 --
--- TOC entry 4366 (class 2606 OID 42072)
+-- TOC entry 4378 (class 2606 OID 20021)
 -- Name: taxes taxes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13421,7 +13253,7 @@ ALTER TABLE ONLY public.taxes
 
 
 --
--- TOC entry 4369 (class 2606 OID 42074)
+-- TOC entry 4381 (class 2606 OID 20023)
 -- Name: terms_and_conditions term_and_conditions_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13430,7 +13262,7 @@ ALTER TABLE ONLY public.terms_and_conditions
 
 
 --
--- TOC entry 4371 (class 2606 OID 42076)
+-- TOC entry 4383 (class 2606 OID 20025)
 -- Name: transaction_accounts transaction_accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13439,7 +13271,7 @@ ALTER TABLE ONLY public.transaction_accounts
 
 
 --
--- TOC entry 4382 (class 2606 OID 42078)
+-- TOC entry 4394 (class 2606 OID 20027)
 -- Name: transaction_type_ext transaction_type_ext_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13448,7 +13280,7 @@ ALTER TABLE ONLY public.transaction_type_ext
 
 
 --
--- TOC entry 4384 (class 2606 OID 42080)
+-- TOC entry 4396 (class 2606 OID 20029)
 -- Name: transaction_type_ledgers transaction_type_ledgers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13457,7 +13289,7 @@ ALTER TABLE ONLY public.transaction_type_ledgers
 
 
 --
--- TOC entry 4380 (class 2606 OID 42082)
+-- TOC entry 4392 (class 2606 OID 20031)
 -- Name: transaction_type_de transaction_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13466,7 +13298,7 @@ ALTER TABLE ONLY public.transaction_type_de
 
 
 --
--- TOC entry 4378 (class 2606 OID 42084)
+-- TOC entry 4390 (class 2606 OID 20033)
 -- Name: transaction_ledgers transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13475,7 +13307,16 @@ ALTER TABLE ONLY public.transaction_ledgers
 
 
 --
--- TOC entry 4397 (class 2606 OID 42086)
+-- TOC entry 4423 (class 2606 OID 21504)
+-- Name: sessions uni_session_token; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT uni_session_token UNIQUE (token);
+
+
+--
+-- TOC entry 4409 (class 2606 OID 20035)
 -- Name: users uni_users_identifier; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13484,7 +13325,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 4387 (class 2606 OID 42088)
+-- TOC entry 4399 (class 2606 OID 20037)
 -- Name: unit_of_measure_translations unit_of_measure_translations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13493,7 +13334,7 @@ ALTER TABLE ONLY public.unit_of_measure_translations
 
 
 --
--- TOC entry 4390 (class 2606 OID 42090)
+-- TOC entry 4402 (class 2606 OID 20039)
 -- Name: unit_of_measures unit_of_measures_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13502,7 +13343,7 @@ ALTER TABLE ONLY public.unit_of_measures
 
 
 --
--- TOC entry 4393 (class 2606 OID 42092)
+-- TOC entry 4405 (class 2606 OID 20041)
 -- Name: user_relations user_relations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13511,7 +13352,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4399 (class 2606 OID 42094)
+-- TOC entry 4411 (class 2606 OID 20043)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13520,7 +13361,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 4402 (class 2606 OID 42096)
+-- TOC entry 4414 (class 2606 OID 20045)
 -- Name: ware_houses ware_houses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13529,7 +13370,7 @@ ALTER TABLE ONLY public.ware_houses
 
 
 --
--- TOC entry 4404 (class 2606 OID 42098)
+-- TOC entry 4416 (class 2606 OID 20047)
 -- Name: workspace_modules workspace_modules_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13538,7 +13379,7 @@ ALTER TABLE ONLY public.workspace_modules
 
 
 --
--- TOC entry 4407 (class 2606 OID 42100)
+-- TOC entry 4419 (class 2606 OID 20049)
 -- Name: workspaces workspaces_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -13547,7 +13388,7 @@ ALTER TABLE ONLY public.workspaces
 
 
 --
--- TOC entry 4225 (class 1259 OID 42101)
+-- TOC entry 4237 (class 1259 OID 20050)
 -- Name: fki_;; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13555,7 +13396,7 @@ CREATE INDEX "fki_;" ON public.party_payments USING btree (payment_id);
 
 
 --
--- TOC entry 4160 (class 1259 OID 42102)
+-- TOC entry 4172 (class 1259 OID 20051)
 -- Name: fki_F; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13563,7 +13404,7 @@ CREATE INDEX "fki_F" ON public.item_lines USING btree (id);
 
 
 --
--- TOC entry 4372 (class 1259 OID 42103)
+-- TOC entry 4384 (class 1259 OID 20052)
 -- Name: fki_T; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13571,7 +13412,7 @@ CREATE INDEX "fki_T" ON public.transaction_ledgers USING btree (ledger);
 
 
 --
--- TOC entry 4081 (class 1259 OID 42104)
+-- TOC entry 4093 (class 1259 OID 20053)
 -- Name: fki_chat; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13579,7 +13420,7 @@ CREATE INDEX fki_chat ON public.chat_members USING btree (profile_id);
 
 
 --
--- TOC entry 4344 (class 1259 OID 42105)
+-- TOC entry 4356 (class 1259 OID 20054)
 -- Name: fki_com; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13587,7 +13428,7 @@ CREATE INDEX fki_com ON public.stock_settings USING btree (company_id);
 
 
 --
--- TOC entry 4097 (class 1259 OID 42106)
+-- TOC entry 4109 (class 1259 OID 20055)
 -- Name: fki_company_en; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13595,7 +13436,7 @@ CREATE INDEX fki_company_en ON public.company_entities USING btree (company_id);
 
 
 --
--- TOC entry 4112 (class 1259 OID 42107)
+-- TOC entry 4124 (class 1259 OID 20056)
 -- Name: fki_customers_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13603,7 +13444,7 @@ CREATE INDEX fki_customers_company ON public.customers USING btree (company_id);
 
 
 --
--- TOC entry 4113 (class 1259 OID 42108)
+-- TOC entry 4125 (class 1259 OID 20057)
 -- Name: fki_customers_group; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13611,7 +13452,7 @@ CREATE INDEX fki_customers_group ON public.customers USING btree (group_id);
 
 
 --
--- TOC entry 4367 (class 1259 OID 42109)
+-- TOC entry 4379 (class 1259 OID 20058)
 -- Name: fki_d; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13619,7 +13460,7 @@ CREATE INDEX fki_d ON public.terms_and_conditions USING btree (company_id);
 
 
 --
--- TOC entry 4059 (class 1259 OID 42110)
+-- TOC entry 4071 (class 1259 OID 20059)
 -- Name: fki_fk_aac_doc_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13627,7 +13468,7 @@ CREATE INDEX fki_fk_aac_doc_id ON public.address_and_contacts USING btree (doc_i
 
 
 --
--- TOC entry 4036 (class 1259 OID 42111)
+-- TOC entry 4048 (class 1259 OID 20060)
 -- Name: fki_fk_acc_setts_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13635,7 +13476,7 @@ CREATE INDEX fki_fk_acc_setts_company ON public.account_settings USING btree (co
 
 
 --
--- TOC entry 4045 (class 1259 OID 42112)
+-- TOC entry 4057 (class 1259 OID 20061)
 -- Name: fki_fk_actions_entity; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13643,7 +13484,7 @@ CREATE INDEX fki_fk_actions_entity ON public.actions USING btree (entity_id);
 
 
 --
--- TOC entry 4048 (class 1259 OID 42113)
+-- TOC entry 4060 (class 1259 OID 20062)
 -- Name: fki_fk_activities_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13651,7 +13492,7 @@ CREATE INDEX fki_fk_activities_party ON public.activities USING btree (party_id)
 
 
 --
--- TOC entry 4049 (class 1259 OID 42114)
+-- TOC entry 4061 (class 1259 OID 20063)
 -- Name: fki_fk_activities_profile; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13659,7 +13500,7 @@ CREATE INDEX fki_fk_activities_profile ON public.activities USING btree (profile
 
 
 --
--- TOC entry 4062 (class 1259 OID 42115)
+-- TOC entry 4074 (class 1259 OID 20064)
 -- Name: fki_fk_addresses_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13667,7 +13508,7 @@ CREATE INDEX fki_fk_addresses_company ON public.addresses USING btree (company_i
 
 
 --
--- TOC entry 4056 (class 1259 OID 42116)
+-- TOC entry 4068 (class 1259 OID 20065)
 -- Name: fki_fk_am_activity; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13675,7 +13516,7 @@ CREATE INDEX fki_fk_am_activity ON public.activity_mentions USING btree (activit
 
 
 --
--- TOC entry 4066 (class 1259 OID 42117)
+-- TOC entry 4078 (class 1259 OID 20066)
 -- Name: fki_fk_ba_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13683,7 +13524,7 @@ CREATE INDEX fki_fk_ba_company ON public.bank_accounts USING btree (company_id);
 
 
 --
--- TOC entry 4069 (class 1259 OID 42118)
+-- TOC entry 4081 (class 1259 OID 20067)
 -- Name: fki_fk_banks_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13691,7 +13532,7 @@ CREATE INDEX fki_fk_banks_company ON public.banks USING btree (company_id);
 
 
 --
--- TOC entry 4291 (class 1259 OID 42119)
+-- TOC entry 4303 (class 1259 OID 20068)
 -- Name: fki_fk_bookings_court; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13699,7 +13540,7 @@ CREATE INDEX fki_fk_bookings_court ON public.r_bookings USING btree (court_id);
 
 
 --
--- TOC entry 4094 (class 1259 OID 42120)
+-- TOC entry 4106 (class 1259 OID 20069)
 -- Name: fki_fk_cd_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13707,7 +13548,7 @@ CREATE INDEX fki_fk_cd_company ON public.company_defaults USING btree (company_i
 
 
 --
--- TOC entry 4098 (class 1259 OID 42121)
+-- TOC entry 4110 (class 1259 OID 20070)
 -- Name: fki_fk_ce_entity; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13715,7 +13556,7 @@ CREATE INDEX fki_fk_ce_entity ON public.company_entities USING btree (entity_id)
 
 
 --
--- TOC entry 4078 (class 1259 OID 42122)
+-- TOC entry 4090 (class 1259 OID 20071)
 -- Name: fki_fk_charges_template_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13723,7 +13564,7 @@ CREATE INDEX fki_fk_charges_template_company ON public.charges_template USING bt
 
 
 --
--- TOC entry 4085 (class 1259 OID 42123)
+-- TOC entry 4097 (class 1259 OID 20072)
 -- Name: fki_fk_chat_msg_chat; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13731,7 +13572,7 @@ CREATE INDEX fki_fk_chat_msg_chat ON public.chat_messages USING btree (chat_id);
 
 
 --
--- TOC entry 4082 (class 1259 OID 42124)
+-- TOC entry 4094 (class 1259 OID 20073)
 -- Name: fki_fk_cm_chat; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13739,7 +13580,7 @@ CREATE INDEX fki_fk_cm_chat ON public.chat_members USING btree (chat_id);
 
 
 --
--- TOC entry 4074 (class 1259 OID 42125)
+-- TOC entry 4086 (class 1259 OID 20074)
 -- Name: fki_fk_co_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13747,7 +13588,7 @@ CREATE INDEX fki_fk_co_company ON public.cash_outflows USING btree (company_id);
 
 
 --
--- TOC entry 4075 (class 1259 OID 42126)
+-- TOC entry 4087 (class 1259 OID 20075)
 -- Name: fki_fk_co_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13755,7 +13596,7 @@ CREATE INDEX fki_fk_co_party ON public.cash_outflows USING btree (party_id);
 
 
 --
--- TOC entry 4090 (class 1259 OID 42127)
+-- TOC entry 4102 (class 1259 OID 20076)
 -- Name: fki_fk_companies_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13763,7 +13604,7 @@ CREATE INDEX fki_fk_companies_party ON public.companies USING btree (id);
 
 
 --
--- TOC entry 4300 (class 1259 OID 42128)
+-- TOC entry 4312 (class 1259 OID 20077)
 -- Name: fki_fk_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13771,7 +13612,7 @@ CREATE INDEX fki_fk_company ON public.r_events USING btree (company_id);
 
 
 --
--- TOC entry 4101 (class 1259 OID 42129)
+-- TOC entry 4113 (class 1259 OID 20078)
 -- Name: fki_fk_contacts_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13779,7 +13620,7 @@ CREATE INDEX fki_fk_contacts_company ON public.contacts USING btree (company_id)
 
 
 --
--- TOC entry 4102 (class 1259 OID 42130)
+-- TOC entry 4114 (class 1259 OID 20079)
 -- Name: fki_fk_contacts_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13787,7 +13628,7 @@ CREATE INDEX fki_fk_contacts_party ON public.contacts USING btree (id);
 
 
 --
--- TOC entry 4294 (class 1259 OID 42131)
+-- TOC entry 4306 (class 1259 OID 20080)
 -- Name: fki_fk_court_rates_court; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13795,7 +13636,7 @@ CREATE INDEX fki_fk_court_rates_court ON public.r_court_rates USING btree (court
 
 
 --
--- TOC entry 4299 (class 1259 OID 42132)
+-- TOC entry 4311 (class 1259 OID 20081)
 -- Name: fki_fk_courts_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13803,7 +13644,7 @@ CREATE INDEX fki_fk_courts_company ON public.r_courts USING btree (company_id);
 
 
 --
--- TOC entry 4109 (class 1259 OID 42133)
+-- TOC entry 4121 (class 1259 OID 20082)
 -- Name: fki_fk_currency_exchanges_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13811,7 +13652,7 @@ CREATE INDEX fki_fk_currency_exchanges_company ON public.currency_exchanges USIN
 
 
 --
--- TOC entry 4119 (class 1259 OID 42134)
+-- TOC entry 4131 (class 1259 OID 20083)
 -- Name: fki_fk_deals_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13819,7 +13660,7 @@ CREATE INDEX fki_fk_deals_company ON public.deals USING btree (company_id);
 
 
 --
--- TOC entry 4116 (class 1259 OID 42135)
+-- TOC entry 4128 (class 1259 OID 20084)
 -- Name: fki_fk_dp_deal; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13827,7 +13668,7 @@ CREATE INDEX fki_fk_dp_deal ON public.deal_participants USING btree (deal_id);
 
 
 --
--- TOC entry 4328 (class 1259 OID 42136)
+-- TOC entry 4340 (class 1259 OID 20085)
 -- Name: fki_fk_entity; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13835,7 +13676,7 @@ CREATE INDEX fki_fk_entity ON public.stages USING btree (entity_id);
 
 
 --
--- TOC entry 4134 (class 1259 OID 42137)
+-- TOC entry 4146 (class 1259 OID 20086)
 -- Name: fki_fk_inv_item_line; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13843,7 +13684,7 @@ CREATE INDEX fki_fk_inv_item_line ON public.invoiced_item_lines USING btree (ite
 
 
 --
--- TOC entry 4137 (class 1259 OID 42138)
+-- TOC entry 4149 (class 1259 OID 20087)
 -- Name: fki_fk_invoices_currency; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13851,7 +13692,7 @@ CREATE INDEX fki_fk_invoices_currency ON public.invoices USING btree (currency);
 
 
 --
--- TOC entry 4143 (class 1259 OID 42139)
+-- TOC entry 4155 (class 1259 OID 20088)
 -- Name: fki_fk_item_attributes_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13859,7 +13700,7 @@ CREATE INDEX fki_fk_item_attributes_party ON public.item_attributes USING btree 
 
 
 --
--- TOC entry 4149 (class 1259 OID 42140)
+-- TOC entry 4161 (class 1259 OID 20089)
 -- Name: fki_fk_item_lin; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13867,7 +13708,7 @@ CREATE INDEX fki_fk_item_lin ON public.item_line_receipts USING btree (item_line
 
 
 --
--- TOC entry 4155 (class 1259 OID 42141)
+-- TOC entry 4167 (class 1259 OID 20090)
 -- Name: fki_fk_item_line_stock_entries_item_line; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13875,7 +13716,7 @@ CREATE INDEX fki_fk_item_line_stock_entries_item_line ON public.item_line_stock_
 
 
 --
--- TOC entry 4150 (class 1259 OID 42142)
+-- TOC entry 4162 (class 1259 OID 20091)
 -- Name: fki_fk_item_line_warehouse_accepted; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13883,7 +13724,7 @@ CREATE INDEX fki_fk_item_line_warehouse_accepted ON public.item_line_receipts US
 
 
 --
--- TOC entry 4151 (class 1259 OID 42143)
+-- TOC entry 4163 (class 1259 OID 20092)
 -- Name: fki_fk_item_line_warehouse_item_line; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13891,7 +13732,7 @@ CREATE INDEX fki_fk_item_line_warehouse_item_line ON public.item_line_receipts U
 
 
 --
--- TOC entry 4152 (class 1259 OID 42144)
+-- TOC entry 4164 (class 1259 OID 20093)
 -- Name: fki_fk_item_line_warehouse_rejected; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13899,7 +13740,7 @@ CREATE INDEX fki_fk_item_line_warehouse_rejected ON public.item_line_receipts US
 
 
 --
--- TOC entry 4173 (class 1259 OID 42145)
+-- TOC entry 4185 (class 1259 OID 20094)
 -- Name: fki_fk_items_group; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13907,7 +13748,7 @@ CREATE INDEX fki_fk_items_group ON public.items USING btree (group_id);
 
 
 --
--- TOC entry 4174 (class 1259 OID 42146)
+-- TOC entry 4186 (class 1259 OID 20095)
 -- Name: fki_fk_items_items_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13915,7 +13756,7 @@ CREATE INDEX fki_fk_items_items_party ON public.items USING btree (id);
 
 
 --
--- TOC entry 4181 (class 1259 OID 42147)
+-- TOC entry 4193 (class 1259 OID 20096)
 -- Name: fki_fk_jel_journal_entry; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13923,7 +13764,7 @@ CREATE INDEX fki_fk_jel_journal_entry ON public.journal_entry_lines USING btree 
 
 
 --
--- TOC entry 4178 (class 1259 OID 42148)
+-- TOC entry 4190 (class 1259 OID 20097)
 -- Name: fki_fk_journal_entries_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13931,7 +13772,7 @@ CREATE INDEX fki_fk_journal_entries_company ON public.journal_entries USING btre
 
 
 --
--- TOC entry 4195 (class 1259 OID 42149)
+-- TOC entry 4207 (class 1259 OID 20098)
 -- Name: fki_fk_ledgers_account_type; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13939,7 +13780,7 @@ CREATE INDEX fki_fk_ledgers_account_type ON public.ledgers USING btree (account_
 
 
 --
--- TOC entry 4187 (class 1259 OID 42150)
+-- TOC entry 4199 (class 1259 OID 20099)
 -- Name: fki_fk_ledgers_accounts_ledger; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13947,7 +13788,7 @@ CREATE INDEX fki_fk_ledgers_accounts_ledger ON public.ledger_accounts USING btre
 
 
 --
--- TOC entry 4196 (class 1259 OID 42151)
+-- TOC entry 4208 (class 1259 OID 20100)
 -- Name: fki_fk_ledgers_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13955,7 +13796,7 @@ CREATE INDEX fki_fk_ledgers_company ON public.ledgers USING btree (company_id);
 
 
 --
--- TOC entry 4197 (class 1259 OID 42152)
+-- TOC entry 4209 (class 1259 OID 20101)
 -- Name: fki_fk_ledgers_parent; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13963,7 +13804,7 @@ CREATE INDEX fki_fk_ledgers_parent ON public.ledgers USING btree (ledger_parent)
 
 
 --
--- TOC entry 4207 (class 1259 OID 42153)
+-- TOC entry 4219 (class 1259 OID 20102)
 -- Name: fki_fk_modules_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13971,7 +13812,7 @@ CREATE INDEX fki_fk_modules_company ON public.modules USING btree (company_id);
 
 
 --
--- TOC entry 4210 (class 1259 OID 42154)
+-- TOC entry 4222 (class 1259 OID 20103)
 -- Name: fki_fk_notifications_profile; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13979,7 +13820,7 @@ CREATE INDEX fki_fk_notifications_profile ON public.notifications USING btree (p
 
 
 --
--- TOC entry 4213 (class 1259 OID 42155)
+-- TOC entry 4225 (class 1259 OID 20104)
 -- Name: fki_fk_orders_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13987,7 +13828,7 @@ CREATE INDEX fki_fk_orders_company ON public.orders USING btree (company_id);
 
 
 --
--- TOC entry 4214 (class 1259 OID 42156)
+-- TOC entry 4226 (class 1259 OID 20105)
 -- Name: fki_fk_orders_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -13995,7 +13836,7 @@ CREATE INDEX fki_fk_orders_party ON public.orders USING btree (id);
 
 
 --
--- TOC entry 4215 (class 1259 OID 42157)
+-- TOC entry 4227 (class 1259 OID 20106)
 -- Name: fki_fk_orders_party2; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14003,7 +13844,7 @@ CREATE INDEX fki_fk_orders_party2 ON public.orders USING btree (party_id);
 
 
 --
--- TOC entry 4221 (class 1259 OID 42158)
+-- TOC entry 4233 (class 1259 OID 20107)
 -- Name: fki_fk_party_addresses_address; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14011,7 +13852,7 @@ CREATE INDEX fki_fk_party_addresses_address ON public.party_addresses USING btre
 
 
 --
--- TOC entry 4239 (class 1259 OID 42159)
+-- TOC entry 4251 (class 1259 OID 20108)
 -- Name: fki_fk_payment_tems_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14019,7 +13860,7 @@ CREATE INDEX fki_fk_payment_tems_company ON public.payment_terms USING btree (co
 
 
 --
--- TOC entry 4245 (class 1259 OID 42160)
+-- TOC entry 4257 (class 1259 OID 20109)
 -- Name: fki_fk_payment_terms_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14027,7 +13868,7 @@ CREATE INDEX fki_fk_payment_terms_company ON public.payment_terms_templates USIN
 
 
 --
--- TOC entry 4253 (class 1259 OID 42161)
+-- TOC entry 4265 (class 1259 OID 20110)
 -- Name: fki_fk_piano_form_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14035,7 +13876,7 @@ CREATE INDEX fki_fk_piano_form_company ON public.piano_form USING btree (company
 
 
 --
--- TOC entry 4254 (class 1259 OID 42162)
+-- TOC entry 4266 (class 1259 OID 20111)
 -- Name: fki_fk_piano_form_party_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14043,7 +13884,7 @@ CREATE INDEX fki_fk_piano_form_party_id ON public.piano_form USING btree (id);
 
 
 --
--- TOC entry 4235 (class 1259 OID 42163)
+-- TOC entry 4247 (class 1259 OID 20112)
 -- Name: fki_fk_pr_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14051,7 +13892,7 @@ CREATE INDEX fki_fk_pr_party ON public.payment_references USING btree (party_id)
 
 
 --
--- TOC entry 4236 (class 1259 OID 42164)
+-- TOC entry 4248 (class 1259 OID 20113)
 -- Name: fki_fk_pr_payment; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14059,7 +13900,7 @@ CREATE INDEX fki_fk_pr_payment ON public.payment_references USING btree (payment
 
 
 --
--- TOC entry 4265 (class 1259 OID 42165)
+-- TOC entry 4277 (class 1259 OID 20114)
 -- Name: fki_fk_profile_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14067,7 +13908,7 @@ CREATE INDEX fki_fk_profile_party ON public.profiles USING btree (id);
 
 
 --
--- TOC entry 4266 (class 1259 OID 42166)
+-- TOC entry 4278 (class 1259 OID 20115)
 -- Name: fki_fk_profiles_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14075,7 +13916,7 @@ CREATE INDEX fki_fk_profiles_company ON public.profiles USING btree (company_id)
 
 
 --
--- TOC entry 4274 (class 1259 OID 42167)
+-- TOC entry 4286 (class 1259 OID 20116)
 -- Name: fki_fk_projects_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14083,7 +13924,7 @@ CREATE INDEX fki_fk_projects_company ON public.projects USING btree (company_id)
 
 
 --
--- TOC entry 4242 (class 1259 OID 42168)
+-- TOC entry 4254 (class 1259 OID 20117)
 -- Name: fki_fk_ptl_doc_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14091,7 +13932,7 @@ CREATE INDEX fki_fk_ptl_doc_party ON public.payment_terms_lines USING btree (doc
 
 
 --
--- TOC entry 4277 (class 1259 OID 42169)
+-- TOC entry 4289 (class 1259 OID 20118)
 -- Name: fki_fk_purchase_records_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14099,7 +13940,7 @@ CREATE INDEX fki_fk_purchase_records_company ON public.purchase_records USING bt
 
 
 --
--- TOC entry 4278 (class 1259 OID 42170)
+-- TOC entry 4290 (class 1259 OID 20119)
 -- Name: fki_fk_purchase_records_supplier; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14107,7 +13948,7 @@ CREATE INDEX fki_fk_purchase_records_supplier ON public.purchase_records USING b
 
 
 --
--- TOC entry 4282 (class 1259 OID 42171)
+-- TOC entry 4294 (class 1259 OID 20120)
 -- Name: fki_fk_quotations_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14115,7 +13956,7 @@ CREATE INDEX fki_fk_quotations_company ON public.quotations USING btree (company
 
 
 --
--- TOC entry 4301 (class 1259 OID 42172)
+-- TOC entry 4313 (class 1259 OID 20121)
 -- Name: fki_fk_r_events_party_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14123,7 +13964,7 @@ CREATE INDEX fki_fk_r_events_party_id ON public.r_events USING btree (id);
 
 
 --
--- TOC entry 4304 (class 1259 OID 42173)
+-- TOC entry 4316 (class 1259 OID 20122)
 -- Name: fki_fk_receipts_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14131,7 +13972,7 @@ CREATE INDEX fki_fk_receipts_company ON public.receipts USING btree (company_id)
 
 
 --
--- TOC entry 4305 (class 1259 OID 42174)
+-- TOC entry 4317 (class 1259 OID 20123)
 -- Name: fki_fk_receipts_party2; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14139,7 +13980,7 @@ CREATE INDEX fki_fk_receipts_party2 ON public.receipts USING btree (party_id);
 
 
 --
--- TOC entry 4306 (class 1259 OID 42175)
+-- TOC entry 4318 (class 1259 OID 20124)
 -- Name: fki_fk_receipts_status; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14147,7 +13988,7 @@ CREATE INDEX fki_fk_receipts_status ON public.receipts USING btree (status);
 
 
 --
--- TOC entry 4229 (class 1259 OID 42176)
+-- TOC entry 4241 (class 1259 OID 20125)
 -- Name: fki_fk_references_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14155,7 +13996,7 @@ CREATE INDEX fki_fk_references_party ON public.party_references USING btree (par
 
 
 --
--- TOC entry 4230 (class 1259 OID 42177)
+-- TOC entry 4242 (class 1259 OID 20126)
 -- Name: fki_fk_references_reference; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14163,7 +14004,7 @@ CREATE INDEX fki_fk_references_reference ON public.party_references USING btree 
 
 
 --
--- TOC entry 4313 (class 1259 OID 42178)
+-- TOC entry 4325 (class 1259 OID 20127)
 -- Name: fki_fk_roles_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14171,7 +14012,7 @@ CREATE INDEX fki_fk_roles_party ON public.roles USING btree (id);
 
 
 --
--- TOC entry 4317 (class 1259 OID 42179)
+-- TOC entry 4329 (class 1259 OID 20128)
 -- Name: fki_fk_sales_records_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14179,7 +14020,7 @@ CREATE INDEX fki_fk_sales_records_company ON public.sales_records USING btree (c
 
 
 --
--- TOC entry 4318 (class 1259 OID 42180)
+-- TOC entry 4330 (class 1259 OID 20129)
 -- Name: fki_fk_sales_records_invoice; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14187,7 +14028,7 @@ CREATE INDEX fki_fk_sales_records_invoice ON public.sales_records USING btree (i
 
 
 --
--- TOC entry 4324 (class 1259 OID 42181)
+-- TOC entry 4336 (class 1259 OID 20130)
 -- Name: fki_fk_sn_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14195,7 +14036,7 @@ CREATE INDEX fki_fk_sn_id ON public.serial_nos USING btree (id);
 
 
 --
--- TOC entry 4325 (class 1259 OID 42182)
+-- TOC entry 4337 (class 1259 OID 20131)
 -- Name: fki_fk_sn_serial_no; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14203,7 +14044,7 @@ CREATE UNIQUE INDEX fki_fk_sn_serial_no ON public.serial_nos USING btree (serial
 
 
 --
--- TOC entry 4329 (class 1259 OID 42183)
+-- TOC entry 4341 (class 1259 OID 20132)
 -- Name: fki_fk_stages_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14211,7 +14052,7 @@ CREATE INDEX fki_fk_stages_company ON public.stages USING btree (company_id);
 
 
 --
--- TOC entry 4347 (class 1259 OID 42184)
+-- TOC entry 4359 (class 1259 OID 20133)
 -- Name: fki_fk_stock_tx_item; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14219,7 +14060,7 @@ CREATE INDEX fki_fk_stock_tx_item ON public.stock_transactions USING btree (item
 
 
 --
--- TOC entry 4348 (class 1259 OID 42185)
+-- TOC entry 4360 (class 1259 OID 20134)
 -- Name: fki_fk_stock_tx_warehouse; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14227,7 +14068,7 @@ CREATE INDEX fki_fk_stock_tx_warehouse ON public.stock_transactions USING btree 
 
 
 --
--- TOC entry 4130 (class 1259 OID 42186)
+-- TOC entry 4142 (class 1259 OID 20135)
 -- Name: fki_fk_supplier_groups_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14235,7 +14076,7 @@ CREATE INDEX fki_fk_supplier_groups_company ON public.groups USING btree (compan
 
 
 --
--- TOC entry 4351 (class 1259 OID 42187)
+-- TOC entry 4363 (class 1259 OID 20136)
 -- Name: fki_fk_supplier_orders_supplier; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14243,7 +14084,7 @@ CREATE INDEX fki_fk_supplier_orders_supplier ON public.supplier_orders USING btr
 
 
 --
--- TOC entry 4355 (class 1259 OID 42188)
+-- TOC entry 4367 (class 1259 OID 20137)
 -- Name: fki_fk_suppliers_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14251,7 +14092,7 @@ CREATE INDEX fki_fk_suppliers_company ON public.suppliers USING btree (company_i
 
 
 --
--- TOC entry 4356 (class 1259 OID 42189)
+-- TOC entry 4368 (class 1259 OID 20138)
 -- Name: fki_fk_suppliers_group; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14259,7 +14100,7 @@ CREATE INDEX fki_fk_suppliers_group ON public.suppliers USING btree (group_id);
 
 
 --
--- TOC entry 4357 (class 1259 OID 42190)
+-- TOC entry 4369 (class 1259 OID 20139)
 -- Name: fki_fk_suppliers_item_group; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14267,7 +14108,7 @@ CREATE INDEX fki_fk_suppliers_item_group ON public.suppliers USING btree (group_
 
 
 --
--- TOC entry 4352 (class 1259 OID 42191)
+-- TOC entry 4364 (class 1259 OID 20140)
 -- Name: fki_fk_suppliers_orders_order; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14275,7 +14116,7 @@ CREATE INDEX fki_fk_suppliers_orders_order ON public.supplier_orders USING btree
 
 
 --
--- TOC entry 4358 (class 1259 OID 42192)
+-- TOC entry 4370 (class 1259 OID 20141)
 -- Name: fki_fk_suppliers_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14283,7 +14124,23 @@ CREATE INDEX fki_fk_suppliers_party ON public.suppliers USING btree (id);
 
 
 --
--- TOC entry 4373 (class 1259 OID 42193)
+-- TOC entry 4426 (class 1259 OID 21557)
+-- Name: fki_fk_tasks_company; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX fki_fk_tasks_company ON public.tasks USING btree (company_id);
+
+
+--
+-- TOC entry 4427 (class 1259 OID 21563)
+-- Name: fki_fk_tasks_project; Type: INDEX; Schema: public; Owner: postgres
+--
+
+CREATE INDEX fki_fk_tasks_project ON public.tasks USING btree (project_id);
+
+
+--
+-- TOC entry 4385 (class 1259 OID 20142)
 -- Name: fki_fk_tx_ledger_ledger; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14291,7 +14148,7 @@ CREATE INDEX fki_fk_tx_ledger_ledger ON public.transaction_ledgers USING btree (
 
 
 --
--- TOC entry 4374 (class 1259 OID 42194)
+-- TOC entry 4386 (class 1259 OID 20143)
 -- Name: fki_fk_tx_ledger_ledger_agst; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14299,7 +14156,7 @@ CREATE INDEX fki_fk_tx_ledger_ledger_agst ON public.transaction_ledgers USING bt
 
 
 --
--- TOC entry 4375 (class 1259 OID 42195)
+-- TOC entry 4387 (class 1259 OID 20144)
 -- Name: fki_fk_tx_ledger_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14307,7 +14164,7 @@ CREATE INDEX fki_fk_tx_ledger_party ON public.transaction_ledgers USING btree (p
 
 
 --
--- TOC entry 4376 (class 1259 OID 42196)
+-- TOC entry 4388 (class 1259 OID 20145)
 -- Name: fki_fk_tx_ledger_project; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14315,7 +14172,7 @@ CREATE INDEX fki_fk_tx_ledger_project ON public.transaction_ledgers USING btree 
 
 
 --
--- TOC entry 4405 (class 1259 OID 42197)
+-- TOC entry 4417 (class 1259 OID 20146)
 -- Name: fki_fk_workspaces_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14323,7 +14180,7 @@ CREATE INDEX fki_fk_workspaces_company ON public.workspaces USING btree (company
 
 
 --
--- TOC entry 4131 (class 1259 OID 42198)
+-- TOC entry 4143 (class 1259 OID 20147)
 -- Name: fki_k; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14331,7 +14188,7 @@ CREATE INDEX fki_k ON public.groups USING btree (parent_id);
 
 
 --
--- TOC entry 4184 (class 1259 OID 42199)
+-- TOC entry 4196 (class 1259 OID 20148)
 -- Name: fki_key_values_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14339,7 +14196,7 @@ CREATE INDEX fki_key_values_party ON public.key_values USING btree (party_id);
 
 
 --
--- TOC entry 4198 (class 1259 OID 42200)
+-- TOC entry 4210 (class 1259 OID 20149)
 -- Name: fki_ledger; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14347,7 +14204,7 @@ CREATE INDEX fki_ledger ON public.ledgers USING btree (account_type);
 
 
 --
--- TOC entry 4188 (class 1259 OID 42201)
+-- TOC entry 4200 (class 1259 OID 20150)
 -- Name: fki_ledger_accounts_ledger; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14355,7 +14212,7 @@ CREATE INDEX fki_ledger_accounts_ledger ON public.ledger_accounts USING btree (l
 
 
 --
--- TOC entry 4226 (class 1259 OID 42202)
+-- TOC entry 4238 (class 1259 OID 20151)
 -- Name: fki_party_payments_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14363,7 +14220,7 @@ CREATE INDEX fki_party_payments_party ON public.party_payments USING btree (part
 
 
 --
--- TOC entry 4248 (class 1259 OID 42203)
+-- TOC entry 4260 (class 1259 OID 20152)
 -- Name: fki_payments_company; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14371,7 +14228,7 @@ CREATE INDEX fki_payments_company ON public.payments USING btree (id);
 
 
 --
--- TOC entry 4249 (class 1259 OID 42204)
+-- TOC entry 4261 (class 1259 OID 20153)
 -- Name: fki_payments_party; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14379,7 +14236,7 @@ CREATE INDEX fki_payments_party ON public.payments USING btree (id);
 
 
 --
--- TOC entry 4250 (class 1259 OID 42205)
+-- TOC entry 4262 (class 1259 OID 20154)
 -- Name: fki_payments_party2; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14387,7 +14244,7 @@ CREATE INDEX fki_payments_party2 ON public.payments USING btree (party_id);
 
 
 --
--- TOC entry 4319 (class 1259 OID 42206)
+-- TOC entry 4331 (class 1259 OID 20155)
 -- Name: fki_pg_sales_records_customer; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14395,7 +14252,7 @@ CREATE INDEX fki_pg_sales_records_customer ON public.sales_records USING btree (
 
 
 --
--- TOC entry 4279 (class 1259 OID 42207)
+-- TOC entry 4291 (class 1259 OID 20156)
 -- Name: fki_purchase_records_invoice; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14403,7 +14260,7 @@ CREATE INDEX fki_purchase_records_invoice ON public.purchase_records USING btree
 
 
 --
--- TOC entry 4361 (class 1259 OID 42208)
+-- TOC entry 4373 (class 1259 OID 20157)
 -- Name: fki_tax; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14411,7 +14268,7 @@ CREATE INDEX fki_tax ON public.tax_and_charge_lines USING btree (doc_party_id);
 
 
 --
--- TOC entry 4394 (class 1259 OID 42209)
+-- TOC entry 4406 (class 1259 OID 20158)
 -- Name: fki_use; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14419,7 +14276,7 @@ CREATE INDEX fki_use ON public.users USING btree (id);
 
 
 --
--- TOC entry 4199 (class 1259 OID 42210)
+-- TOC entry 4211 (class 1259 OID 20159)
 -- Name: fki_v; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14427,7 +14284,7 @@ CREATE INDEX fki_v ON public.ledgers USING btree (company_id);
 
 
 --
--- TOC entry 4063 (class 1259 OID 42211)
+-- TOC entry 4075 (class 1259 OID 20160)
 -- Name: idx_addresses_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14435,7 +14292,7 @@ CREATE INDEX idx_addresses_deleted_at ON public.addresses USING btree (deleted_a
 
 
 --
--- TOC entry 4091 (class 1259 OID 42212)
+-- TOC entry 4103 (class 1259 OID 20161)
 -- Name: idx_companies_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14443,7 +14300,7 @@ CREATE INDEX idx_companies_deleted_at ON public.companies USING btree (deleted_a
 
 
 --
--- TOC entry 4140 (class 1259 OID 42213)
+-- TOC entry 4152 (class 1259 OID 20162)
 -- Name: idx_item_attribute_values_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14451,7 +14308,7 @@ CREATE INDEX idx_item_attribute_values_deleted_at ON public.item_attribute_value
 
 
 --
--- TOC entry 4144 (class 1259 OID 42214)
+-- TOC entry 4156 (class 1259 OID 20163)
 -- Name: idx_item_attributes_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14459,7 +14316,7 @@ CREATE INDEX idx_item_attributes_deleted_at ON public.item_attributes USING btre
 
 
 --
--- TOC entry 4163 (class 1259 OID 42215)
+-- TOC entry 4175 (class 1259 OID 20164)
 -- Name: idx_item_price_lists_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14467,7 +14324,7 @@ CREATE INDEX idx_item_price_lists_deleted_at ON public.price_lists USING btree (
 
 
 --
--- TOC entry 4168 (class 1259 OID 42216)
+-- TOC entry 4180 (class 1259 OID 20165)
 -- Name: idx_item_prices_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14475,7 +14332,7 @@ CREATE INDEX idx_item_prices_deleted_at ON public.item_prices USING btree (delet
 
 
 --
--- TOC entry 4175 (class 1259 OID 42217)
+-- TOC entry 4187 (class 1259 OID 20166)
 -- Name: idx_items_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14483,7 +14340,7 @@ CREATE INDEX idx_items_deleted_at ON public.items USING btree (deleted_at);
 
 
 --
--- TOC entry 4218 (class 1259 OID 42218)
+-- TOC entry 4230 (class 1259 OID 20167)
 -- Name: idx_parties_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14491,7 +14348,7 @@ CREATE INDEX idx_parties_deleted_at ON public.parties USING btree (deleted_at);
 
 
 --
--- TOC entry 4222 (class 1259 OID 42219)
+-- TOC entry 4234 (class 1259 OID 20168)
 -- Name: idx_party_addresses_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14499,7 +14356,7 @@ CREATE INDEX idx_party_addresses_deleted_at ON public.party_addresses USING btre
 
 
 --
--- TOC entry 4267 (class 1259 OID 42220)
+-- TOC entry 4279 (class 1259 OID 20169)
 -- Name: idx_profiles_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14507,7 +14364,7 @@ CREATE INDEX idx_profiles_deleted_at ON public.profiles USING btree (deleted_at)
 
 
 --
--- TOC entry 4314 (class 1259 OID 42221)
+-- TOC entry 4326 (class 1259 OID 20170)
 -- Name: idx_roles_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14515,7 +14372,7 @@ CREATE INDEX idx_roles_deleted_at ON public.roles USING btree (deleted_at);
 
 
 --
--- TOC entry 4338 (class 1259 OID 42222)
+-- TOC entry 4350 (class 1259 OID 20171)
 -- Name: idx_stock_levels_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14523,7 +14380,7 @@ CREATE INDEX idx_stock_levels_deleted_at ON public.stock_levels USING btree (del
 
 
 --
--- TOC entry 4341 (class 1259 OID 42223)
+-- TOC entry 4353 (class 1259 OID 20172)
 -- Name: idx_stock_movements_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14531,7 +14388,7 @@ CREATE INDEX idx_stock_movements_deleted_at ON public.stock_movements USING btre
 
 
 --
--- TOC entry 4364 (class 1259 OID 42224)
+-- TOC entry 4376 (class 1259 OID 20173)
 -- Name: idx_taxes_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14539,7 +14396,7 @@ CREATE INDEX idx_taxes_deleted_at ON public.taxes USING btree (deleted_at);
 
 
 --
--- TOC entry 4385 (class 1259 OID 42225)
+-- TOC entry 4397 (class 1259 OID 20174)
 -- Name: idx_unit_of_measure_translations_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14547,7 +14404,7 @@ CREATE INDEX idx_unit_of_measure_translations_deleted_at ON public.unit_of_measu
 
 
 --
--- TOC entry 4388 (class 1259 OID 42226)
+-- TOC entry 4400 (class 1259 OID 20175)
 -- Name: idx_unit_of_measures_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14555,7 +14412,7 @@ CREATE INDEX idx_unit_of_measures_deleted_at ON public.unit_of_measures USING bt
 
 
 --
--- TOC entry 4391 (class 1259 OID 42227)
+-- TOC entry 4403 (class 1259 OID 20176)
 -- Name: idx_user_relations_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14563,7 +14420,7 @@ CREATE INDEX idx_user_relations_deleted_at ON public.user_relations USING btree 
 
 
 --
--- TOC entry 4395 (class 1259 OID 42228)
+-- TOC entry 4407 (class 1259 OID 20177)
 -- Name: idx_users_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14571,7 +14428,7 @@ CREATE INDEX idx_users_deleted_at ON public.users USING btree (deleted_at);
 
 
 --
--- TOC entry 4400 (class 1259 OID 42229)
+-- TOC entry 4412 (class 1259 OID 20178)
 -- Name: idx_ware_houses_deleted_at; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14579,7 +14436,7 @@ CREATE INDEX idx_ware_houses_deleted_at ON public.ware_houses USING btree (delet
 
 
 --
--- TOC entry 4202 (class 1259 OID 42230)
+-- TOC entry 4214 (class 1259 OID 20179)
 -- Name: mention_reference_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -14587,7 +14444,7 @@ CREATE INDEX mention_reference_id ON public.mentions USING btree (reference_id);
 
 
 --
--- TOC entry 4470 (class 2606 OID 42231)
+-- TOC entry 4492 (class 2606 OID 20180)
 -- Name: customers customer_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14596,7 +14453,7 @@ ALTER TABLE ONLY public.customers
 
 
 --
--- TOC entry 4471 (class 2606 OID 42236)
+-- TOC entry 4493 (class 2606 OID 20185)
 -- Name: customers customers_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14605,7 +14462,7 @@ ALTER TABLE ONLY public.customers
 
 
 --
--- TOC entry 4472 (class 2606 OID 42241)
+-- TOC entry 4494 (class 2606 OID 20190)
 -- Name: customers customers_group; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14614,7 +14471,7 @@ ALTER TABLE ONLY public.customers
 
 
 --
--- TOC entry 4423 (class 2606 OID 42246)
+-- TOC entry 4445 (class 2606 OID 20195)
 -- Name: address_and_contacts fk_aac_billing; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14623,7 +14480,7 @@ ALTER TABLE ONLY public.address_and_contacts
 
 
 --
--- TOC entry 4424 (class 2606 OID 42251)
+-- TOC entry 4446 (class 2606 OID 20200)
 -- Name: address_and_contacts fk_aac_doc_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14632,7 +14489,7 @@ ALTER TABLE ONLY public.address_and_contacts
 
 
 --
--- TOC entry 4425 (class 2606 OID 42256)
+-- TOC entry 4447 (class 2606 OID 20205)
 -- Name: address_and_contacts fk_aac_party_address; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14641,7 +14498,7 @@ ALTER TABLE ONLY public.address_and_contacts
 
 
 --
--- TOC entry 4426 (class 2606 OID 42261)
+-- TOC entry 4448 (class 2606 OID 20210)
 -- Name: address_and_contacts fk_acc_contact; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14650,7 +14507,7 @@ ALTER TABLE ONLY public.address_and_contacts
 
 
 --
--- TOC entry 4408 (class 2606 OID 42266)
+-- TOC entry 4430 (class 2606 OID 20215)
 -- Name: account_settings fk_acc_setts_acc1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14659,7 +14516,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4409 (class 2606 OID 42271)
+-- TOC entry 4431 (class 2606 OID 20220)
 -- Name: account_settings fk_acc_setts_acc2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14668,7 +14525,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4410 (class 2606 OID 42276)
+-- TOC entry 4432 (class 2606 OID 20225)
 -- Name: account_settings fk_acc_setts_acc3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14677,7 +14534,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4411 (class 2606 OID 42281)
+-- TOC entry 4433 (class 2606 OID 20230)
 -- Name: account_settings fk_acc_setts_acc4; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14686,7 +14543,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4412 (class 2606 OID 42286)
+-- TOC entry 4434 (class 2606 OID 20235)
 -- Name: account_settings fk_acc_setts_acc5; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14695,7 +14552,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4413 (class 2606 OID 42291)
+-- TOC entry 4435 (class 2606 OID 20240)
 -- Name: account_settings fk_acc_setts_acc6; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14704,7 +14561,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4414 (class 2606 OID 42296)
+-- TOC entry 4436 (class 2606 OID 20245)
 -- Name: account_settings fk_acc_setts_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14713,7 +14570,7 @@ ALTER TABLE ONLY public.account_settings
 
 
 --
--- TOC entry 4427 (class 2606 OID 42301)
+-- TOC entry 4449 (class 2606 OID 20250)
 -- Name: address_and_contacts fk_acc_shipping; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14722,7 +14579,7 @@ ALTER TABLE ONLY public.address_and_contacts
 
 
 --
--- TOC entry 4415 (class 2606 OID 42306)
+-- TOC entry 4437 (class 2606 OID 20255)
 -- Name: actions fk_actions_entity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14731,7 +14588,7 @@ ALTER TABLE ONLY public.actions
 
 
 --
--- TOC entry 4416 (class 2606 OID 42311)
+-- TOC entry 4438 (class 2606 OID 20260)
 -- Name: activities fk_activities_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14740,7 +14597,7 @@ ALTER TABLE ONLY public.activities
 
 
 --
--- TOC entry 4417 (class 2606 OID 42316)
+-- TOC entry 4439 (class 2606 OID 20265)
 -- Name: activities fk_activities_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14749,7 +14606,7 @@ ALTER TABLE ONLY public.activities
 
 
 --
--- TOC entry 4418 (class 2606 OID 42321)
+-- TOC entry 4440 (class 2606 OID 20270)
 -- Name: activity_deadlines fk_activiy_deadlines_activity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14758,7 +14615,7 @@ ALTER TABLE ONLY public.activity_deadlines
 
 
 --
--- TOC entry 4419 (class 2606 OID 42326)
+-- TOC entry 4441 (class 2606 OID 20275)
 -- Name: activity_deadlines fk_ad_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14767,7 +14624,7 @@ ALTER TABLE ONLY public.activity_deadlines
 
 
 --
--- TOC entry 4420 (class 2606 OID 42331)
+-- TOC entry 4442 (class 2606 OID 20280)
 -- Name: activity_deadlines fk_ad_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14776,7 +14633,7 @@ ALTER TABLE ONLY public.activity_deadlines
 
 
 --
--- TOC entry 4428 (class 2606 OID 42336)
+-- TOC entry 4450 (class 2606 OID 20285)
 -- Name: addresses fk_address_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14785,7 +14642,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- TOC entry 4429 (class 2606 OID 42341)
+-- TOC entry 4451 (class 2606 OID 20290)
 -- Name: addresses fk_addresses_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14794,7 +14651,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- TOC entry 4421 (class 2606 OID 42346)
+-- TOC entry 4443 (class 2606 OID 20295)
 -- Name: activity_mentions fk_am_activity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14803,7 +14660,7 @@ ALTER TABLE ONLY public.activity_mentions
 
 
 --
--- TOC entry 4422 (class 2606 OID 42351)
+-- TOC entry 4444 (class 2606 OID 20300)
 -- Name: activity_mentions fk_am_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14812,7 +14669,7 @@ ALTER TABLE ONLY public.activity_mentions
 
 
 --
--- TOC entry 4430 (class 2606 OID 42356)
+-- TOC entry 4452 (class 2606 OID 20305)
 -- Name: bank_accounts fk_ba_bank; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14821,7 +14678,7 @@ ALTER TABLE ONLY public.bank_accounts
 
 
 --
--- TOC entry 4431 (class 2606 OID 42361)
+-- TOC entry 4453 (class 2606 OID 20310)
 -- Name: bank_accounts fk_ba_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14830,7 +14687,7 @@ ALTER TABLE ONLY public.bank_accounts
 
 
 --
--- TOC entry 4432 (class 2606 OID 42366)
+-- TOC entry 4454 (class 2606 OID 20315)
 -- Name: bank_accounts fk_ba_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14839,7 +14696,7 @@ ALTER TABLE ONLY public.bank_accounts
 
 
 --
--- TOC entry 4433 (class 2606 OID 42371)
+-- TOC entry 4455 (class 2606 OID 20320)
 -- Name: bank_accounts fk_ba_ledger; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14848,7 +14705,7 @@ ALTER TABLE ONLY public.bank_accounts
 
 
 --
--- TOC entry 4434 (class 2606 OID 42376)
+-- TOC entry 4456 (class 2606 OID 20325)
 -- Name: bank_accounts fk_ba_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14857,7 +14714,7 @@ ALTER TABLE ONLY public.bank_accounts
 
 
 --
--- TOC entry 4435 (class 2606 OID 42381)
+-- TOC entry 4457 (class 2606 OID 20330)
 -- Name: bank_accounts fk_ba_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14866,7 +14723,7 @@ ALTER TABLE ONLY public.bank_accounts
 
 
 --
--- TOC entry 4436 (class 2606 OID 42386)
+-- TOC entry 4458 (class 2606 OID 20335)
 -- Name: banks fk_banks_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14875,7 +14732,7 @@ ALTER TABLE ONLY public.banks
 
 
 --
--- TOC entry 4437 (class 2606 OID 42391)
+-- TOC entry 4459 (class 2606 OID 20340)
 -- Name: banks fk_banks_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14884,7 +14741,7 @@ ALTER TABLE ONLY public.banks
 
 
 --
--- TOC entry 4438 (class 2606 OID 42396)
+-- TOC entry 4460 (class 2606 OID 20345)
 -- Name: banks fk_banks_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14893,7 +14750,7 @@ ALTER TABLE ONLY public.banks
 
 
 --
--- TOC entry 4587 (class 2606 OID 42401)
+-- TOC entry 4609 (class 2606 OID 20350)
 -- Name: r_bookings fk_bookings_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14902,7 +14759,7 @@ ALTER TABLE ONLY public.r_bookings
 
 
 --
--- TOC entry 4588 (class 2606 OID 42406)
+-- TOC entry 4610 (class 2606 OID 20355)
 -- Name: r_bookings fk_bookings_court; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14911,7 +14768,7 @@ ALTER TABLE ONLY public.r_bookings
 
 
 --
--- TOC entry 4589 (class 2606 OID 42411)
+-- TOC entry 4611 (class 2606 OID 20360)
 -- Name: r_bookings fk_bookings_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14920,7 +14777,7 @@ ALTER TABLE ONLY public.r_bookings
 
 
 --
--- TOC entry 4590 (class 2606 OID 42416)
+-- TOC entry 4612 (class 2606 OID 20365)
 -- Name: r_bookings fk_bookings_party_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14929,7 +14786,7 @@ ALTER TABLE ONLY public.r_bookings
 
 
 --
--- TOC entry 4586 (class 2606 OID 42421)
+-- TOC entry 4608 (class 2606 OID 20370)
 -- Name: r_booking_prices fk_bookings_prices_booking; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14938,7 +14795,7 @@ ALTER TABLE ONLY public.r_booking_prices
 
 
 --
--- TOC entry 4591 (class 2606 OID 42426)
+-- TOC entry 4613 (class 2606 OID 20375)
 -- Name: r_bookings fk_bookings_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14947,7 +14804,7 @@ ALTER TABLE ONLY public.r_bookings
 
 
 --
--- TOC entry 4457 (class 2606 OID 42431)
+-- TOC entry 4479 (class 2606 OID 20380)
 -- Name: company_defaults fk_cd_address; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14956,7 +14813,7 @@ ALTER TABLE ONLY public.company_defaults
 
 
 --
--- TOC entry 4458 (class 2606 OID 42436)
+-- TOC entry 4480 (class 2606 OID 20385)
 -- Name: company_defaults fk_cd_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14965,7 +14822,7 @@ ALTER TABLE ONLY public.company_defaults
 
 
 --
--- TOC entry 4459 (class 2606 OID 42441)
+-- TOC entry 4481 (class 2606 OID 20390)
 -- Name: company_defaults fk_cd_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14974,7 +14831,7 @@ ALTER TABLE ONLY public.company_defaults
 
 
 --
--- TOC entry 4460 (class 2606 OID 42446)
+-- TOC entry 4482 (class 2606 OID 20395)
 -- Name: company_entities fk_ce_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14983,7 +14840,7 @@ ALTER TABLE ONLY public.company_entities
 
 
 --
--- TOC entry 4461 (class 2606 OID 42451)
+-- TOC entry 4483 (class 2606 OID 20400)
 -- Name: company_entities fk_ce_entity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -14992,7 +14849,7 @@ ALTER TABLE ONLY public.company_entities
 
 
 --
--- TOC entry 4444 (class 2606 OID 42456)
+-- TOC entry 4466 (class 2606 OID 20405)
 -- Name: charges_template fk_charges_template_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15001,7 +14858,7 @@ ALTER TABLE ONLY public.charges_template
 
 
 --
--- TOC entry 4445 (class 2606 OID 42461)
+-- TOC entry 4467 (class 2606 OID 20410)
 -- Name: charges_template fk_charges_template_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15010,7 +14867,7 @@ ALTER TABLE ONLY public.charges_template
 
 
 --
--- TOC entry 4446 (class 2606 OID 42466)
+-- TOC entry 4468 (class 2606 OID 20415)
 -- Name: charges_template fk_charges_template_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15019,7 +14876,7 @@ ALTER TABLE ONLY public.charges_template
 
 
 --
--- TOC entry 4449 (class 2606 OID 42471)
+-- TOC entry 4471 (class 2606 OID 20420)
 -- Name: chat_messages fk_chat_msg_chat; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15028,7 +14885,7 @@ ALTER TABLE ONLY public.chat_messages
 
 
 --
--- TOC entry 4450 (class 2606 OID 42476)
+-- TOC entry 4472 (class 2606 OID 20425)
 -- Name: chat_messages fk_chat_msg_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15037,7 +14894,7 @@ ALTER TABLE ONLY public.chat_messages
 
 
 --
--- TOC entry 4451 (class 2606 OID 42481)
+-- TOC entry 4473 (class 2606 OID 20430)
 -- Name: chats fk_chats_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15046,7 +14903,7 @@ ALTER TABLE ONLY public.chats
 
 
 --
--- TOC entry 4452 (class 2606 OID 42486)
+-- TOC entry 4474 (class 2606 OID 20435)
 -- Name: chats fk_chats_entity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15055,7 +14912,7 @@ ALTER TABLE ONLY public.chats
 
 
 --
--- TOC entry 4453 (class 2606 OID 42491)
+-- TOC entry 4475 (class 2606 OID 20440)
 -- Name: chats fk_chats_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15064,7 +14921,7 @@ ALTER TABLE ONLY public.chats
 
 
 --
--- TOC entry 4454 (class 2606 OID 42496)
+-- TOC entry 4476 (class 2606 OID 20445)
 -- Name: chats fk_chats_party_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15073,7 +14930,7 @@ ALTER TABLE ONLY public.chats
 
 
 --
--- TOC entry 4447 (class 2606 OID 42501)
+-- TOC entry 4469 (class 2606 OID 20450)
 -- Name: chat_members fk_cm_chat; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15082,7 +14939,7 @@ ALTER TABLE ONLY public.chat_members
 
 
 --
--- TOC entry 4448 (class 2606 OID 42506)
+-- TOC entry 4470 (class 2606 OID 20455)
 -- Name: chat_members fk_cm_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15091,7 +14948,7 @@ ALTER TABLE ONLY public.chat_members
 
 
 --
--- TOC entry 4439 (class 2606 OID 42511)
+-- TOC entry 4461 (class 2606 OID 20460)
 -- Name: cash_outflows fk_co_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15100,7 +14957,7 @@ ALTER TABLE ONLY public.cash_outflows
 
 
 --
--- TOC entry 4440 (class 2606 OID 42516)
+-- TOC entry 4462 (class 2606 OID 20465)
 -- Name: cash_outflows fk_co_cost_center; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15109,7 +14966,7 @@ ALTER TABLE ONLY public.cash_outflows
 
 
 --
--- TOC entry 4441 (class 2606 OID 42521)
+-- TOC entry 4463 (class 2606 OID 20470)
 -- Name: cash_outflows fk_co_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15118,7 +14975,7 @@ ALTER TABLE ONLY public.cash_outflows
 
 
 --
--- TOC entry 4442 (class 2606 OID 42526)
+-- TOC entry 4464 (class 2606 OID 20475)
 -- Name: cash_outflows fk_co_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15127,7 +14984,7 @@ ALTER TABLE ONLY public.cash_outflows
 
 
 --
--- TOC entry 4443 (class 2606 OID 42531)
+-- TOC entry 4465 (class 2606 OID 20480)
 -- Name: cash_outflows fk_co_project; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15136,7 +14993,7 @@ ALTER TABLE ONLY public.cash_outflows
 
 
 --
--- TOC entry 4455 (class 2606 OID 42536)
+-- TOC entry 4477 (class 2606 OID 20485)
 -- Name: companies fk_companies_parent; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15145,7 +15002,7 @@ ALTER TABLE ONLY public.companies
 
 
 --
--- TOC entry 4456 (class 2606 OID 42541)
+-- TOC entry 4478 (class 2606 OID 20490)
 -- Name: companies fk_companies_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15154,7 +15011,25 @@ ALTER TABLE ONLY public.companies
 
 
 --
--- TOC entry 4462 (class 2606 OID 42546)
+-- TOC entry 4693 (class 2606 OID 21529)
+-- Name: connections fk_connection_entity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.connections
+    ADD CONSTRAINT fk_connection_entity FOREIGN KEY (entity_id) REFERENCES public.entities(id) ON DELETE CASCADE;
+
+
+--
+-- TOC entry 4694 (class 2606 OID 21524)
+-- Name: connections fk_connection_reference_entity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.connections
+    ADD CONSTRAINT fk_connection_reference_entity FOREIGN KEY (reference_entity_id) REFERENCES public.entities(id) ON DELETE CASCADE;
+
+
+--
+-- TOC entry 4484 (class 2606 OID 20495)
 -- Name: contacts fk_contacts_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15163,7 +15038,7 @@ ALTER TABLE ONLY public.contacts
 
 
 --
--- TOC entry 4463 (class 2606 OID 42551)
+-- TOC entry 4485 (class 2606 OID 20500)
 -- Name: contacts fk_contacts_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15172,7 +15047,7 @@ ALTER TABLE ONLY public.contacts
 
 
 --
--- TOC entry 4464 (class 2606 OID 42556)
+-- TOC entry 4486 (class 2606 OID 20505)
 -- Name: cost_centers fk_cost_centers_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15181,7 +15056,7 @@ ALTER TABLE ONLY public.cost_centers
 
 
 --
--- TOC entry 4465 (class 2606 OID 42561)
+-- TOC entry 4487 (class 2606 OID 20510)
 -- Name: cost_centers fk_cost_centers_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15190,7 +15065,7 @@ ALTER TABLE ONLY public.cost_centers
 
 
 --
--- TOC entry 4466 (class 2606 OID 42566)
+-- TOC entry 4488 (class 2606 OID 20515)
 -- Name: cost_centers fk_cost_centers_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15199,7 +15074,7 @@ ALTER TABLE ONLY public.cost_centers
 
 
 --
--- TOC entry 4592 (class 2606 OID 42571)
+-- TOC entry 4614 (class 2606 OID 20520)
 -- Name: r_court_rates fk_court_rates_court; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15208,7 +15083,7 @@ ALTER TABLE ONLY public.r_court_rates
 
 
 --
--- TOC entry 4593 (class 2606 OID 42576)
+-- TOC entry 4615 (class 2606 OID 20525)
 -- Name: r_court_rates fk_court_rates_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15217,7 +15092,7 @@ ALTER TABLE ONLY public.r_court_rates
 
 
 --
--- TOC entry 4594 (class 2606 OID 42581)
+-- TOC entry 4616 (class 2606 OID 20530)
 -- Name: r_courts fk_courts_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15226,7 +15101,7 @@ ALTER TABLE ONLY public.r_courts
 
 
 --
--- TOC entry 4595 (class 2606 OID 42586)
+-- TOC entry 4617 (class 2606 OID 20535)
 -- Name: r_courts fk_courts_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15235,7 +15110,7 @@ ALTER TABLE ONLY public.r_courts
 
 
 --
--- TOC entry 4596 (class 2606 OID 42591)
+-- TOC entry 4618 (class 2606 OID 20540)
 -- Name: r_courts fk_courts_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15244,7 +15119,7 @@ ALTER TABLE ONLY public.r_courts
 
 
 --
--- TOC entry 4467 (class 2606 OID 42596)
+-- TOC entry 4489 (class 2606 OID 20545)
 -- Name: currency_exchanges fk_currency_exchanges_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15253,7 +15128,7 @@ ALTER TABLE ONLY public.currency_exchanges
 
 
 --
--- TOC entry 4468 (class 2606 OID 42601)
+-- TOC entry 4490 (class 2606 OID 20550)
 -- Name: currency_exchanges fk_currency_exchanges_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15262,7 +15137,7 @@ ALTER TABLE ONLY public.currency_exchanges
 
 
 --
--- TOC entry 4469 (class 2606 OID 42606)
+-- TOC entry 4491 (class 2606 OID 20555)
 -- Name: currency_exchanges fk_currency_exchanges_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15271,7 +15146,7 @@ ALTER TABLE ONLY public.currency_exchanges
 
 
 --
--- TOC entry 4481 (class 2606 OID 42611)
+-- TOC entry 4503 (class 2606 OID 20560)
 -- Name: doc_accounts fk_da_credit_account; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15280,7 +15155,7 @@ ALTER TABLE ONLY public.doc_accounts
 
 
 --
--- TOC entry 4482 (class 2606 OID 42616)
+-- TOC entry 4504 (class 2606 OID 20565)
 -- Name: doc_accounts fk_da_debit_account; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15289,7 +15164,7 @@ ALTER TABLE ONLY public.doc_accounts
 
 
 --
--- TOC entry 4475 (class 2606 OID 42621)
+-- TOC entry 4497 (class 2606 OID 20570)
 -- Name: deals fk_deals_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15298,7 +15173,7 @@ ALTER TABLE ONLY public.deals
 
 
 --
--- TOC entry 4476 (class 2606 OID 42626)
+-- TOC entry 4498 (class 2606 OID 20575)
 -- Name: deals fk_deals_customer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15307,7 +15182,7 @@ ALTER TABLE ONLY public.deals
 
 
 --
--- TOC entry 4477 (class 2606 OID 42631)
+-- TOC entry 4499 (class 2606 OID 20580)
 -- Name: deals fk_deals_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15316,7 +15191,7 @@ ALTER TABLE ONLY public.deals
 
 
 --
--- TOC entry 4478 (class 2606 OID 42636)
+-- TOC entry 4500 (class 2606 OID 20585)
 -- Name: deals fk_deals_responsible_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15325,7 +15200,7 @@ ALTER TABLE ONLY public.deals
 
 
 --
--- TOC entry 4479 (class 2606 OID 42641)
+-- TOC entry 4501 (class 2606 OID 20590)
 -- Name: deals fk_deals_stage; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15334,7 +15209,7 @@ ALTER TABLE ONLY public.deals
 
 
 --
--- TOC entry 4480 (class 2606 OID 42646)
+-- TOC entry 4502 (class 2606 OID 20595)
 -- Name: delivery_line_items fk_dli_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15343,7 +15218,7 @@ ALTER TABLE ONLY public.delivery_line_items
 
 
 --
--- TOC entry 4483 (class 2606 OID 42651)
+-- TOC entry 4505 (class 2606 OID 20600)
 -- Name: doc_accounts fk_doc_accounts_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15352,7 +15227,7 @@ ALTER TABLE ONLY public.doc_accounts
 
 
 --
--- TOC entry 4484 (class 2606 OID 42656)
+-- TOC entry 4506 (class 2606 OID 20605)
 -- Name: doc_terms fk_doc_terms_ptt; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15361,7 +15236,7 @@ ALTER TABLE ONLY public.doc_terms
 
 
 --
--- TOC entry 4485 (class 2606 OID 42661)
+-- TOC entry 4507 (class 2606 OID 20610)
 -- Name: doc_terms fk_doc_terms_tac; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15370,7 +15245,7 @@ ALTER TABLE ONLY public.doc_terms
 
 
 --
--- TOC entry 4473 (class 2606 OID 42666)
+-- TOC entry 4495 (class 2606 OID 20615)
 -- Name: deal_participants fk_dp_deal; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15379,7 +15254,7 @@ ALTER TABLE ONLY public.deal_participants
 
 
 --
--- TOC entry 4474 (class 2606 OID 42671)
+-- TOC entry 4496 (class 2606 OID 20620)
 -- Name: deal_participants fk_dp_participant; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15388,7 +15263,7 @@ ALTER TABLE ONLY public.deal_participants
 
 
 --
--- TOC entry 4597 (class 2606 OID 42676)
+-- TOC entry 4619 (class 2606 OID 20625)
 -- Name: r_events fk_events_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15397,7 +15272,7 @@ ALTER TABLE ONLY public.r_events
 
 
 --
--- TOC entry 4486 (class 2606 OID 42681)
+-- TOC entry 4508 (class 2606 OID 20630)
 -- Name: groups fk_groups_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15406,7 +15281,7 @@ ALTER TABLE ONLY public.groups
 
 
 --
--- TOC entry 4487 (class 2606 OID 42686)
+-- TOC entry 4509 (class 2606 OID 20635)
 -- Name: groups fk_groups_parent; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15415,7 +15290,7 @@ ALTER TABLE ONLY public.groups
 
 
 --
--- TOC entry 4488 (class 2606 OID 42691)
+-- TOC entry 4510 (class 2606 OID 20640)
 -- Name: groups fk_groups_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15424,7 +15299,7 @@ ALTER TABLE ONLY public.groups
 
 
 --
--- TOC entry 4499 (class 2606 OID 42696)
+-- TOC entry 4521 (class 2606 OID 20645)
 -- Name: item_line_receipts fk_il_receipts_line; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15433,7 +15308,7 @@ ALTER TABLE ONLY public.item_line_receipts
 
 
 --
--- TOC entry 4502 (class 2606 OID 42701)
+-- TOC entry 4524 (class 2606 OID 20650)
 -- Name: item_line_stock_entries fk_ilse_item_line; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15442,7 +15317,7 @@ ALTER TABLE ONLY public.item_line_stock_entries
 
 
 --
--- TOC entry 4503 (class 2606 OID 42706)
+-- TOC entry 4525 (class 2606 OID 20655)
 -- Name: item_line_stock_entries fk_ilse_source_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15451,7 +15326,7 @@ ALTER TABLE ONLY public.item_line_stock_entries
 
 
 --
--- TOC entry 4504 (class 2606 OID 42711)
+-- TOC entry 4526 (class 2606 OID 20660)
 -- Name: item_line_stock_entries fk_ilse_target_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15460,7 +15335,7 @@ ALTER TABLE ONLY public.item_line_stock_entries
 
 
 --
--- TOC entry 4489 (class 2606 OID 42716)
+-- TOC entry 4511 (class 2606 OID 20665)
 -- Name: invoiced_item_lines fk_inv_invoice; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15469,7 +15344,7 @@ ALTER TABLE ONLY public.invoiced_item_lines
 
 
 --
--- TOC entry 4490 (class 2606 OID 42721)
+-- TOC entry 4512 (class 2606 OID 20670)
 -- Name: invoiced_item_lines fk_inv_item_line; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15478,7 +15353,7 @@ ALTER TABLE ONLY public.invoiced_item_lines
 
 
 --
--- TOC entry 4491 (class 2606 OID 42726)
+-- TOC entry 4513 (class 2606 OID 20675)
 -- Name: invoices fk_invoices_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15487,7 +15362,7 @@ ALTER TABLE ONLY public.invoices
 
 
 --
--- TOC entry 4492 (class 2606 OID 42731)
+-- TOC entry 4514 (class 2606 OID 20680)
 -- Name: invoices fk_invoices_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15496,7 +15371,7 @@ ALTER TABLE ONLY public.invoices
 
 
 --
--- TOC entry 4493 (class 2606 OID 42736)
+-- TOC entry 4515 (class 2606 OID 20685)
 -- Name: invoices fk_invoices_state; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15505,7 +15380,7 @@ ALTER TABLE ONLY public.invoices
 
 
 --
--- TOC entry 4495 (class 2606 OID 42741)
+-- TOC entry 4517 (class 2606 OID 20690)
 -- Name: item_attribute_values fk_item_attribute_values_item_attribute; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15514,7 +15389,7 @@ ALTER TABLE ONLY public.item_attribute_values
 
 
 --
--- TOC entry 4496 (class 2606 OID 42746)
+-- TOC entry 4518 (class 2606 OID 20695)
 -- Name: item_attributes fk_item_attributes_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15523,7 +15398,7 @@ ALTER TABLE ONLY public.item_attributes
 
 
 --
--- TOC entry 4497 (class 2606 OID 42751)
+-- TOC entry 4519 (class 2606 OID 20700)
 -- Name: item_attributes fk_item_attributes_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15532,7 +15407,7 @@ ALTER TABLE ONLY public.item_attributes
 
 
 --
--- TOC entry 4498 (class 2606 OID 42756)
+-- TOC entry 4520 (class 2606 OID 20705)
 -- Name: item_inventory_settings fk_item_inventory_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15541,7 +15416,7 @@ ALTER TABLE ONLY public.item_inventory_settings
 
 
 --
--- TOC entry 4500 (class 2606 OID 42761)
+-- TOC entry 4522 (class 2606 OID 20710)
 -- Name: item_line_receipts fk_item_line_warehouse_accepted; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15550,7 +15425,7 @@ ALTER TABLE ONLY public.item_line_receipts
 
 
 --
--- TOC entry 4501 (class 2606 OID 42766)
+-- TOC entry 4523 (class 2606 OID 20715)
 -- Name: item_line_receipts fk_item_line_warehouse_rejected; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15559,7 +15434,7 @@ ALTER TABLE ONLY public.item_line_receipts
 
 
 --
--- TOC entry 4505 (class 2606 OID 42771)
+-- TOC entry 4527 (class 2606 OID 20720)
 -- Name: item_lines fk_item_lines_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15568,7 +15443,7 @@ ALTER TABLE ONLY public.item_lines
 
 
 --
--- TOC entry 4506 (class 2606 OID 42776)
+-- TOC entry 4528 (class 2606 OID 20725)
 -- Name: item_lines fk_item_lines_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15577,7 +15452,7 @@ ALTER TABLE ONLY public.item_lines
 
 
 --
--- TOC entry 4507 (class 2606 OID 42781)
+-- TOC entry 4529 (class 2606 OID 20730)
 -- Name: item_lines fk_item_lines_reference; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15586,7 +15461,7 @@ ALTER TABLE ONLY public.item_lines
 
 
 --
--- TOC entry 4508 (class 2606 OID 42786)
+-- TOC entry 4530 (class 2606 OID 20735)
 -- Name: item_lines fk_item_lines_type; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15595,7 +15470,7 @@ ALTER TABLE ONLY public.item_lines
 
 
 --
--- TOC entry 4509 (class 2606 OID 42791)
+-- TOC entry 4531 (class 2606 OID 20740)
 -- Name: price_lists fk_item_price_lists_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15604,7 +15479,7 @@ ALTER TABLE ONLY public.price_lists
 
 
 --
--- TOC entry 4513 (class 2606 OID 42796)
+-- TOC entry 4535 (class 2606 OID 20745)
 -- Name: item_prices fk_item_prices_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15613,7 +15488,7 @@ ALTER TABLE ONLY public.item_prices
 
 
 --
--- TOC entry 4514 (class 2606 OID 42801)
+-- TOC entry 4536 (class 2606 OID 20750)
 -- Name: item_prices fk_item_prices_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15622,7 +15497,7 @@ ALTER TABLE ONLY public.item_prices
 
 
 --
--- TOC entry 4515 (class 2606 OID 42806)
+-- TOC entry 4537 (class 2606 OID 20755)
 -- Name: item_prices fk_item_prices_item_price_list; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15631,7 +15506,7 @@ ALTER TABLE ONLY public.item_prices
 
 
 --
--- TOC entry 4512 (class 2606 OID 42811)
+-- TOC entry 4534 (class 2606 OID 20760)
 -- Name: item_price_plugins fk_item_prices_item_price_plugin; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15640,7 +15515,7 @@ ALTER TABLE ONLY public.item_price_plugins
 
 
 --
--- TOC entry 4516 (class 2606 OID 42816)
+-- TOC entry 4538 (class 2606 OID 20765)
 -- Name: item_prices fk_item_prices_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15649,7 +15524,7 @@ ALTER TABLE ONLY public.item_prices
 
 
 --
--- TOC entry 4517 (class 2606 OID 42821)
+-- TOC entry 4539 (class 2606 OID 20770)
 -- Name: item_variants fk_item_variants_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15658,7 +15533,7 @@ ALTER TABLE ONLY public.item_variants
 
 
 --
--- TOC entry 4518 (class 2606 OID 42826)
+-- TOC entry 4540 (class 2606 OID 20775)
 -- Name: item_variants fk_item_variants_item_attribute_value; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15667,7 +15542,7 @@ ALTER TABLE ONLY public.item_variants
 
 
 --
--- TOC entry 4519 (class 2606 OID 42831)
+-- TOC entry 4541 (class 2606 OID 20780)
 -- Name: item_variants fk_item_variants_variant; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15676,7 +15551,7 @@ ALTER TABLE ONLY public.item_variants
 
 
 --
--- TOC entry 4520 (class 2606 OID 42836)
+-- TOC entry 4542 (class 2606 OID 20785)
 -- Name: items fk_items_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15685,7 +15560,7 @@ ALTER TABLE ONLY public.items
 
 
 --
--- TOC entry 4521 (class 2606 OID 42841)
+-- TOC entry 4543 (class 2606 OID 20790)
 -- Name: items fk_items_group; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15694,7 +15569,7 @@ ALTER TABLE ONLY public.items
 
 
 --
--- TOC entry 4522 (class 2606 OID 42846)
+-- TOC entry 4544 (class 2606 OID 20795)
 -- Name: items fk_items_items_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15703,7 +15578,7 @@ ALTER TABLE ONLY public.items
 
 
 --
--- TOC entry 4523 (class 2606 OID 42851)
+-- TOC entry 4545 (class 2606 OID 20800)
 -- Name: items fk_items_parent; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15712,7 +15587,7 @@ ALTER TABLE ONLY public.items
 
 
 --
--- TOC entry 4524 (class 2606 OID 42856)
+-- TOC entry 4546 (class 2606 OID 20805)
 -- Name: items fk_items_unit_of_measure; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15721,7 +15596,7 @@ ALTER TABLE ONLY public.items
 
 
 --
--- TOC entry 4527 (class 2606 OID 42861)
+-- TOC entry 4549 (class 2606 OID 20810)
 -- Name: journal_entry_lines fk_jel_cost_center; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15730,7 +15605,7 @@ ALTER TABLE ONLY public.journal_entry_lines
 
 
 --
--- TOC entry 4528 (class 2606 OID 42866)
+-- TOC entry 4550 (class 2606 OID 20815)
 -- Name: journal_entry_lines fk_jel_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15739,7 +15614,7 @@ ALTER TABLE ONLY public.journal_entry_lines
 
 
 --
--- TOC entry 4529 (class 2606 OID 42871)
+-- TOC entry 4551 (class 2606 OID 20820)
 -- Name: journal_entry_lines fk_jel_journal_entry; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15748,7 +15623,7 @@ ALTER TABLE ONLY public.journal_entry_lines
 
 
 --
--- TOC entry 4530 (class 2606 OID 42876)
+-- TOC entry 4552 (class 2606 OID 20825)
 -- Name: journal_entry_lines fk_jel_ledger; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15757,7 +15632,7 @@ ALTER TABLE ONLY public.journal_entry_lines
 
 
 --
--- TOC entry 4531 (class 2606 OID 42881)
+-- TOC entry 4553 (class 2606 OID 20830)
 -- Name: journal_entry_lines fk_jel_project; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15766,7 +15641,7 @@ ALTER TABLE ONLY public.journal_entry_lines
 
 
 --
--- TOC entry 4525 (class 2606 OID 42886)
+-- TOC entry 4547 (class 2606 OID 20835)
 -- Name: journal_entries fk_journal_entries_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15775,7 +15650,7 @@ ALTER TABLE ONLY public.journal_entries
 
 
 --
--- TOC entry 4526 (class 2606 OID 42891)
+-- TOC entry 4548 (class 2606 OID 20840)
 -- Name: journal_entries fk_journal_entries_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15784,7 +15659,7 @@ ALTER TABLE ONLY public.journal_entries
 
 
 --
--- TOC entry 4533 (class 2606 OID 42896)
+-- TOC entry 4555 (class 2606 OID 20845)
 -- Name: ledger_accounts fk_l_acc_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15793,7 +15668,7 @@ ALTER TABLE ONLY public.ledger_accounts
 
 
 --
--- TOC entry 4535 (class 2606 OID 42901)
+-- TOC entry 4557 (class 2606 OID 20850)
 -- Name: ledgers fk_ledgers_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15802,7 +15677,7 @@ ALTER TABLE ONLY public.ledgers
 
 
 --
--- TOC entry 4536 (class 2606 OID 42906)
+-- TOC entry 4558 (class 2606 OID 20855)
 -- Name: ledgers fk_ledgers_parent; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15811,7 +15686,7 @@ ALTER TABLE ONLY public.ledgers
 
 
 --
--- TOC entry 4537 (class 2606 OID 42911)
+-- TOC entry 4559 (class 2606 OID 20860)
 -- Name: ledgers fk_ledgers_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15820,7 +15695,7 @@ ALTER TABLE ONLY public.ledgers
 
 
 --
--- TOC entry 4665 (class 2606 OID 42916)
+-- TOC entry 4687 (class 2606 OID 20865)
 -- Name: workspace_modules fk_module; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15829,7 +15704,7 @@ ALTER TABLE ONLY public.workspace_modules
 
 
 --
--- TOC entry 4539 (class 2606 OID 42921)
+-- TOC entry 4561 (class 2606 OID 20870)
 -- Name: modules fk_modules_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15838,7 +15713,7 @@ ALTER TABLE ONLY public.modules
 
 
 --
--- TOC entry 4540 (class 2606 OID 42926)
+-- TOC entry 4562 (class 2606 OID 20875)
 -- Name: modules fk_modules_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15847,7 +15722,7 @@ ALTER TABLE ONLY public.modules
 
 
 --
--- TOC entry 4538 (class 2606 OID 42931)
+-- TOC entry 4560 (class 2606 OID 20880)
 -- Name: mentions fk_nm_entity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15856,7 +15731,7 @@ ALTER TABLE ONLY public.mentions
 
 
 --
--- TOC entry 4541 (class 2606 OID 42936)
+-- TOC entry 4563 (class 2606 OID 20885)
 -- Name: notifications fk_notification_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15865,7 +15740,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- TOC entry 4542 (class 2606 OID 42941)
+-- TOC entry 4564 (class 2606 OID 20890)
 -- Name: notifications fk_notifications_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15874,7 +15749,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- TOC entry 4543 (class 2606 OID 42946)
+-- TOC entry 4565 (class 2606 OID 20895)
 -- Name: orders fk_orders_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15883,7 +15758,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 4544 (class 2606 OID 42951)
+-- TOC entry 4566 (class 2606 OID 20900)
 -- Name: orders fk_orders_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15892,7 +15767,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 4545 (class 2606 OID 42956)
+-- TOC entry 4567 (class 2606 OID 20905)
 -- Name: orders fk_orders_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15901,7 +15776,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 4546 (class 2606 OID 42961)
+-- TOC entry 4568 (class 2606 OID 20910)
 -- Name: orders fk_orders_party2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15910,7 +15785,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 4547 (class 2606 OID 42966)
+-- TOC entry 4569 (class 2606 OID 20915)
 -- Name: orders fk_orders_state; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15919,7 +15794,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 4564 (class 2606 OID 42971)
+-- TOC entry 4586 (class 2606 OID 20920)
 -- Name: payments fk_p_company_bank_account; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15928,7 +15803,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- TOC entry 4565 (class 2606 OID 42976)
+-- TOC entry 4587 (class 2606 OID 20925)
 -- Name: payments fk_p_party_bank_account; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15937,7 +15812,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- TOC entry 4548 (class 2606 OID 42981)
+-- TOC entry 4570 (class 2606 OID 20930)
 -- Name: parties fk_parties_party_type; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15946,7 +15821,7 @@ ALTER TABLE ONLY public.parties
 
 
 --
--- TOC entry 4549 (class 2606 OID 42986)
+-- TOC entry 4571 (class 2606 OID 20935)
 -- Name: party_addresses fk_party_addresses_address; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15955,7 +15830,7 @@ ALTER TABLE ONLY public.party_addresses
 
 
 --
--- TOC entry 4550 (class 2606 OID 42991)
+-- TOC entry 4572 (class 2606 OID 20940)
 -- Name: party_addresses fk_party_addresses_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15964,7 +15839,7 @@ ALTER TABLE ONLY public.party_addresses
 
 
 --
--- TOC entry 4494 (class 2606 OID 42996)
+-- TOC entry 4516 (class 2606 OID 20945)
 -- Name: invoices fk_party_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15973,7 +15848,7 @@ ALTER TABLE ONLY public.invoices
 
 
 --
--- TOC entry 4558 (class 2606 OID 43001)
+-- TOC entry 4580 (class 2606 OID 20950)
 -- Name: payment_terms fk_payment_tems_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15982,7 +15857,7 @@ ALTER TABLE ONLY public.payment_terms
 
 
 --
--- TOC entry 4559 (class 2606 OID 43006)
+-- TOC entry 4581 (class 2606 OID 20955)
 -- Name: payment_terms fk_payment_tems_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -15991,7 +15866,7 @@ ALTER TABLE ONLY public.payment_terms
 
 
 --
--- TOC entry 4562 (class 2606 OID 43011)
+-- TOC entry 4584 (class 2606 OID 20960)
 -- Name: payment_terms_templates fk_payment_tems_templates_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16000,7 +15875,7 @@ ALTER TABLE ONLY public.payment_terms_templates
 
 
 --
--- TOC entry 4563 (class 2606 OID 43016)
+-- TOC entry 4585 (class 2606 OID 20965)
 -- Name: payment_terms_templates fk_payment_terms_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16009,7 +15884,7 @@ ALTER TABLE ONLY public.payment_terms_templates
 
 
 --
--- TOC entry 4566 (class 2606 OID 43021)
+-- TOC entry 4588 (class 2606 OID 20970)
 -- Name: payments fk_payments_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16018,7 +15893,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- TOC entry 4567 (class 2606 OID 43026)
+-- TOC entry 4589 (class 2606 OID 20975)
 -- Name: payments fk_payments_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16027,7 +15902,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- TOC entry 4568 (class 2606 OID 43031)
+-- TOC entry 4590 (class 2606 OID 20980)
 -- Name: payments fk_payments_party_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16036,7 +15911,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- TOC entry 4569 (class 2606 OID 43036)
+-- TOC entry 4591 (class 2606 OID 20985)
 -- Name: payments fk_payments_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16045,7 +15920,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- TOC entry 4570 (class 2606 OID 43041)
+-- TOC entry 4592 (class 2606 OID 20990)
 -- Name: piano_form fk_piano_form_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16054,7 +15929,7 @@ ALTER TABLE ONLY public.piano_form
 
 
 --
--- TOC entry 4571 (class 2606 OID 43046)
+-- TOC entry 4593 (class 2606 OID 20995)
 -- Name: piano_form fk_piano_form_party_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16063,7 +15938,7 @@ ALTER TABLE ONLY public.piano_form
 
 
 --
--- TOC entry 4555 (class 2606 OID 43051)
+-- TOC entry 4577 (class 2606 OID 21000)
 -- Name: payment_references fk_pr_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16072,7 +15947,7 @@ ALTER TABLE ONLY public.payment_references
 
 
 --
--- TOC entry 4556 (class 2606 OID 43056)
+-- TOC entry 4578 (class 2606 OID 21005)
 -- Name: payment_references fk_pr_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16081,7 +15956,7 @@ ALTER TABLE ONLY public.payment_references
 
 
 --
--- TOC entry 4557 (class 2606 OID 43061)
+-- TOC entry 4579 (class 2606 OID 21010)
 -- Name: payment_references fk_pr_payment; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16090,7 +15965,7 @@ ALTER TABLE ONLY public.payment_references
 
 
 --
--- TOC entry 4510 (class 2606 OID 43066)
+-- TOC entry 4532 (class 2606 OID 21015)
 -- Name: price_lists fk_price_lists_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16099,7 +15974,7 @@ ALTER TABLE ONLY public.price_lists
 
 
 --
--- TOC entry 4511 (class 2606 OID 43071)
+-- TOC entry 4533 (class 2606 OID 21020)
 -- Name: price_lists fk_price_lists_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16108,7 +15983,7 @@ ALTER TABLE ONLY public.price_lists
 
 
 --
--- TOC entry 4572 (class 2606 OID 43076)
+-- TOC entry 4594 (class 2606 OID 21025)
 -- Name: profiles fk_profile_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16117,7 +15992,7 @@ ALTER TABLE ONLY public.profiles
 
 
 --
--- TOC entry 4573 (class 2606 OID 43081)
+-- TOC entry 4595 (class 2606 OID 21030)
 -- Name: profiles fk_profiles_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16126,7 +16001,7 @@ ALTER TABLE ONLY public.profiles
 
 
 --
--- TOC entry 4652 (class 2606 OID 43086)
+-- TOC entry 4674 (class 2606 OID 21035)
 -- Name: user_relations fk_profiles_user_relation; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16135,7 +16010,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4574 (class 2606 OID 43091)
+-- TOC entry 4596 (class 2606 OID 21040)
 -- Name: progress_invoices fk_progress_invoices_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16144,7 +16019,7 @@ ALTER TABLE ONLY public.progress_invoices
 
 
 --
--- TOC entry 4575 (class 2606 OID 43096)
+-- TOC entry 4597 (class 2606 OID 21045)
 -- Name: projects fk_projects_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16153,7 +16028,7 @@ ALTER TABLE ONLY public.projects
 
 
 --
--- TOC entry 4576 (class 2606 OID 43101)
+-- TOC entry 4598 (class 2606 OID 21050)
 -- Name: projects fk_projects_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16162,7 +16037,7 @@ ALTER TABLE ONLY public.projects
 
 
 --
--- TOC entry 4577 (class 2606 OID 43106)
+-- TOC entry 4599 (class 2606 OID 21055)
 -- Name: projects fk_projects_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16171,7 +16046,7 @@ ALTER TABLE ONLY public.projects
 
 
 --
--- TOC entry 4560 (class 2606 OID 43111)
+-- TOC entry 4582 (class 2606 OID 21060)
 -- Name: payment_terms_lines fk_ptl_doc_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16180,7 +16055,7 @@ ALTER TABLE ONLY public.payment_terms_lines
 
 
 --
--- TOC entry 4561 (class 2606 OID 43116)
+-- TOC entry 4583 (class 2606 OID 21065)
 -- Name: payment_terms_lines fk_ptl_payment_terms; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16189,7 +16064,7 @@ ALTER TABLE ONLY public.payment_terms_lines
 
 
 --
--- TOC entry 4578 (class 2606 OID 43121)
+-- TOC entry 4600 (class 2606 OID 21070)
 -- Name: purchase_records fk_purchase_records_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16198,7 +16073,7 @@ ALTER TABLE ONLY public.purchase_records
 
 
 --
--- TOC entry 4579 (class 2606 OID 43126)
+-- TOC entry 4601 (class 2606 OID 21075)
 -- Name: purchase_records fk_purchase_records_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16207,7 +16082,7 @@ ALTER TABLE ONLY public.purchase_records
 
 
 --
--- TOC entry 4580 (class 2606 OID 43131)
+-- TOC entry 4602 (class 2606 OID 21080)
 -- Name: purchase_records fk_purchase_records_supplier; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16216,7 +16091,7 @@ ALTER TABLE ONLY public.purchase_records
 
 
 --
--- TOC entry 4582 (class 2606 OID 43136)
+-- TOC entry 4604 (class 2606 OID 21085)
 -- Name: quotations fk_quotations_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16225,7 +16100,7 @@ ALTER TABLE ONLY public.quotations
 
 
 --
--- TOC entry 4583 (class 2606 OID 43141)
+-- TOC entry 4605 (class 2606 OID 21090)
 -- Name: quotations fk_quotations_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16234,7 +16109,7 @@ ALTER TABLE ONLY public.quotations
 
 
 --
--- TOC entry 4584 (class 2606 OID 43146)
+-- TOC entry 4606 (class 2606 OID 21095)
 -- Name: quotations fk_quotations_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16243,7 +16118,7 @@ ALTER TABLE ONLY public.quotations
 
 
 --
--- TOC entry 4585 (class 2606 OID 43151)
+-- TOC entry 4607 (class 2606 OID 21100)
 -- Name: quotations fk_quotations_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16252,7 +16127,7 @@ ALTER TABLE ONLY public.quotations
 
 
 --
--- TOC entry 4598 (class 2606 OID 43156)
+-- TOC entry 4620 (class 2606 OID 21105)
 -- Name: r_events fk_r_events_party_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16261,7 +16136,7 @@ ALTER TABLE ONLY public.r_events
 
 
 --
--- TOC entry 4599 (class 2606 OID 43161)
+-- TOC entry 4621 (class 2606 OID 21110)
 -- Name: receipts fk_receipts_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16270,7 +16145,7 @@ ALTER TABLE ONLY public.receipts
 
 
 --
--- TOC entry 4600 (class 2606 OID 43166)
+-- TOC entry 4622 (class 2606 OID 21115)
 -- Name: receipts fk_receipts_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16279,7 +16154,7 @@ ALTER TABLE ONLY public.receipts
 
 
 --
--- TOC entry 4601 (class 2606 OID 43171)
+-- TOC entry 4623 (class 2606 OID 21120)
 -- Name: receipts fk_receipts_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16288,7 +16163,7 @@ ALTER TABLE ONLY public.receipts
 
 
 --
--- TOC entry 4602 (class 2606 OID 43176)
+-- TOC entry 4624 (class 2606 OID 21125)
 -- Name: receipts fk_receipts_party2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16297,7 +16172,7 @@ ALTER TABLE ONLY public.receipts
 
 
 --
--- TOC entry 4603 (class 2606 OID 43181)
+-- TOC entry 4625 (class 2606 OID 21130)
 -- Name: receipts fk_receipts_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16306,7 +16181,7 @@ ALTER TABLE ONLY public.receipts
 
 
 --
--- TOC entry 4553 (class 2606 OID 43186)
+-- TOC entry 4575 (class 2606 OID 21135)
 -- Name: party_references fk_references_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16315,7 +16190,7 @@ ALTER TABLE ONLY public.party_references
 
 
 --
--- TOC entry 4554 (class 2606 OID 43191)
+-- TOC entry 4576 (class 2606 OID 21140)
 -- Name: party_references fk_references_reference; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16324,7 +16199,7 @@ ALTER TABLE ONLY public.party_references
 
 
 --
--- TOC entry 4604 (class 2606 OID 43196)
+-- TOC entry 4626 (class 2606 OID 21145)
 -- Name: role_actions fk_role_actions_action; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16333,7 +16208,7 @@ ALTER TABLE ONLY public.role_actions
 
 
 --
--- TOC entry 4606 (class 2606 OID 43201)
+-- TOC entry 4628 (class 2606 OID 21150)
 -- Name: role_templates fk_role_templates_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16342,7 +16217,7 @@ ALTER TABLE ONLY public.role_templates
 
 
 --
--- TOC entry 4607 (class 2606 OID 43206)
+-- TOC entry 4629 (class 2606 OID 21155)
 -- Name: roles fk_roles_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16351,7 +16226,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- TOC entry 4608 (class 2606 OID 43211)
+-- TOC entry 4630 (class 2606 OID 21160)
 -- Name: roles fk_roles_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16360,7 +16235,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- TOC entry 4605 (class 2606 OID 43216)
+-- TOC entry 4627 (class 2606 OID 21165)
 -- Name: role_actions fk_roles_role_actions; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16369,7 +16244,7 @@ ALTER TABLE ONLY public.role_actions
 
 
 --
--- TOC entry 4609 (class 2606 OID 43221)
+-- TOC entry 4631 (class 2606 OID 21481)
 -- Name: roles fk_roles_workspace; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16378,7 +16253,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- TOC entry 4610 (class 2606 OID 43226)
+-- TOC entry 4632 (class 2606 OID 21170)
 -- Name: sales_records fk_sales_records_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16387,7 +16262,7 @@ ALTER TABLE ONLY public.sales_records
 
 
 --
--- TOC entry 4611 (class 2606 OID 43231)
+-- TOC entry 4633 (class 2606 OID 21175)
 -- Name: sales_records fk_sales_records_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16396,7 +16271,7 @@ ALTER TABLE ONLY public.sales_records
 
 
 --
--- TOC entry 4612 (class 2606 OID 43236)
+-- TOC entry 4634 (class 2606 OID 21180)
 -- Name: sales_records fk_sales_records_invoice; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16405,7 +16280,25 @@ ALTER TABLE ONLY public.sales_records
 
 
 --
--- TOC entry 4614 (class 2606 OID 43241)
+-- TOC entry 4691 (class 2606 OID 21510)
+-- Name: sessions fk_session_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT fk_session_company FOREIGN KEY (active_company_id) REFERENCES public.companies(id) ON DELETE SET NULL;
+
+
+--
+-- TOC entry 4692 (class 2606 OID 21505)
+-- Name: sessions fk_session_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT fk_session_user FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE;
+
+
+--
+-- TOC entry 4636 (class 2606 OID 21185)
 -- Name: serial_nos fk_sn_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16414,7 +16307,7 @@ ALTER TABLE ONLY public.serial_nos
 
 
 --
--- TOC entry 4615 (class 2606 OID 43246)
+-- TOC entry 4637 (class 2606 OID 21190)
 -- Name: stages fk_stages_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16423,7 +16316,7 @@ ALTER TABLE ONLY public.stages
 
 
 --
--- TOC entry 4616 (class 2606 OID 43251)
+-- TOC entry 4638 (class 2606 OID 21195)
 -- Name: stages fk_stages_entity; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16432,7 +16325,7 @@ ALTER TABLE ONLY public.stages
 
 
 --
--- TOC entry 4617 (class 2606 OID 43256)
+-- TOC entry 4639 (class 2606 OID 21200)
 -- Name: stock_defaults fk_stock_defaults_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16441,7 +16334,7 @@ ALTER TABLE ONLY public.stock_defaults
 
 
 --
--- TOC entry 4618 (class 2606 OID 43261)
+-- TOC entry 4640 (class 2606 OID 21205)
 -- Name: stock_defaults fk_stock_defaults_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16450,7 +16343,7 @@ ALTER TABLE ONLY public.stock_defaults
 
 
 --
--- TOC entry 4619 (class 2606 OID 43266)
+-- TOC entry 4641 (class 2606 OID 21210)
 -- Name: stock_entries fk_stock_entries_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16459,7 +16352,7 @@ ALTER TABLE ONLY public.stock_entries
 
 
 --
--- TOC entry 4620 (class 2606 OID 43271)
+-- TOC entry 4642 (class 2606 OID 21215)
 -- Name: stock_entries fk_stock_entries_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16468,7 +16361,7 @@ ALTER TABLE ONLY public.stock_entries
 
 
 --
--- TOC entry 4621 (class 2606 OID 43276)
+-- TOC entry 4643 (class 2606 OID 21220)
 -- Name: stock_entries fk_stock_entries_project; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16477,7 +16370,7 @@ ALTER TABLE ONLY public.stock_entries
 
 
 --
--- TOC entry 4622 (class 2606 OID 43281)
+-- TOC entry 4644 (class 2606 OID 21225)
 -- Name: stock_levels fk_stock_levels_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16486,7 +16379,7 @@ ALTER TABLE ONLY public.stock_levels
 
 
 --
--- TOC entry 4623 (class 2606 OID 43286)
+-- TOC entry 4645 (class 2606 OID 21230)
 -- Name: stock_levels fk_stock_levels_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16495,7 +16388,7 @@ ALTER TABLE ONLY public.stock_levels
 
 
 --
--- TOC entry 4624 (class 2606 OID 43291)
+-- TOC entry 4646 (class 2606 OID 21235)
 -- Name: stock_levels fk_stock_levels_ware_house; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16504,7 +16397,7 @@ ALTER TABLE ONLY public.stock_levels
 
 
 --
--- TOC entry 4625 (class 2606 OID 43296)
+-- TOC entry 4647 (class 2606 OID 21240)
 -- Name: stock_movements fk_stock_movements_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16513,7 +16406,7 @@ ALTER TABLE ONLY public.stock_movements
 
 
 --
--- TOC entry 4626 (class 2606 OID 43301)
+-- TOC entry 4648 (class 2606 OID 21245)
 -- Name: stock_movements fk_stock_movements_ware_house; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16522,7 +16415,7 @@ ALTER TABLE ONLY public.stock_movements
 
 
 --
--- TOC entry 4627 (class 2606 OID 43306)
+-- TOC entry 4649 (class 2606 OID 21250)
 -- Name: stock_settings fk_stock_settings_acc1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16531,7 +16424,7 @@ ALTER TABLE ONLY public.stock_settings
 
 
 --
--- TOC entry 4628 (class 2606 OID 43311)
+-- TOC entry 4650 (class 2606 OID 21255)
 -- Name: stock_settings fk_stock_settings_acc2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16540,7 +16433,7 @@ ALTER TABLE ONLY public.stock_settings
 
 
 --
--- TOC entry 4629 (class 2606 OID 43316)
+-- TOC entry 4651 (class 2606 OID 21260)
 -- Name: stock_settings fk_stock_settings_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16549,7 +16442,7 @@ ALTER TABLE ONLY public.stock_settings
 
 
 --
--- TOC entry 4630 (class 2606 OID 43321)
+-- TOC entry 4652 (class 2606 OID 21265)
 -- Name: stock_transactions fk_stock_tx_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16558,7 +16451,7 @@ ALTER TABLE ONLY public.stock_transactions
 
 
 --
--- TOC entry 4631 (class 2606 OID 43326)
+-- TOC entry 4653 (class 2606 OID 21270)
 -- Name: stock_transactions fk_stock_tx_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16567,7 +16460,7 @@ ALTER TABLE ONLY public.stock_transactions
 
 
 --
--- TOC entry 4632 (class 2606 OID 43331)
+-- TOC entry 4654 (class 2606 OID 21275)
 -- Name: stock_transactions fk_stock_tx_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16576,7 +16469,7 @@ ALTER TABLE ONLY public.stock_transactions
 
 
 --
--- TOC entry 4633 (class 2606 OID 43336)
+-- TOC entry 4655 (class 2606 OID 21280)
 -- Name: supplier_orders fk_supplier_orders_supplier; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16585,7 +16478,7 @@ ALTER TABLE ONLY public.supplier_orders
 
 
 --
--- TOC entry 4635 (class 2606 OID 43341)
+-- TOC entry 4657 (class 2606 OID 21285)
 -- Name: suppliers fk_suppliers_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16594,7 +16487,7 @@ ALTER TABLE ONLY public.suppliers
 
 
 --
--- TOC entry 4636 (class 2606 OID 43346)
+-- TOC entry 4658 (class 2606 OID 21290)
 -- Name: suppliers fk_suppliers_group; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16603,7 +16496,7 @@ ALTER TABLE ONLY public.suppliers
 
 
 --
--- TOC entry 4634 (class 2606 OID 43351)
+-- TOC entry 4656 (class 2606 OID 21295)
 -- Name: supplier_orders fk_suppliers_orders_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16612,7 +16505,7 @@ ALTER TABLE ONLY public.supplier_orders
 
 
 --
--- TOC entry 4637 (class 2606 OID 43356)
+-- TOC entry 4659 (class 2606 OID 21300)
 -- Name: suppliers fk_suppliers_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16621,7 +16514,7 @@ ALTER TABLE ONLY public.suppliers
 
 
 --
--- TOC entry 4638 (class 2606 OID 43361)
+-- TOC entry 4660 (class 2606 OID 21305)
 -- Name: tax_and_charge_lines fk_tacl_doc_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16630,7 +16523,7 @@ ALTER TABLE ONLY public.tax_and_charge_lines
 
 
 --
--- TOC entry 4639 (class 2606 OID 43366)
+-- TOC entry 4661 (class 2606 OID 21310)
 -- Name: tax_and_charge_lines fk_tacl_ledger; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16639,7 +16532,52 @@ ALTER TABLE ONLY public.tax_and_charge_lines
 
 
 --
--- TOC entry 4640 (class 2606 OID 43371)
+-- TOC entry 4695 (class 2606 OID 21564)
+-- Name: tasks fk_task_assignee; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tasks
+    ADD CONSTRAINT fk_task_assignee FOREIGN KEY (assignee) REFERENCES public.profiles(id);
+
+
+--
+-- TOC entry 4696 (class 2606 OID 21552)
+-- Name: tasks fk_tasks_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tasks
+    ADD CONSTRAINT fk_tasks_company FOREIGN KEY (company_id) REFERENCES public.companies(id);
+
+
+--
+-- TOC entry 4697 (class 2606 OID 21542)
+-- Name: tasks fk_tasks_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tasks
+    ADD CONSTRAINT fk_tasks_party FOREIGN KEY (id) REFERENCES public.parties(id);
+
+
+--
+-- TOC entry 4698 (class 2606 OID 21547)
+-- Name: tasks fk_tasks_project; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tasks
+    ADD CONSTRAINT fk_tasks_project FOREIGN KEY (project_id) REFERENCES public.projects(id);
+
+
+--
+-- TOC entry 4699 (class 2606 OID 21570)
+-- Name: tasks fk_tasks_stage; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.tasks
+    ADD CONSTRAINT fk_tasks_stage FOREIGN KEY (stage_id) REFERENCES public.stages(id);
+
+
+--
+-- TOC entry 4662 (class 2606 OID 21315)
 -- Name: taxes fk_taxes_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16648,7 +16586,7 @@ ALTER TABLE ONLY public.taxes
 
 
 --
--- TOC entry 4641 (class 2606 OID 43376)
+-- TOC entry 4663 (class 2606 OID 21320)
 -- Name: taxes fk_taxes_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16657,7 +16595,7 @@ ALTER TABLE ONLY public.taxes
 
 
 --
--- TOC entry 4642 (class 2606 OID 43381)
+-- TOC entry 4664 (class 2606 OID 21325)
 -- Name: terms_and_conditions fk_terms_and_conditions_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16666,7 +16604,7 @@ ALTER TABLE ONLY public.terms_and_conditions
 
 
 --
--- TOC entry 4643 (class 2606 OID 43386)
+-- TOC entry 4665 (class 2606 OID 21330)
 -- Name: terms_and_conditions fk_terms_and_conditions_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16675,7 +16613,7 @@ ALTER TABLE ONLY public.terms_and_conditions
 
 
 --
--- TOC entry 4644 (class 2606 OID 43391)
+-- TOC entry 4666 (class 2606 OID 21335)
 -- Name: transaction_ledgers fk_tx_ledger_currency; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16684,7 +16622,7 @@ ALTER TABLE ONLY public.transaction_ledgers
 
 
 --
--- TOC entry 4645 (class 2606 OID 43396)
+-- TOC entry 4667 (class 2606 OID 21340)
 -- Name: transaction_ledgers fk_tx_ledger_ledger; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16693,7 +16631,7 @@ ALTER TABLE ONLY public.transaction_ledgers
 
 
 --
--- TOC entry 4646 (class 2606 OID 43401)
+-- TOC entry 4668 (class 2606 OID 21345)
 -- Name: transaction_ledgers fk_tx_ledger_ledger_agst; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16702,7 +16640,7 @@ ALTER TABLE ONLY public.transaction_ledgers
 
 
 --
--- TOC entry 4647 (class 2606 OID 43406)
+-- TOC entry 4669 (class 2606 OID 21350)
 -- Name: transaction_ledgers fk_tx_ledger_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16711,7 +16649,7 @@ ALTER TABLE ONLY public.transaction_ledgers
 
 
 --
--- TOC entry 4648 (class 2606 OID 43411)
+-- TOC entry 4670 (class 2606 OID 21355)
 -- Name: transaction_ledgers fk_tx_ledger_project; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16720,7 +16658,7 @@ ALTER TABLE ONLY public.transaction_ledgers
 
 
 --
--- TOC entry 4649 (class 2606 OID 43416)
+-- TOC entry 4671 (class 2606 OID 21360)
 -- Name: unit_of_measure_translations fk_unit_of_measure_translations_unit_of_measure; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16729,7 +16667,7 @@ ALTER TABLE ONLY public.unit_of_measure_translations
 
 
 --
--- TOC entry 4651 (class 2606 OID 43421)
+-- TOC entry 4673 (class 2606 OID 21365)
 -- Name: unit_of_measures fk_unit_of_measures_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16738,7 +16676,7 @@ ALTER TABLE ONLY public.unit_of_measures
 
 
 --
--- TOC entry 4650 (class 2606 OID 43426)
+-- TOC entry 4672 (class 2606 OID 21370)
 -- Name: unit_of_measure_translations fk_unit_of_measures_unit_of_measure_translation; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16747,7 +16685,7 @@ ALTER TABLE ONLY public.unit_of_measure_translations
 
 
 --
--- TOC entry 4653 (class 2606 OID 43431)
+-- TOC entry 4675 (class 2606 OID 21375)
 -- Name: user_relations fk_user_ralations_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16756,7 +16694,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4654 (class 2606 OID 43436)
+-- TOC entry 4676 (class 2606 OID 21380)
 -- Name: user_relations fk_user_ralations_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16765,7 +16703,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4655 (class 2606 OID 43441)
+-- TOC entry 4677 (class 2606 OID 21385)
 -- Name: user_relations fk_user_ralations_role; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16774,7 +16712,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4656 (class 2606 OID 43446)
+-- TOC entry 4678 (class 2606 OID 21390)
 -- Name: user_relations fk_user_relations_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16783,7 +16721,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4657 (class 2606 OID 43451)
+-- TOC entry 4679 (class 2606 OID 21395)
 -- Name: user_relations fk_user_relations_profile; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16792,7 +16730,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4658 (class 2606 OID 43456)
+-- TOC entry 4680 (class 2606 OID 21400)
 -- Name: user_relations fk_user_relations_role; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16801,7 +16739,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4661 (class 2606 OID 43461)
+-- TOC entry 4683 (class 2606 OID 21405)
 -- Name: users fk_users_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16810,7 +16748,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 4659 (class 2606 OID 43466)
+-- TOC entry 4681 (class 2606 OID 21410)
 -- Name: user_relations fk_users_user_ralation; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16819,7 +16757,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4660 (class 2606 OID 43471)
+-- TOC entry 4682 (class 2606 OID 21415)
 -- Name: user_relations fk_users_user_relation; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16828,7 +16766,7 @@ ALTER TABLE ONLY public.user_relations
 
 
 --
--- TOC entry 4662 (class 2606 OID 43476)
+-- TOC entry 4684 (class 2606 OID 21420)
 -- Name: ware_houses fk_ware_houses_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16837,7 +16775,7 @@ ALTER TABLE ONLY public.ware_houses
 
 
 --
--- TOC entry 4663 (class 2606 OID 43481)
+-- TOC entry 4685 (class 2606 OID 21425)
 -- Name: ware_houses fk_ware_houses_parent; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16846,7 +16784,7 @@ ALTER TABLE ONLY public.ware_houses
 
 
 --
--- TOC entry 4664 (class 2606 OID 43486)
+-- TOC entry 4686 (class 2606 OID 21430)
 -- Name: ware_houses fk_ware_houses_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16855,7 +16793,7 @@ ALTER TABLE ONLY public.ware_houses
 
 
 --
--- TOC entry 4666 (class 2606 OID 43491)
+-- TOC entry 4688 (class 2606 OID 21435)
 -- Name: workspace_modules fk_workspace; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16864,7 +16802,7 @@ ALTER TABLE ONLY public.workspace_modules
 
 
 --
--- TOC entry 4667 (class 2606 OID 43496)
+-- TOC entry 4689 (class 2606 OID 21440)
 -- Name: workspaces fk_workspaces_company; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16873,7 +16811,7 @@ ALTER TABLE ONLY public.workspaces
 
 
 --
--- TOC entry 4668 (class 2606 OID 43501)
+-- TOC entry 4690 (class 2606 OID 21445)
 -- Name: workspaces fk_workspaces_status; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16882,7 +16820,7 @@ ALTER TABLE ONLY public.workspaces
 
 
 --
--- TOC entry 4532 (class 2606 OID 43506)
+-- TOC entry 4554 (class 2606 OID 21450)
 -- Name: key_values key_values_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16891,7 +16829,7 @@ ALTER TABLE ONLY public.key_values
 
 
 --
--- TOC entry 4534 (class 2606 OID 43511)
+-- TOC entry 4556 (class 2606 OID 21455)
 -- Name: ledger_accounts ledger_accounts_ledger; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16900,7 +16838,7 @@ ALTER TABLE ONLY public.ledger_accounts
 
 
 --
--- TOC entry 4551 (class 2606 OID 43516)
+-- TOC entry 4573 (class 2606 OID 21460)
 -- Name: party_payments party_payments_party; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16909,7 +16847,7 @@ ALTER TABLE ONLY public.party_payments
 
 
 --
--- TOC entry 4552 (class 2606 OID 43521)
+-- TOC entry 4574 (class 2606 OID 21465)
 -- Name: party_payments party_payments_payment; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16918,7 +16856,7 @@ ALTER TABLE ONLY public.party_payments
 
 
 --
--- TOC entry 4613 (class 2606 OID 43526)
+-- TOC entry 4635 (class 2606 OID 21470)
 -- Name: sales_records pg_sales_records_customer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16927,7 +16865,7 @@ ALTER TABLE ONLY public.sales_records
 
 
 --
--- TOC entry 4581 (class 2606 OID 43531)
+-- TOC entry 4603 (class 2606 OID 21475)
 -- Name: purchase_records purchase_records_invoice; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -16936,7 +16874,7 @@ ALTER TABLE ONLY public.purchase_records
 
 
 --
--- TOC entry 4987 (class 0 OID 0)
+-- TOC entry 5021 (class 0 OID 0)
 -- Dependencies: 7
 -- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
 --
@@ -16945,7 +16883,7 @@ REVOKE USAGE ON SCHEMA public FROM PUBLIC;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2025-05-30 17:57:01
+-- Completed on 2025-08-08 15:07:09
 
 --
 -- PostgreSQL database dump complete

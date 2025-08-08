@@ -159,7 +159,9 @@ func (r *stageRepo) stageQuery(req *common.RequestContext, d map[string]string, 
 		`)
 	whereSQL.WriteString(` e.deleted_at is null and e.company_id = ? `)
 	params = append(params, req.ActiveCompany.ID)
-	columnFilters := []string{}
+	columnFilters := []string{
+		"entity_id",
+	}
 	r.query.FilterBuilder(&whereSQL, &params, d, columnFilters...)
 
 	helper.JoinWhereBuilder(generateSQL, whereSQL)

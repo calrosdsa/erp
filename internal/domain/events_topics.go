@@ -74,6 +74,9 @@ const (
 	//Deal
 	DealCreatedEvent = "deal.created"
 	DealEditedEvent  = "deal.edited"
+	//Task
+	TaskCreatedEvent = "task.created"
+	TaskEditedEvent  = "task.edited"
 	//Party
 	PartyStageChange = "party.state_change"
 )

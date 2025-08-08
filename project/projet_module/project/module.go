@@ -17,11 +17,13 @@ func (m *Module) Startup(ctx context.Context, svc system.Service) error {
 }
 
 func Root(ctx context.Context, svc system.Service) error {
+	// Initialize project module
 	projectRepo := project_repo.NewProjectRepository(svc.DBConn(), svc.Helpers())
 	projectUcase := project_ucase.NewProjectUcase(svc.Logger(), projectRepo,
 		svc.PermissionService(), svc.CoreService())
 	rest_project.NewProjectHandler(svc.HumaApi(), svc.Helpers(), projectUcase,
 		huma.Middlewares{svc.Middlewares().Authenticate},svc.PermissionService())
+
 	return nil
 }
 

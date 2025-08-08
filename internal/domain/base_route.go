@@ -93,6 +93,7 @@ const (
 
 	//Project
 	PROJECT_BASE_ROUTE = "/project"
+	TASK_BASE_ROUTE    = "/task"
 
 	//Regate
 	COURT_BASE_ROUTE      = "/court"

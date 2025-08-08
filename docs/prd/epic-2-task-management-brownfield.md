@@ -35,6 +35,14 @@ Add essential task management capabilities to the existing project module, enabl
 - Use kanban for task progress tracking
 - Add task filtering and search capabilities within projects
 
+### Story 4: Refactor Task Module Following CRM Deal Module Architecture
+- **Repository Layer Refactoring:** Restructure task repository to match Deal repository patterns (`project/crm/deal/repository/pg_deal.go`)
+- **Handler Layer Enhancement:** Refactor task handler to follow Deal handler structure with proper operation naming and documentation
+- **Use Case Layer Alignment:** Update task use case to match Deal use case patterns with enhanced business logic
+- **MCP Integration:** Implement comprehensive MCP handler following Deal MCP pattern with all CRUD operations
+- **Module Integration:** Update module.go to follow Deal module's DI pattern and service registration
+- **DTO Alignment:** Ensure task DTOs follow Deal DTO patterns for consistency across the system
+
 ## Compatibility Requirements
 - [x] Existing APIs remain unchanged
 - [x] Database schema changes are backward compatible

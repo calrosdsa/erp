@@ -4,6 +4,7 @@ import (
 	"context"
 	"erp/pkg/system"
 	"erp/project/projet_module/project"
+	"erp/project/projet_module/task"
 )
 
 type Module struct{}
@@ -25,6 +26,7 @@ func Root(ctx context.Context, svc system.Service) error {
 		Service: svc,
 		modules: []system.Module{
 			&project.Module{},
+			&task.Module{},
 		},
 	}
 

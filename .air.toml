@@ -6,10 +6,10 @@ testdata_dir = "testdata"
 tmp_dir = "tmp"
 
 [build]
-  args_bin = []
-  bin = "./tmp/main"
-  cmd = "go build -o ./tmp/main ./cmd/all/main.go"
-  delay = 1000
+  args_bin = ["-hot-reload", "-local"]
+  bin = "./tmp/main.exe"
+  cmd = "go build -o ./tmp/main.exe ./cmd/all/main.go"
+  delay = 10000
   exclude_dir = ["assets", "tmp", "vendor", "testdata", "gen", "build", "coverage", "documents", ".git", "node_modules"]
   exclude_file = []
   exclude_regex = ["_test.go", ".gen.go"]

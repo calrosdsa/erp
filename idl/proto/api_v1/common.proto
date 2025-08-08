@@ -78,6 +78,7 @@ enum PartyType {
     deal = 52;
     chat = 53;
     workspace = 54;
+    task = 55;
 }
 
 enum PianoPartyType {

@@ -34,6 +34,7 @@ var (
 	JOURNAL_ENTRY             = EntityTemplate{Name: "Journal-Entry", ID: 29}
 	COST_CENTER               = EntityTemplate{Name: "Cost-Center", ID: 30}
 	PROJECT                   = EntityTemplate{Name: "Project", ID: 31}
+	TASK                      = EntityTemplate{Name: "Task", ID: 69}
 	STOCK_ENTRY               = EntityTemplate{Name: "Stock-Entry", ID: 32}
 	GENERAL_LEDGER            = EntityTemplate{Name: "General-Ledger", ID: 33}
 	ACCOUNT_RECEIVABLE        = EntityTemplate{Name: "Account-Receivable", ID: 34}
@@ -71,5 +72,6 @@ var (
 	CHAT                      = EntityTemplate{Name: "Chat", ID: 66}
 	BOOKING_SCHEDULE                      = EntityTemplate{Name: "Calendario Reservas", ID: 67}
 	WORKSPACE = EntityTemplate{Name: "Workspace",ID: 68}
+
 	// SELLER_GROUP   = EntityTemplate{Name: "Seller Group", ID: 13}
 )
